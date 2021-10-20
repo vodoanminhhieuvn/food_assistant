@@ -1,0 +1,8 @@
+version: "2.0"
+
+nlu:
+  - intent: food_recipe
+    examples: |
+      - What is food
+      - is food good?
+      - I hate food
