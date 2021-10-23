@@ -3,6 +3,25 @@ version: "2.0"
 nlu:
   - intent: food_recipe
     examples: |
-      - What is food
-      - is food good?
-      - I hate food
+      - What is [rice](food_recipe)
+      - is [apple](food_recipe) good?
+      - what recipe with [rice](food_recipe)
+      - what dish come with [apple](food_recipe)
+      - are there any good [fish](food_recipe) dish
+      - can you show few [meat](food_recipe)
+      - I want to make some food with [tuna](food_recipe)
+      - What can i cook with [brocoli](food_recipe)
+      - Which are [carrot](food_recipe) ?
+      - can I make anything with [carrot](food_recipe)
+      - I want to make something with [chicken](food_recipe)
+
+  - lookup: food_recipe
+    examples: |
+      - carrot
+      - rice
+      - apple
+      - brocoli
+      - fish
+      - pineapple
+      - pig meat
+      - chicken
