@@ -1,37 +1,19 @@
 version: "2.0"
 
 nlu:
-  - intent: food_recipe
+  - intent: preparation_technique
     examples: |
-      - What is [rice](food_recipe)
-      - is [apple](food_recipe) good?
-      - what recipe with [rice](food_recipe)
-      - what dish come with [apple](food_recipe)
-      - are there any good [fish](food_recipe) dish
-      - can you show few [meat](food_recipe)
-      - I want to make some food with [tuna](food_recipe)
-      - What can i cook with [brocoli](food_recipe)
-      - Which are [carrot](food_recipe) ?
-      - can I make anything with [carrot](food_recipe)
-      - I want to make something with [chicken](food_recipe)
+      - What is [Barking](preparation_technique)
+      - what recipe with [Barking](preparation_technique)
+      - what dish come with [Barking](preparation_technique)
+      - are there any good [Barking](preparation_technique) dish
+      - can you show few [Frying](preparation_technique)
+      - I want to make some food with [Dying](preparation_technique)
+      - What can i cook with [Dying](preparation_technique)
+      - can I make anything with [Boiling](preparation_technique)
+      - I want to make something with [Deep Frying](preparation_technique)
 
-  - intent: calo_number
-    examples: |
-      - have 500
-      - calo >500
-
-  - lookup: food_recipe
-    examples: |
-      - carrot
-      - rice
-      - apple
-      - brocoli
-      - fish
-      - pineapple
-      - pig meat
-      - chicken
-
-  - lookup: food_preparation_techniques
+  - lookup: preparation_technique
     examples: |
       - Baking
       - Blind-baking

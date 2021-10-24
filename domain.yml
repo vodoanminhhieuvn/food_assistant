@@ -19,12 +19,15 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- food_recipe:
+- ingredient:
+    use_entities: true
+- preparation_technique:
     use_entities: true
 - bad_language:
     use_entities: true
 entities:
-- food_recipe
+- ingredient
+- preparation_technique
 slots:
   food_recipe:
     type: rasa.shared.core.slots.TextSlot
