@@ -20,10 +20,6 @@ pipeline:
       - email
       - number
       - amount-of-money
-  - name: RegexEntityExtractor
-    case_sensitive: False
-    use_lookup_tables: True
-    use_regexes: True
   - name: EntitySynonymMapper
   - name: ResponseSelector
     retrieval_intent: out_of_scope

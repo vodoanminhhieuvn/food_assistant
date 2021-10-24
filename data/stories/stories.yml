@@ -8,6 +8,7 @@ stories:
       - action: action_get_food_recipe
       - intent: mood_great
       - action: utter_happy
+
   - story: sad path 1
     steps:
       - intent: greet
@@ -17,23 +18,15 @@ stories:
       - action: utter_did_that_help
       - intent: affirm
       - action: utter_happy
-  - story: sad path 2
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: deny
-      - action: utter_goodbye
+
   - story: food recipe path 1
     steps:
       - slot_was_set:
-          - food_recipe: rice
+          - ingredients: rice
       - action: utter_food_recipe
       - intent: food_recipe
         entities:
-          - food_recipe: apple
+          - ingredients: apple
       - slot_was_set:
-          - food_recipe: apple
+          - ingredients: apple
       - action: action_get_food_recipe
