@@ -19,9 +19,7 @@ intents:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- ingredient:
-    use_entities: true
-- preparation_technique:
+- food_recipe:
     use_entities: true
 - bad_language:
     use_entities: true

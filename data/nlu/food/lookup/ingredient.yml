@@ -1,20 +1,6 @@
 version: "2.0"
 
 nlu:
-  - intent: ingredient
-    examples: |
-      - What is [rice](ingredient)
-      - is [apple](ingredient) good?
-      - what recipe with [rice](ingredient)
-      - what dish come with [apple](ingredient)
-      - are there any good [fish](ingredient) dish
-      - can you show few [meat](ingredient)
-      - I want to make some food with [tuna](ingredient)
-      - What can i cook with [brocoli](ingredient)
-      - Which are [carrot](ingredient) ?
-      - can I make anything with [carrot](ingredient)
-      - I want to make something with [chicken](ingredient)
-
   - lookup: ingredient
     examples: |
       - Salt

@@ -1,8 +1,19 @@
 version: "2.0"
 
 nlu:
-  - intent: preparation_technique
+  - intent: food_recipe
     examples: |
+      - What is [rice](ingredient)
+      - is [apple](ingredient) good?
+      - what recipe with [rice](ingredient)
+      - what dish come with [apple](ingredient)
+      - are there any good [fish](ingredient) dish
+      - can you show few [meat](ingredient)
+      - I want to make some food with [tuna](ingredient)
+      - What can i cook with [brocoli](ingredient)
+      - Which are [carrot](ingredient) ?
+      - can I make anything with [carrot](ingredient)
+      - I want to make something with [chicken](ingredient)
       - What is [Barking](preparation_technique)
       - what recipe with [Barking](preparation_technique)
       - what dish come with [Barking](preparation_technique)
@@ -13,52 +24,4 @@ nlu:
       - can I make anything with [Boiling](preparation_technique)
       - I want to make something with [Deep Frying](preparation_technique)
 
-  - lookup: preparation_technique
-    examples: |
-      - Baking
-      - Blind-baking
-      - Boiling
-      - Blanching
-      - Braising
-      - Coddling
-      - Infusion
-      - Pressure cooking
-      - Simmering
-      - Poaching
-      - Steaming
-      - Double steaming
-      - Steeping
-      - Stewing
-      - Vacuum flask cooking
-      - Grilling
-      - Barbecuing
-      - Frying
-      - Deep frying
-      - Gentle frying
-      - Hot salt frying
-      - Pan frying
-      - Pressure frying
-      - Sautéing
-      - Shallow frying
-      - Stir frying
-      - Microwave oven
-      - Roasting
-      - Rotisserie
-      - Searing
-      - Smoking
-      - Brining
-      - Ceviche
-      - Drying
-      - Fermentation
-      - Marinating
-      - Saikyoyaki
-      - Pickling
-      - Salting
-      - Seasoning
-      - Souring
-      - Sprouting
-      - Sugaring
-      - Basting
-      - Kneading
-      - Mixing
-      - Blending
+
