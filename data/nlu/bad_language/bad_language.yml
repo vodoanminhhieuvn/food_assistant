@@ -1,0 +1,12 @@
+version: "2.0"
+
+nlu:
+  - intent: bad_language
+    examples: |
+      - Fuck you
+      - Fuck yourself
+      - piece of shit
+      - You are bitch
+      - Bitch
+      - Fack you
+      - You are whole

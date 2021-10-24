@@ -1,0 +1,1534 @@
+version: "2.0"
+
+nlu:
+  - regex: ingredient
+    examples: |
+      - ([^{]+(?=}))
+
+  - lookup: ingredient
+    examples: |
+      - Salt
+      - Sugar
+      - Water
+      - Oil and fat
+      - Flavouring
+      - Dairy
+      - Vegetable oil and fat
+      - Cereal
+      - Vegetable
+      - Fruit
+      - Flour
+      - Wheat
+      - Root vegetable
+      - Vegetable oil
+      - Glucose
+      - Starch
+      - Cereal flour
+      - Milk
+      - Natural flavouring
+      - Spice
+      - Emulsifier
+      - Wheat flour
+      - E330
+      - Herb
+      - Sunflower oil
+      - Seed
+      - Colour
+      - Preservative
+      - Cocoa
+      - Acid
+      - E322
+      - Plant
+      - Onion
+      - Antioxidant
+      - Egg
+      - Milk powder
+      - Thickener
+      - Dextrose
+      - E322i
+      - Pepper
+      - Yeast
+      - Garlic
+      - Stabiliser
+      - Glucose syrup
+      - Rapeseed oil
+      - Citrus fruit
+      - Animal
+      - Tomato
+      - Protein
+      - Corn starch
+      - Nut
+      - Fruit juice
+      - Cocoa butter
+      - Acidity regulator
+      - Palm oil and fat
+      - Soya lecithin
+      - Cocoa paste
+      - Skimmed milk powder
+      - Vinegar
+      - Meat
+      - Raising agent
+      - E500
+      - Rice
+      - E300
+      - Cream
+      - Modified starch
+      - Ferment
+      - Fat
+      - Malt
+      - Pork
+      - Colza oil
+      - Lemon
+      - Tree nut
+      - E415
+      - E250
+      - Sea salt
+      - Corn
+      - E412
+      - Cocoa powder
+      - Lactose
+      - Legume
+      - Pork meat
+      - Soya
+      - Carrot
+      - E471
+      - Palm oil
+      - Animal protein
+      - Berries
+      - Milk proteins
+      - Apple
+      - Potato starch
+      - Butter
+      - Chocolate
+      - Whole milk powder
+      - Cane sugar
+      - E450
+      - Cheese
+      - Microbial culture
+      - Olive oil
+      - Fructose
+      - Malted barley
+      - Lactic ferments
+      - E440a
+      - Fish
+      - Whey
+      - Enzyme
+      - E407
+      - Glucose-fructose syrup
+      - Maltodextrins
+      - Milkfat
+      - Parsley
+      - Mustard
+      - Gluten
+      - Vanilla flavouring
+      - Fat reduced cocoa powder
+      - E202
+      - Potato
+      - Vitamins
+      - Gelling agent
+      - Coagulating enzyme
+      - Alcohol
+      - Vegetable fat
+      - Rice flour
+      - Concentrated lemon juice
+      - Whole milk
+      - E500ii
+      - Vegetable protein
+      - Natural vanilla flavouring
+      - Rennet
+      - Orange
+      - Yeast extract
+      - Butterfat
+      - Modified corn starch
+      - Almond
+      - Minerals
+      - E301
+      - Flavour enhancer
+      - Hazelnut
+      - Honey
+      - Virgin olive oil
+      - Oat
+      - Sugar syrup
+      - Skimmed milk
+      - E410
+      - Chili pepper
+      - Extra virgin olive oil
+      - Palm fat
+      - Poultry
+      - Grape
+      - Black pepper
+      - Mustard seed
+      - Vanilla
+      - Celery
+      - Invert sugar
+      - Fiber
+      - Sweetener
+      - Soya bean
+      - E503
+      - Bell pepper
+      - Sunflower lecithin
+      - Durum wheat
+      - E160a
+      - Lemon juice
+      - Thyme
+      - E621
+      - Wheat gluten
+      - Sunflower
+      - Spice extract
+      - Invert sugar syrup
+      - Vegetable fiber
+      - E270
+      - Durum wheat semolina
+      - Basil
+      - Semolina
+      - Coconut
+      - Beef
+      - Oily fish
+      - Egg yolk
+      - Tapioca starch
+      - Wheat starch
+      - Barley
+      - Yogurt
+      - Egg white
+      - Iodised salt
+      - Wholemeal flour
+      - Rice starch
+      - E160c
+      - Raspberry
+      - Hops
+      - Animal fat
+      - Glazing agent
+      - Purée
+      - E422
+      - Paprika
+      - Whey powder
+      - Unrefined sugar
+      - Hydrolysed vegetable protein
+      - Wine
+      - E414
+      - Unrefined cane sugar
+      - Dough
+      - Coriander
+      - E120
+      - Barley malt extract
+      - Corn flour
+      - Cinnamon
+      - Coconut oil
+      - E428
+      - E290
+      - E375
+      - Cow's milk
+      - E450i
+      - E420
+      - Sauce
+      - Soy protein
+      - Sesame
+      - Alcohol vinegar
+      - Peanut
+      - Tomato concentrate
+      - Palm
+      - E950
+      - Vanilla extract
+      - Oat flakes
+      - Thiamin
+      - Coating
+      - E466
+      - E316
+      - Vitamin D
+      - Orange juice
+      - E101
+      - Tomato purée
+      - Mango
+      - Chopped tomatoes
+      - Oregano
+      - Whole egg
+      - Spirit vinegar
+      - Chicken
+      - Strawberry
+      - Whole wheat flour
+      - Mushroom
+      - Beef meat
+      - Garlic powder
+      - Turmeric
+      - Nutmeg
+      - Wine vinegar
+      - E150a
+      - Fresh cream
+      - Folate
+      - Peach
+      - Sulfite
+      - Folic acid
+      - E296
+      - E150
+      - Pasteurised milk
+      - E331
+      - Apple juice
+      - Mineral water
+      - Rosemary
+      - Iron
+      - White wine
+      - Milk chocolate
+      - E955
+      - E903
+      - Humectant
+      - Herbs and spices
+      - E1404
+      - Soya flour
+      - Fresh egg
+      - White pepper
+      - Baker's yeast
+      - Vitamin B6
+      - Rapeseed
+      - E252
+      - E211
+      - Blueberry
+      - Smoke
+      - Lemon juice concentrate
+      - E100
+      - E160ai
+      - Pineapple
+      - Natural lemon flavouring
+      - Ginger
+      - Beans
+      - Chicken meat
+      - Bacon
+      - Broth
+      - E163
+      - Lard
+      - Sunflower seed
+      - E503ii
+      - Lactose and milk proteins
+      - Crushed tomato
+      - E282
+      - E392
+      - Shellfish
+      - Flour treatment agent
+      - Cucumber
+      - E341
+      - Carbonated water
+      - Blackcurrant
+      - Fat reduced cocoa
+      - Cumin seeds
+      - Tea
+      - Condensed milk
+      - Pear
+      - Shallot
+      - Leek
+      - Rye
+      - Coconut fat
+      - Semi-skimmed milk
+      - Margarine
+      - Bread crumbs
+      - Banana
+      - Salt from Guérande
+      - E306
+      - Natural mineral water
+      - Anti-caking agent
+      - Rye flour
+      - Clove
+      - Chocolate powder
+      - Sodium
+      - Ham
+      - E951
+      - Vitamin C
+      - Fruit pectin
+      - Flax
+      - Coffee
+      - Palm kernel oil and fat
+      - E224
+      - Vitamin B12
+      - Wheat malt
+      - Tomato powder
+      - E464
+      - Courgette
+      - Red bell pepper
+      - E262
+      - Bay leaf
+      - Flavouring preparation
+      - Modified tapioca starch
+      - Cornmeal
+      - Smoke flavouring
+      - Tomato juice
+      - Sodium citrate
+      - Spinach
+      - White fish
+      - Agave syrup
+      - Elder
+      - Vitamin E
+      - Filling
+      - Beetroot
+      - E170
+      - Sweet whey
+      - Vanillin
+      - Brown rice
+      - Chives
+      - Pantothenic Acid
+      - Champignon
+      - Carob seeds
+      - Raisin
+      - Pumpkin
+      - Cashew nuts
+      - Sweet whey powder
+      - Fruit juice concentrate
+      - Vegetarian rennet
+      - Palm kernel oil
+      - Dijon mustard
+      - Caramelised sugar
+      - Fresh milk
+      - Salmon
+      - Concentrated apple juice
+      - Dill
+      - Olives
+      - Chocolate pieces
+      - Flax seed
+      - Shea butter
+      - E160b
+      - E451
+      - E160
+      - Safflower
+      - Salad
+      - Microbial rennet
+      - Soy sauce
+      - E200
+      - Marjoram
+      - E476
+      - Sourdough
+      - E965
+      - E171
+      - Apricot
+      - Orange zest
+      - Mint
+      - Mango puree
+      - Vitamin A
+      - Powdered egg white
+      - Mollusc
+      - Sesame seeds
+      - Sucrose
+      - E260
+      - Blackberry
+      - Fennel
+      - E170i
+      - Raspberry puree
+      - Gherkin
+      - E917
+      - Raw milk
+      - Barley flour
+      - E472e
+      - E509
+      - Tuna
+      - E150d
+      - Passion fruit
+      - Carob seed flour
+      - Turkey
+      - Syrup
+      - Wheat bran
+      - Condensed skimmed milk
+      - Anchovy
+      - Grape sugar
+      - Crustacean
+      - Natural orange flavouring
+      - E452
+      - E339
+      - Must
+      - Dark chocolate
+      - E501
+      - Beech wood smoke
+      - Emulsifying salts
+      - Lentils
+      - Fresh whole milk
+      - Apple fiber
+      - E161b
+      - Potato flakes
+      - Orange juice from concentrate
+      - Pea
+      - Brown sugar
+      - E338
+      - Bulking agent
+      - Wheat glucose syrup
+      - Liquorice
+      - Aubergine
+      - Herring
+      - Chickpea
+      - Pasteurised cow's milk
+      - Double concentrated tomato
+      - Biotin
+      - E631
+      - E401
+      - E901
+      - Atlantic herring
+      - Oil
+      - Duck
+      - Cholecalciferol
+      - Pumpkin seed
+      - Hazelnut paste
+      - Cheese powder
+      - Turkey meat
+      - Molasses
+      - E327
+      - Atlantic salmon
+      - Poultry fat
+      - Malted wheat flour
+      - Reconstituted skimmed milk
+      - Alaska pollock
+      - Raspberry juice
+      - Vegetable juice
+      - Green olives
+      - Whey protein
+      - Zinc
+      - Chicken egg
+      - Casing
+      - E334
+      - Herring fillet
+      - Red chili pepper
+      - E524
+      - Lime juice
+      - Wheat protein
+      - Cayenne pepper
+      - White wine vinegar
+      - Spirulina
+      - E627
+      - Wheat fiber
+      - Pork breast
+      - Pea protein
+      - Green peas
+      - Whey product
+      - Green bean
+      - Emmental
+      - E1105
+      - Soya oil
+      - Natural raspberry flavouring
+      - Breast
+      - E461
+      - E223
+      - Pasta
+      - E1103
+      - Raw cow's milk
+      - E904
+      - Black tea
+      - Dehydrated onion
+      - E133
+      - Herb extract
+      - Animal-based rennet
+      - Walnut
+      - Green lentils
+      - Whipping cream
+      - Condiment
+      - E304
+      - Biscuit
+      - Lardon
+      - Wholemeal rye flour
+      - Mild yogurt
+      - E511
+      - Green pepper
+      - Buttermilk
+      - Baking powder
+      - High oleic sunflower oil
+      - Green bell pepper
+      - E333
+      - Milk fat substitute
+      - Cooking water
+      - Glaze
+      - E102
+      - Dehydrated glucose syrup
+      - Strawberry puree
+      - Passion fruit juice
+      - Corn flakes
+      - Concentrated grape must
+      - Lemongrass
+      - Elderberry
+      - Pork liver
+      - Buckwheat flour
+      - Cranberry
+      - Caramel syrup
+      - Wheat flakes
+      - Caffeine
+      - Pork gelatin
+      - Cherry
+      - Gum base
+      - Whole powdered egg
+      - Pineapple juice
+      - E110
+      - Apple juice from concentrate
+      - E385
+      - Corn syrup
+      - Grapefruit
+      - E445
+      - Chicken fat
+      - Rice syrup
+      - E460
+      - Superior quality durum wheat semolina
+      - Collagen
+      - Natural vanilla extract
+      - Edam
+      - E153
+      - Concentrated orange juice
+      - Herbes de Provence
+      - Inulin
+      - Oat flour
+      - Cooked rice
+      - E470b
+      - Cardamom
+      - Potato powder
+      - Sheeps casing
+      - Lactic and aging ferments
+      - Acerola
+      - Juice
+      - Crushed peeled tomato
+      - E420ii
+      - E500i
+      - Coconut flakes
+      - E162
+      - Lysozyme from eggs
+      - Hop extract
+      - E472c
+      - E1510
+      - Duck liver
+      - E516
+      - Red beetroot
+      - E141
+      - Tofu
+      - E332
+      - Whole yogurt
+      - E472b
+      - E220
+      - Refined sunflower oil
+      - E967
+      - Apple purée
+      - Cheddar
+      - Red fruits
+      - Melted cheese
+      - E262i
+      - Bread
+      - Pork rind
+      - Cyanocobalamin
+      - Essential oil
+      - Coagulant
+      - Grape juice
+      - Wheat malt flour
+      - Smoked lardoons
+      - Capers
+      - Fruit concentrates
+      - Pyridoxine hydrochloride
+      - Natural pepper flavouring
+      - E551
+      - Egg powder
+      - E952
+      - Sherry vinegar
+      - Cod
+      - Black olive
+      - Free range eggs
+      - E131
+      - Honey from France
+      - Chestnut
+      - Concentrated pineapple juice
+      - Vanilla pod
+      - Spelt
+      - Firming agent
+      - Paprika powder
+      - Parmesan
+      - Curry
+      - E475
+      - Parboiled rice
+      - Asparagus
+      - Goat milk
+      - Aniseed
+      - Cow cheese
+      - Barley malt flour
+      - Mackerel
+      - Quark
+      - E965ii
+      - Malt extract
+      - Quinoa
+      - Icing sugar
+      - Pasteurised whole milk
+      - E320
+      - Table vinegar
+      - Roselle flower
+      - Brown sugar syrup
+      - Milk minerals
+      - Guava
+      - Plant concentrates
+      - Nigari
+      - Grana Padano
+      - Thiamin mononitrate
+      - E1400
+      - E150b
+      - Fromage blanc
+      - Brandy
+      - E326
+      - Fruit extract
+      - Rapeseed lecithin
+      - E1442
+      - Wheat germ
+      - Caraway
+      - Sage
+      - Cabbage
+      - Pork by-product
+      - E325
+      - Veal
+      - Corn dextrose
+      - Poultry meat
+      - Coconut milk
+      - Lemon oil
+      - Rye sourdough
+      - Bourbon vanilla
+      - Wheat dextrose
+      - Mackerel fillet
+      - Fruit and plant concentrates
+      - Poultry skin
+      - Malted wholemeal rye flour
+      - Parsnip
+      - Reconstituted lime juice
+      - Calcium
+      - Sweetcorn
+      - E406
+      - Radish
+      - Cherry tomato
+      - E350
+      - Fleur de sel
+      - Tamarind
+      - Beef fat
+      - Concentrate
+      - E635
+      - E481
+      - Redcurrant
+      - Fructose syrup
+      - Tomato pulp
+      - Iodine
+      - Sterilised milk
+      - Natural colours
+      - Special bread
+      - Superior cooked ham
+      - Low-fat milk
+      - Lettuce
+      - Strawberry juice
+      - Deodorized sunflower oil
+      - Cracked black pepper
+      - Endive
+      - Red wine vinegar
+      - Pork loin
+      - Filtered water
+      - Concentrated purée
+      - Fig
+      - Cep
+      - Bourbon vanilla extract
+      - Cane sugar syrup
+      - Noodle
+      - E575
+      - Hot chili peppers
+      - Streptococcus thermophilus
+      - Sweet peppers
+      - UHT pasteurised milk
+      - Rooibos
+      - Non-hydrogenated sunflower oil
+      - Tarragon
+      - E421
+      - Ricotta
+      - Shiitake
+      - Rye malt
+      - Psyllium
+      - Potato flour
+      - Brazil nut
+      - Concentrated carrot juice
+      - Long grain rice
+      - Pork collagen
+      - Veal meat
+      - Orange extract
+      - Cooked ham
+      - Hydrolysed proteins
+      - Potassium iodide
+      - Date
+      - Milk solids
+      - Wheat flour type 0
+      - Cocoa butter substitute
+      - Natural basil flavouring
+      - Blend of honeys
+      - Port
+      - E530
+      - Extract
+      - Tea extract
+      - Bifidus
+      - Reduced iron
+      - Cocoa solids
+      - Peppermint
+      - Pomace brandy
+      - Hydrolysed pea protein
+      - E251
+      - E501i
+      - Armagnac
+      - E350ii
+      - Broad bean flour
+      - Pork fillet
+      - E442
+      - Mashed potato
+      - Rice bran
+      - Albacore
+      - White chocolate
+      - Egg yolk powder
+      - White beans
+      - Rice semolina
+      - Chicory
+      - Lemon powder
+      - Roasted peanuts
+      - Liqueur wine
+      - Buckwheat
+      - E332ii
+      - Plum
+      - Pure vanilla extract
+      - Pasteurized skimmed milk
+      - Sour cream
+      - Wheat glucose-fructose syrup
+      - Carbonated natural mineral water
+      - Lovage
+      - E508
+      - Corn kernel
+      - Pear juice
+      - Duck foie gras
+      - Squid
+      - Mayonnaise
+      - Sardine
+      - Red wine
+      - Yellow bell pepper
+      - Black carrot
+      - Potato protein
+      - E920
+      - Reconstituted passion fruit juice
+      - Brown flax seeds
+      - Shrimp
+      - Dry roasted almonds
+      - Aromatic caramel
+      - Green tea
+      - E413
+      - Elderberry extract
+      - Liquorice extract
+      - Smoked bacon
+      - Sugar beet syrup
+      - Garlic puree
+      - Deactivated yeast
+      - Bone
+      - Acacia honey
+      - E460i
+      - Parboiled long grain rice
+      - Hydrogenated oil
+      - Corn oil
+      - Plant extracts
+      - E160aii
+      - Chokeberry
+      - Hydrogenated vegetable oil
+      - Melon
+      - Celery seed
+      - E1100
+      - Lemon peel
+      - E473
+      - Enhancer
+      - Sodium chloride
+      - Boiled egg
+      - Single cream
+      - Natural sheep casing
+      - Sweet potato
+      - Vegetable margarine
+      - Unrefined sea salt
+      - E307a
+      - Whole grain oat flakes
+      - Concentrated plant colour
+      - E504
+      - Natural mint flavouring
+      - Plantain
+      - Carrot juice
+      - Mint flavouring
+      - Pine nuts
+      - Chickpea flour
+      - Palm kernel fat
+      - UHT pasteurised whole milk
+      - Algae
+      - Star anise
+      - Red onion
+      - Thiamin hydrochloride
+      - Grape must
+      - E340
+      - Mung bean
+      - Nibbed and ground hazelnuts
+      - Strawberry juice concentrate
+      - Camomile
+      - Instant coffee
+      - Lime
+      - Pasteurized semi-skimmed milk
+      - Fruit preservative
+      - Xanthan gum and guar gum
+      - Maltose
+      - Natural garlic flavouring
+      - Mixed spices
+      - Liquid smoke
+      - White asparagus
+      - Light cream
+      - Juniper
+      - Poppy
+      - Goat cheese
+      - Natural lime flavouring
+      - Modified wheat starch
+      - Whole durum wheat semolina
+      - Exhausted ground vanilla pod
+      - Orange essential oil
+      - E339ii
+      - Red beans
+      - E504i
+      - Nectarine
+      - Chromium
+      - Natural apple flavouring
+      - Calvados
+      - Totally hydrogenated palm fat
+      - Clementine
+      - Grated emmental cheese
+      - Apricot kernels
+      - Fruits preparation
+      - Menthol
+      - E433
+      - Milk mineral concentrate
+      - Unrefined sea salt from the Atlantic
+      - Marinade
+      - High fructose corn syrup
+      - Pasteurized crème fraîche
+      - Guava puree
+      - Dried apple
+      - Wholemeal cereal
+      - E451i
+      - Yeast extract powder
+      - Concentrated juice
+      - Beet sugar
+      - Chocolate cream
+      - Anchovy filets
+      - Natural oregano flavouring
+      - Soy base
+      - Concentrated grape juice
+      - Free range chicken eggs
+      - Salted butter
+      - Chili puree
+      - Chocolate filling
+      - Cream from Normandy
+      - Powdered almonds
+      - Red lentils
+      - Liquid egg white
+      - Rehydrated onion
+      - E953
+      - E553b
+      - Cinnamon powder
+      - Pineapple segments
+      - Duck fat
+      - White cabbage
+      - Mace
+      - Modified rice starch
+      - E472a
+      - Pork shoulder
+      - Concentrated tomato purée
+      - Puffed rice
+      - Prune
+      - Potassium
+      - Rose petals
+      - Pureed green bean
+      - Beer
+      - Pre fried onions
+      - Natural citrus flavouring
+      - Wholemeal oat flour
+      - Exhausted vanilla pod
+      - Beetroot juice
+      - Fruit vinegar
+      - Pork bone
+      - Corn maltodextrin
+      - Dehydrated soy protein
+      - E141ii
+      - Pulp
+      - Skimmed milk yogurt powder
+      - Citrus flavouring
+      - Soy preparation
+      - E553
+      - Welsh onion
+      - Quinine
+      - Chia
+      - E319
+      - Whole liquid pasteurised egg
+      - E341ii
+      - Soy sauce powder
+      - Natural flavor of turmeric
+      - Fennel seed
+      - E536
+      - Sugar beet fibre
+      - Acacia honey from France
+      - Pea starch
+      - E261
+      - Sweetened condensed milk
+      - E262ii
+      - Rye flakes
+      - Thai rice
+      - Millet flour
+      - Spirulina concentrate
+      - Brine
+      - Fortified wheat flour
+      - Chicken thigh
+      - E172
+      - E321
+      - Pink peppercorn
+      - Cottonseed oil
+      - Chicken liver
+      - Celery powder
+      - Allspice
+      - Magnesium
+      - Blend of EU and non-EU honeys
+      - Gluten free oats
+      - Rum
+      - E492
+      - Mallow
+      - Butter flavouring
+      - Bread improver
+      - Semi-whole durum wheat semolina
+      - Yellowfin tuna
+      - Aloe vera
+      - Lobster
+      - Microbial coagulating enzyme
+      - Mustard oil
+      - Neapolitan wafer
+      - Superior quality long grain parboiled rice
+      - E468
+      - E503i
+      - Cider vinegar
+      - Beef broth
+      - Brewer's yeast
+      - Buffalo milk
+      - Juniper berry
+      - Ground almonds
+      - Small white onions
+      - Bechamel sauce
+      - Spinach powder
+      - Marc de Champagne
+      - Basmati rice
+      - Atlantic cod
+      - Watermelon
+      - Mozzarella
+      - Black carrot juice
+      - Soy milk
+      - Ferric diphosphate
+      - Chicken skin
+      - Cognac
+      - Zinc sulfate
+      - Blackcurrant juice from concentrate
+      - Natural blackcurrant flavouring
+      - Red beetroot juice
+      - E242
+      - Wheat sourdough
+      - Unsalted butter
+      - Palm olein
+      - Couscous
+      - Grapefruit juice
+      - E407a
+      - Ground hazelnuts
+      - Mountain honey
+      - Pepper extract
+      - Vegetable broth
+      - Concentrated whey protein
+      - Lychee
+      - Zante currant
+      - Broad bean
+      - Pineapple juice from concentrate
+      - Tapioca flour
+      - Balsamic vinegar
+      - Pork sausage
+      - Canola
+      - E535
+      - Dried fruits
+      - Oyster mushroom
+      - Cornflower
+      - Brown rice syrup
+      - Ground coffee
+      - Beef gelatin
+      - Cooked potato
+      - E640
+      - E1422
+      - Salami
+      - Beetroot juice concentrate
+      - Concentrated raspberry juice
+      - Hard-boiled egg
+      - E960
+      - Lupin flour
+      - Canola oil
+      - Tomato sauce
+      - Millet
+      - Wholemeal oat
+      - E235
+      - Pasteurised goat milk
+      - Acacia fibre
+      - Atlantic mackerel
+      - Duck meat
+      - Cane invert syrup
+      - Kiwi
+      - E336
+      - Zinc gluconate
+      - Ketchup
+      - Pea fiber
+      - Papaya
+      - Fenugreek
+      - Milkcap
+      - Spelt flour
+      - Strong mustard
+      - Cereals containing gluten
+      - Veal fond
+      - Lovage leaves
+      - Sorghum flour
+      - Taurine
+      - Poppyseed
+      - Forest mushroom
+      - Camomile flower
+      - Red apple
+      - Sheeps milk
+      - E1450
+      - Cauliflower
+      - Bamboo
+      - Hydrogenated vegetable fat
+      - Turnip-rape
+      - Churned butter
+      - Garlic paste
+      - E160e
+      - Pear puree
+      - Foaming agent
+      - Chinese hibiscus
+      - Elderflower
+      - E954
+      - D-pantothenate calcium
+      - Quinoa flour
+      - E122
+      - Onion Extract
+      - Kvass wort concentrate
+      - Blue cheese
+      - Kirsch
+      - Casein
+      - Iodised sea salt
+      - Liver
+      - Chokeberry juice
+      - Sugared cranberries
+      - E417
+      - Apple vinegar
+      - Mandarin
+      - Almond paste
+      - Roscoff onions
+      - Hydrogenated palm kernel oil
+      - Lemon flavouring
+      - Crêpe
+      - Almonds pieces
+      - Rabbit meat
+      - Jalapeno
+      - Wakame
+      - Lactose-free milk
+      - Bourbon vanilla natural flavouring
+      - Natural spices
+      - Extruded rice
+      - Iron fumarate
+      - Beef casing
+      - E526
+      - Chard
+      - E263
+      - Cooked carrot
+      - White rice
+      - Coconut water
+      - Natural dill flavouring
+      - E221
+      - Roast chicken
+      - Chicken protein
+      - Meat patty
+      - Red and yellow peppers
+      - E345
+      - Beef heart
+      - Cooked beef meat
+      - Banana flavouring
+      - Whole cow's milk
+      - Whole fresh eggs
+      - Skipjack tuna
+      - E212
+      - Pholiota
+      - Sweet paprika
+      - Raspberry flavouring
+      - Soy protein isolate
+      - Thai long grain rice
+      - Orange pulp
+      - Aspic
+      - Copper
+      - Candied orange peel
+      - Patagonian scallop
+      - Semi-skimmed mild yogurt
+      - Natural peach flavouring
+      - Natural spice flavouring
+      - Dog rose
+      - Elderberry juice
+      - Sour cherry
+      - Artichoke
+      - Forest honey
+      - Arabica coffee
+      - Skim milk and pasteurized cream
+      - Natural banana flavouring
+      - Linden honey
+      - Nettle
+      - Bifidus actiregularis
+      - Slippery jack
+      - Brown cane sugar
+      - Cocoa bean
+      - Split pea
+      - Hydrolysed corn protein
+      - Scallop
+      - Semi-skimmed milk powder
+      - Beef bones
+      - Caramelised sugar syrup
+      - Shea oil
+      - Natural spice extract
+      - Glacé cherry
+      - E525
+      - Bamboo shoot
+      - Dried apple pieces
+      - Red cabbage
+      - Lamb
+      - E222
+      - Seaweed
+      - Diphosphates and sodium carbonates
+      - Acerola powder
+      - Smoked cured ham
+      - Cooked chickpeas
+      - Celery leaves
+      - Lemon zest
+      - Sultanas
+      - E450ii
+      - E142
+      - Free range chicken egg yolk
+      - Soft white cheese
+      - Raw ham
+      - Oat fibre
+      - Baby spinach
+      - Bamboo fibre
+      - Rice protein
+      - Laurel extract
+      - E435
+      - Cockles
+      - White seedless grape
+      - Carrot extract
+      - Chicken egg yolk
+      - Natural caramel flavouring
+      - Apple flavouring
+      - Natural onion flavouring
+      - Chromium chloride
+      - Rehydrated egg white
+      - Caribbean spiny lobster
+      - White sugar
+      - Celtic sea salt
+      - Wholemeal rye flakes
+      - Proteins mix
+      - Fully hydrogenated vegetable oils
+      - Natural strawberry flavouring
+      - Chromium nicotinate
+      - Mint leaf
+      - Chocolate ice cream
+      - Hake
+      - E505
+      - Free range egg yolk
+      - Eggs from caged hens
+      - Boletus edulis
+      - Nitrite curing salt
+      - European hake
+      - Mild whole kefir
+      - E559
+      - Safflower concentrate
+      - Garam masala
+      - Natural thyme flavouring
+      - E225
+      - E941
+      - Black radish
+      - Sheep's-milk cheese
+      - Flaked almonds
+      - Maltose syrup
+      - Barley malt syrup
+      - Frying oil
+      - E329
+      - Cassia
+      - Tahini
+      - Lime oil
+      - E959
+      - Artificial flavouring
+      - E519
+      - Green chili pepper
+      - Liquid egg yolk
+      - Hydrolysed soy protein
+      - Humboldt squid
+      - Brown rice flour
+      - E172ii
+      - Chia seed
+      - Orange blossom honey
+      - Lavender
+      - Chicken egg yolk powder
+      - Desiccated coconut
+      - Ice
+      - Curing salt
+      - Powdered sugar
+      - Barbecue flavouring
+      - E900
+      - Retinyl acetate
+      - Pasteurised semi-skimmed cow's milk
+      - Green asparagus
+      - Lamb meat
+      - Sweetened condensed semi-skimmed milk
+      - Elderberry juice concentrate
+      - Natural cola flavouring
+      - E337
+      - Strawberry flavouring
+      - Ice cream
+      - Sequestrant
+      - Demerara sugar
+      - Lime flavouring
+      - Sorrel
+      - Liquid sugar
+      - Organic buckwheat
+      - White quinoa
+      - E418
+      - Rehydrated soy protein
+      - Chicken flavouring
+      - Rice bran oil
+      - Cereal crispies
+      - Fish sauce
+      - Hazelnut oil
+      - Aloe vera juice
+      - Norway lobster
+      - Iceberg lettuce
+      - Pleurotus ostreatus
+      - Concentrated lemon extract
+      - Cane sugar molasses
+      - E450vii
+      - Lemon balm
+      - Vinaigrette
+      - Lithothamnium calcareum
+      - Fishpowder
+      - Eau de vie
+      - Sour cream powder
+      - Salted butter caramel
+      - E501ii
+      - Flower honey
+      - Ravioli
+      - Filtered whey powder
+      - Omelette
+      - Cocoa processed with alkali
+      - Linden
+      - E957
+      - Rabbit
+      - Acerola juice
+      - Pearl Barley
+      - Fond
+      - Coconut chips
+      - Fresh butter
+      - Habanero chili
+      - White grape juice
+      - Zinc oxide
+      - Calf rennet
+      - Tagliatelle
+      - Whole grain spelt flakes
+      - Millet seed
+      - Shortcrust dough
+      - Concentrated mushroom juice
+      - Cooked pasta
+      - Chicken breast
+      - E460ii
+      - Barley flakes
+      - Phosphate
+      - Comté
+      - Cheese sauce
+      - Hard cheese
+      - Mediterranean salt
+      - Soya bean paste
+      - Orange leaves
+      - Sea-buckthorn
+      - E518
+      - Propellent gas
+      - Ground roasted coffee
+      - Sheep
+      - E579
+      - E425
+      - E444
+      - Rambutan
+      - Hemp seed
+      - Free range chicken
+      - White grape
+      - Corn salad
+      - Sweet cherry
+      - Thaï brown rice
+      - Highly fat reduced cocoa
+      - Brown beans
+      - Ananas flavouring
+      - Yellow corn
+      - Cocoa fat
+      - E129
+      - Rocket
+      - Rose hip
+      - Soluble fibre
+      - Mechanically separated meat of turkey
+      - Vanilla seeds
+      - Skimmed cows milk
+      - Vegetable extract
+      - Pistachio nuts
+      - Whole wheat
+      - Stuffed pasta
+      - Whey permeate
+      - Spring water
+      - Strong Dijon mustard
+      - Celeriac
+      - Whole spelt
+      - White wine extract
+      - Wheat cakes
+      - Traditional free-range chicken
+      - Wafer
+      - Ribwort plantain
+      - Sorghum
+      - Snail
+      - Chestnut flour
+      - Melted Emmental cheese
+      - E341i
+      - Sesame paste
+      - Cured cheese
+      - Fenugreek leaf
+      - Semi-skimmed cow's milk
+      - Wholemeal rye
+      - Rose water
+      - Spiny lobster
+      - E472d
+      - Vanilla ice cream
+      - Verbena
+      - Vegetable blend
+      - E151
+      - Vanilla powder
+      - Surimi
+      - Gingerbread
+      - Müesli
+      - Honey from Spain
+      - Ginger powder
+      - Morels
+      - Mung bean sprout
+      - E340i
+      - Cardamom seed
+      - Breadmeal
+      - Garlic extract
+      - Tapioca syrup
+      - Meadowsweet
+      - Bolognese sauce
+      - Crudités
+      - Apple pieces
+      - Poultry broth
+      - Espelette chili pepper
+      - Extra mature cheddar
+      - Argentine shortfin squid
+      - Varietal
+      - Glucose-fructose
+      - Retinyl palmitate
+      - black-beans
+      - Glutinous rice
+      - Calcium pantothenate
+      - Dried fig
+      - Turkey breast
+      - Concentrated white grape juice
+      - Mate
+      - Whole kefir
+      - Rosé wine
+      - Beef extract
+      - Pink salmon
+      - E155
+      - Lasagne
+      - Finegrained salt
+      - Selenium
+      - Coppa
+      - American lobster
+      - E540
+      - E341iii
+      - Skimmed cocoa powder
+      - Caramel flavouring
+      - Bifidobacterium lactis
+      - E1441
+      - Bitter almond
+      - Citrus fruit extract
+      - Mixed condiments
+      - Horse
+      - Prunes from Agen
+      - Low fat yogurt
+      - Natural tarragon flavouring
+      - E228
+      - Smoked salt
+      - Phylloquinone
+      - Dried vegetables
+      - Deep-sea shrimp
+      - DL-alpha tocopheryl acetate
+      - Marigold
+      - Rusk
+      - Alaskan Pollock fillet
+      - Kvass wort
+      - Onion flavouring
+      - Burnet
+      - Malt flour
+      - Feta
+      - Crème fraîche
+      - Natural cocoa flavouring
+      - Smoked sausages
+      - E336i
+      - Lemon pulpe
+      - Hydrogenated palm oil
+      - Ginseng
+      - Crab
+      - Exhausted vanilla seeds
+      - Fish gelatine
+      - Coconut milk powder
+      - Quail
+      - E900a
+      - Chicken broth
+      - Mature cheddar
+      - Orange blossom flavouring
+      - Lean duck liver
+      - Smoked cooked lardoons
+      - Apple extract
+      - E132
+      - Natural yeast
+      - Duck gizzard
+      - Peanut flour
+      - Fresh onions
+      - Angus beef
+      - Butter natural flavouring
+      - Cooked green lentils
+      - Round rice
+      - Black pepper extract
+      - Non-hydrogenated vegetable fats
+      - Poultry liver
+      - Wild rice
+      - Organic tomato
+      - Egg protein
+      - Vitamin K
+      - Walnut kernel
+      - Broccoli
+      - Whole almonds
+      - Ergocalciferol
+      - E1201
+      - Dandelion
+      - Chicory root
+      - Pecan nut
+      - Manganese
+      - E510
+      - Citrus fibre
+      - Horse meat
+      - Mascarpone
+      - Bourbon vanilla beans
+      - Water chestnut
+      - Marshmallow
+      - Lime juice concentrate
+      - Unrefined salt
+      - Black tea extract
+      - Hydrogenated fat
+      - Wild garli
+      - Syrah
+      - Turmeric powder
+      - Wild rocket
+      - Spices and spices extracts
+      - Bran
+      - Pork belly
+      - Algae extract
+      - Marc de Bourgogne
+      - Cheese flavouring
+      - E1101
+      - Kefir
+      - Fried onion
+      - Crocant	
+      - Almond flour

@@ -1,0 +1,264 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "actions",
+        "description": "actions",
+        "isExtraImport": true,
+        "detail": "actions",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "ExtensionFunction",
+        "importPath": "actions.extension_function",
+        "description": "actions.extension_function",
+        "isExtraImport": true,
+        "detail": "actions.extension_function",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "rasa_sdk",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "DomainDict",
+        "importPath": "rasa_sdk.types",
+        "description": "rasa_sdk.types",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.types",
+        "documentation": {}
+    },
+    {
+        "label": "FormValidationAction",
+        "importPath": "rasa_sdk.forms",
+        "description": "rasa_sdk.forms",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CollectingDispatcher",
+        "importPath": "rasa_sdk.executor",
+        "description": "rasa_sdk.executor",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.executor",
+        "documentation": {}
+    },
+    {
+        "label": "SlotSet",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "UserUtteranceReverted",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationPaused",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventType",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "FoodAPI",
+        "importPath": "actions.api.food_api",
+        "description": "actions.api.food_api",
+        "isExtraImport": true,
+        "detail": "actions.api.food_api",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "file",
+        "kind": 5,
+        "importPath": "actions.api.api_testing",
+        "description": "actions.api.api_testing",
+        "peekOfCode": "file = open(\"./data/chicken.json\")\ndata = json.load(file)\nprint(data[\"hits\"][0][\"recipe\"][\"label\"])\n# print(data)\n# ingredients = {\n#     \"chicken\",\n#     \"fish\",\n#     \"egg\",\n#     \"beaf\",\n#     \"banana\",",
+        "detail": "actions.api.api_testing",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "actions.api.api_testing",
+        "description": "actions.api.api_testing",
+        "peekOfCode": "data = json.load(file)\nprint(data[\"hits\"][0][\"recipe\"][\"label\"])\n# print(data)\n# ingredients = {\n#     \"chicken\",\n#     \"fish\",\n#     \"egg\",\n#     \"beaf\",\n#     \"banana\",\n# }",
+        "detail": "actions.api.api_testing",
+        "documentation": {}
+    },
+    {
+        "label": "FoodAPI",
+        "kind": 6,
+        "importPath": "actions.api.food_api",
+        "description": "actions.api.food_api",
+        "peekOfCode": "class FoodAPI:\n    @staticmethod\n    def get_food_recipe(ingredients: str) -> str:\n        try:\n            jsonData = ExtensionFunction.getJsonFILE(\n                f\"src/actions/api/data/{ingredients}.json\"\n            )\n            return jsonData[\"hits\"][0][\"recipe\"][\"label\"]\n        except Exception as e:\n            params = {",
+        "detail": "actions.api.food_api",
+        "documentation": {}
+    },
+    {
+        "label": "ActionSearchFoodRecipe",
+        "kind": 6,
+        "importPath": "actions.actions",
+        "description": "actions.actions",
+        "peekOfCode": "class ActionSearchFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_search_food_recipe\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        entities = [",
+        "detail": "actions.actions",
+        "documentation": {}
+    },
+    {
+        "label": "ActionGetFoodRecipe",
+        "kind": 6,
+        "importPath": "actions.actions",
+        "description": "actions.actions",
+        "peekOfCode": "class ActionGetFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_get_food_recipe\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        ingredients = tracker.get_slot(\"ingredients\")",
+        "detail": "actions.actions",
+        "documentation": {}
+    },
+    {
+        "label": "edamam_url_endpoint",
+        "kind": 5,
+        "importPath": "actions.config",
+        "description": "actions.config",
+        "peekOfCode": "edamam_url_endpoint = \"https://api.edamam.com/api/recipes/v2\"\nedamam_app_id = os.environ.get(\"EDAMAM_APP_ID\", \"d736f71a\")\nedamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
+        "detail": "actions.config",
+        "documentation": {}
+    },
+    {
+        "label": "edamam_app_id",
+        "kind": 5,
+        "importPath": "actions.config",
+        "description": "actions.config",
+        "peekOfCode": "edamam_app_id = os.environ.get(\"EDAMAM_APP_ID\", \"d736f71a\")\nedamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
+        "detail": "actions.config",
+        "documentation": {}
+    },
+    {
+        "label": "edamam_app_key",
+        "kind": 5,
+        "importPath": "actions.config",
+        "description": "actions.config",
+        "peekOfCode": "edamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
+        "detail": "actions.config",
+        "documentation": {}
+    },
+    {
+        "label": "ingredient_data_path",
+        "kind": 5,
+        "importPath": "actions.config",
+        "description": "actions.config",
+        "peekOfCode": "ingredient_data_path = \"src/actions/api/data\"",
+        "detail": "actions.config",
+        "documentation": {}
+    },
+    {
+        "label": "ExtensionFunction",
+        "kind": 6,
+        "importPath": "actions.extension_function",
+        "description": "actions.extension_function",
+        "peekOfCode": "class ExtensionFunction:\n    @staticmethod\n    def getJsonFILE(path: str) -> json:\n        cur_path = os.path.dirname(__file__)\n        relative_path = os.path.relpath(path, cur_path)\n        print(relative_path)\n        file = open(relative_path)\n        return json.load(file)",
+        "detail": "actions.extension_function",
+        "documentation": {}
+    }
+]
