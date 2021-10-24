@@ -3,6 +3,25 @@ version: "2.0"
 nlu:
   - intent: food_recipe
     examples: |
-      - What is food
-      - is food good?
-      - I hate food
+      - What is [rice](ingredient)
+      - is [apple](ingredient) good?
+      - what recipe with [rice](ingredient)
+      - what dish come with [apple](ingredient)
+      - are there any good [fish](ingredient) dish
+      - can you show few [meat](ingredient)
+      - I want to make some food with [tuna](ingredient)
+      - What can i cook with [brocoli](ingredient)
+      - Which are [carrot](ingredient) ?
+      - can I make anything with [carrot](ingredient)
+      - I want to make something with [chicken](ingredient)
+      - What is [Barking](preparation_technique)
+      - what recipe with [Barking](preparation_technique)
+      - what dish come with [Barking](preparation_technique)
+      - are there any good [Barking](preparation_technique) dish
+      - can you show few [Frying](preparation_technique)
+      - I want to make some food with [Dying](preparation_technique)
+      - What can i cook with [Dying](preparation_technique)
+      - can I make anything with [Boiling](preparation_technique)
+      - I want to make something with [Deep Frying](preparation_technique)
+
+

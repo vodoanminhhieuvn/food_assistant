@@ -11,6 +11,7 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
+    entity_recognition: false
     epochs: 200
     ranking_length: 5
   - name: DucklingEntityExtractor
@@ -19,6 +20,10 @@ pipeline:
       - email
       - number
       - amount-of-money
+  - name: RegexEntityExtractor
+    case_sensitive: False
+    use_lookup_tables: True
+    use_regexes: True
   - name: EntitySynonymMapper
   - name: ResponseSelector
     retrieval_intent: out_of_scope
