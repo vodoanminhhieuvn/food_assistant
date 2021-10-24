@@ -11,9 +11,9 @@ pipeline:
     min_ngram: 1
     max_ngram: 4
   - name: DIETClassifier
+    entity_recognition: false
     epochs: 200
     ranking_length: 5
-    entity_recognition: false
   - name: DucklingEntityExtractor
     url: http://localhost:8000
     dimensions:

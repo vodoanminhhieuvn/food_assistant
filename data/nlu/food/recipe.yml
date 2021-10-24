@@ -15,6 +15,11 @@ nlu:
       - can I make anything with [carrot](food_recipe)
       - I want to make something with [chicken](food_recipe)
 
+  - intent: calo_number
+    examples: |
+      - have 500
+      - calo >500
+
   - lookup: food_recipe
     examples: |
       - carrot
@@ -25,3 +30,53 @@ nlu:
       - pineapple
       - pig meat
       - chicken
+
+  - lookup: food_preparation_techniques
+    examples: |
+      - Baking
+      - Blind-baking
+      - Boiling
+      - Blanching
+      - Braising
+      - Coddling
+      - Infusion
+      - Pressure cooking
+      - Simmering
+      - Poaching
+      - Steaming
+      - Double steaming
+      - Steeping
+      - Stewing
+      - Vacuum flask cooking
+      - Grilling
+      - Barbecuing
+      - Frying
+      - Deep frying
+      - Gentle frying
+      - Hot salt frying
+      - Pan frying
+      - Pressure frying
+      - Sautéing
+      - Shallow frying
+      - Stir frying
+      - Microwave oven
+      - Roasting
+      - Rotisserie
+      - Searing
+      - Smoking
+      - Brining
+      - Ceviche
+      - Drying
+      - Fermentation
+      - Marinating
+      - Saikyoyaki
+      - Pickling
+      - Salting
+      - Seasoning
+      - Souring
+      - Sprouting
+      - Sugaring
+      - Basting
+      - Kneading
+      - Mixing
+      - Blending
