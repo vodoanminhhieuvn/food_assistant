@@ -3,50 +3,59 @@ version: "2.0"
 nlu:
   - lookup: preparation_technique
     examples: |
-      - Baking
-      - Blind-baking
-      - Boiling
-      - Blanching
-      - Braising
-      - Coddling
-      - Infusion
-      - Pressure cooking
-      - Simmering
-      - Poaching
-      - Steaming
-      - Double steaming
-      - Steeping
-      - Stewing
-      - Vacuum flask cooking
-      - Grilling
-      - Barbecuing
-      - Frying
-      - Deep frying
-      - Gentle frying
-      - Hot salt frying
-      - Pan frying
-      - Pressure frying
-      - Sautéing
-      - Shallow frying
-      - Stir frying
-      - Microwave oven
-      - Roasting
-      - Rotisserie
-      - Searing
-      - Smoking
-      - Brining
-      - Ceviche
-      - Drying
-      - Fermentation
-      - Marinating
-      - Saikyoyaki
-      - Pickling
-      - Salting
-      - Seasoning
-      - Souring
-      - Sprouting
-      - Sugaring
-      - Basting
-      - Kneading
-      - Mixing
+      - Baking 
+      - Blind-baking 
+      - Boiling 
+      - Blanching 
+      - Braising 
+      - Coddling 
+      - Infusion 
+      - Pressure cooking 
+      - Simmering 
+      - Poaching 
+      - Steaming 
+      - Double steaming 
+      - Steeping 
+      - Stewing 
+      - Vacuum flask cooking 
+      - Grilling 
+      - Barbecuing 
+      - Frying 
+      - Deep frying 
+      - Gentle frying 
+      - Hot salt frying 
+      - Pan frying 
+      - Pressure frying 
+      - Sautéing 
+      - Shallow frying 
+      - Stir frying 
+      - Microwave oven 
+      - Roasting 
+      - Rotisserie 
+      - Searing 
+      - Smoking 
+      - Brining 
+      - Ceviche 
+      - Drying 
+      - Fermentation 
+      - Marinating 
+      - Saikyoyaki 
+      - Pickling 
+      - Salting 
+      - Seasoning 
+      - Souring 
+      - Sprouting 
+      - Sugaring 
+      - Basting 
+      - Cutting 
+      - Dicing 
+      - Grating  
+      - Julienning  
+      - Mincing  
+      - Peeling  
+      - Shaving  
+      - chiffonade 
+      - Milling 
+      - Kneading 
+      - Mixing 
       - Blending

@@ -1,32 +1,64 @@
 version: "2.0"
 stories:
-  - story: happy path
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: food_recipe
-      - action: action_search_food_recipe
-      - intent: mood_great
-      - action: utter_happy
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: food_recipe
+  - action: action_search_food_recipe
+  - intent: mood_great
+  - action: utter_happy
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: food recipe path 1
+  steps:
+  - slot_was_set:
+    - ingredient: rice
+  - action: utter_food_recipe
+  - intent: food_recipe
+    entities:
+    - ingredient: apple
+  - slot_was_set:
+    - ingredient: apple
+  - action: action_search_food_recipe
 
-  - story: sad path 1
-    steps:
-      - intent: greet
-      - action: utter_greet
-      - intent: mood_unhappy
-      - action: utter_cheer_up
-      - action: utter_did_that_help
-      - intent: affirm
-      - action: utter_happy
-
-  - story: food recipe path 1
-    steps:
-      - slot_was_set:
-          - ingredient: rice
-      - action: utter_food_recipe
-      - intent: food_recipe
-        entities:
-          - ingredient: apple
-      - slot_was_set:
-          - ingredient: apple
-      - action: action_search_food_recipe
+- story: food recipe path 2
+  steps:
+  - action: action_search_food_recipe
+  - slot_was_set:
+    - ingredient: water
+  - intent: food_recipe
+    entities:
+    - ingredient: rice
+    - ingredient: water
+  - slot_was_set:
+    - ingredient: water
+  - intent: food_recipe
+    entities:
+    - preparation_technique: frying
+  - action: action_search_food_recipe
+  - slot_was_set:
+    - recipe_parts:
+      - entity: ingredient
+        start: -20
+        end: -16
+        value: rice
+        extractor: RegexEntityExtractor
+      - entity: ingredient
+        start: -11
+        end: -6
+        value: water
+        extractor: RegexEntityExtractor
+      - entity: preparation_technique
+        start: -6
+        end: 0
+        value: frying
+        extractor: RegexEntityExtractor
+  - action: action_get_food_recipe
