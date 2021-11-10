@@ -1,0 +1,33 @@
+version: "2.0"
+nlu:
+- intent: ask_for_calory
+  examples: |
+    - Calory >[500](calory_min)
+    - Calory <[500](calory_max)
+    - Calory [>500]{"entity": "calory_min", "value": "500"}
+    - Calory [<500]{"entity": "calory_max", "value": "500"}
+    - I need calory >[123](calory_min)
+    - I need calory <[540](calory_max)
+    - How about < [500](calory_max) calo
+    - How about > [500](calory_min) calo
+    - How about [<500]{"entity": "calory_max", "value": "500"} calo
+    - How about [>500]{"entity": "calory_min", "value": "500"} calo
+    - <[500](calory_max) calory please
+    - >[230](calory_min) calory
+    - <500[](calory_max) calory please
+    - >230[](calory_min) calory
+    - calo > [333](calory_min) is okay
+    - calo < [333](calory_max) is okay
+    - calo [>333]{"entity": "calory_min", "value": "333"} is okay
+    - calo [<333]{"entity": "calory_max", "value": "333"} is okay
+    - calo > [333](calory_min) < [555](calory_max)
+    - calo < [555](calory_max) > [533](calory_min)
+    - calory >[500](calory_min) please
+    - calory > [500](calory_min) please
+    - calory < [500](calory_max) please
+    - can you give me calory < [500](calory_max)
+    - i need lower than [400](calory_max)
+    - food has > [500](calory_min) and < [650](calory_max)
+    - food has < [230](calory_max)
+
+    

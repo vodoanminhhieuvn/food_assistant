@@ -28,6 +28,8 @@ entities:
 - ingredientReg
 - preparation_technique
 - or
+- calory_min
+- calory_max
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot
