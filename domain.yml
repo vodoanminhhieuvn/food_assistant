@@ -30,6 +30,8 @@ entities:
 - or
 - calory_min
 - calory_max
+- fat_min
+- fat_max
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot

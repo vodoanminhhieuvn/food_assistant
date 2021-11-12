@@ -8,12 +8,16 @@ nlu:
     - Calory [<500]{"entity": "calory_max", "value": "500"}
     - I need calory >[123](calory_min)
     - I need calory <[540](calory_max)
+    - I need [calory >123]{"entity": "calory_min", "value": "123"}
+    - I need [calory <540]{"entity": "calory_max", "value": "540"}
     - How about < [500](calory_max) calo
     - How about > [500](calory_min) calo
     - How about [<500]{"entity": "calory_max", "value": "500"} calo
     - How about [>500]{"entity": "calory_min", "value": "500"} calo
     - <[500](calory_max) calory please
     - >[230](calory_min) calory
+    - <[500 calory]{"entity": "calory_max", "value": "500"}  please
+    - >[230 calory]{"entity": "calory_min", "value": "230"} calory
     - <500[](calory_max) calory please
     - >230[](calory_min) calory
     - calo > [333](calory_min) is okay
@@ -29,5 +33,40 @@ nlu:
     - i need lower than [400](calory_max)
     - food has > [500](calory_min) and < [650](calory_max)
     - food has < [230](calory_max)
+- intent: ask_for_fat
+  examples: |
+    - fat >[500](fat_min)
+    - fat <[500](fat_max)
+    - fat [>500]{"entity": "fat_min", "value": "500"}
+    - fat [<500]{"entity": "fat_max", "value": "500"}
+    - [fat > 500]{"entity": "fat_min", "value": "500"}
+    - [fat < 500]{"entity": "fat_max", "value": "500"}
+    - I need fat >[123](fat_min)
+    - I need fat <[540](fat_max)
+    - I need [fat > 123]{"entity": "fat_min", "value": "123"}
+    - I need [fat < 540]{"entity": "fat_max", "value": "540"}
+    - How about < [500](fat_max) fat
+    - How about > [500](fat_min) fat
+    - How about [<500]{"entity": "fat_max", "value": "500"} fat
+    - How about [>500]{"entity": "fat_min", "value": "500"} fat
+    - <[500](fat_max) fat please
+    - >[230](fat_min) fat
+    - <[500 fat]{"entity": "fat_max", "value": "500"}  please
+    - >[230 fat]{"entity": "fat_min", "value": "230"} fat
+    - <500[](fat_max) fat please
+    - >230[](fat_min) fat
+    - fat > [333](fat_min) is okay
+    - fat < [333](fat_max) is okay
+    - fat [>333]{"entity": "fat_min", "value": "333"} is okay
+    - fat [<333]{"entity": "fat_max", "value": "333"} is okay
+    - fat > [333](fat_min) < [555](fat_max)
+    - fat < [555](fat_max) > [533](fat_min)
+    - fat >[500](fat_min) please
+    - fat > [500](fat_min) please
+    - fat < [500](fat_max) please
+    - can you give me fat < [500](fat_max)
+    - i need lower than [400](fat_max)
+    - food has > [500](fat_min) and < [650](fat_max)
+    - food has < [230](fat_max)
 
     
