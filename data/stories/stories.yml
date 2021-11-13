@@ -62,6 +62,6 @@ stories:
         extractor: RegexEntityExtractor
 - story: food nutrient path
   steps:
-  - intent: ask_for_calory
-  - action: action_get_calory
+  - intent: ask_for_nutrient
+  - action: action_get_nutrient
 

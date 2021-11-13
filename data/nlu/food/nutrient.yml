@@ -1,6 +1,6 @@
 version: "2.0"
 nlu:
-- intent: ask_for_[calory](nutrient)
+- intent: ask_for_nutrient
   examples: |
     - [calo] [<500]{"entity": "max", "value": "500"}
     - I need [calory](nutrient) <[540](max)

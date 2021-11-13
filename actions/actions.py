@@ -15,6 +15,7 @@ from rasa_sdk.events import (
 import os
 
 from actions.api.food_api import FoodAPI
+from actions.food_utils import Nutrients
 
 
 class ActionSearchFoodRecipe(Action):
@@ -172,51 +173,76 @@ class ActionGetFoodRecipe(Action):
 
         return []
 
+""" [nutrient_slot] to set Slot after calling Get Nutrient """
+nutrient_slots = {
+    "calory_min": None,
+    "calory_max": None,
+    "fat_min": None,
+    "fat_max": None,
+}
 
-
-class ActionGetCalory(Action):
+class ActionGetNutrient(Action):
     def name(self) -> Text:
-        return "action_get_calory"
+        return "action_get_nutrient"
 
-    def run(
+    async def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        min_values = []
-        max_values = []
-        nutrient_values = []
 
-        tracker_entities = tracker.latest_message['entities']
+        min_value = []
+        max_value = []
+        nutrient_type = []
+
+        tracker_entities = tracker.latest_message["entities"]
 
         for entity in tracker_entities:
-            if (entity["entity"] == "min"):
-                min_values.append(entity["value"])
-            elif (entity["entity"] == "max"):
-                max_values.append(entity["value"])
-            elif (entity["entity"] == "nutrient"):
-                nutrient_values.append(entity["value"])
+            if entity["entity"] == "min":
+                min_value.append(entity["value"])
+            elif entity["entity"] == "max":
+                max_value.append(entity["value"])
+            elif entity["entity"] == "nutrient":
+                nutrient_type.append(entity["value"])
                 
-        if (len(min_values) >= 2):
-            return self._too_much_info(
-                dispatcher, "You can't input 2 minium values"
-            )
-
-        if (len(max_values) >=2):
-            return self._too_much_info(
-                dispatcher, "You can't input 2 maximum values"
-            )
-
-        if (len(nutrient_values) >= 2):
-            return self._too_much_info(
-                dispatcher, "You can't input 2 nutrient type"
-            )
+        self._check_valid_nutrient(dispatcher, nutrient_type)
+        self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
+        self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
+        
+        print(nutrient_slots)
 
         return []
-
-
+    
+    def _check_valid_nutrient(self, dispatcher, nutrient_type):
+        if len(nutrient_type) >= 2:
+            return self._too_much_info(
+                dispatcher, "You can't input 2 nutrient type values"
+            )
+        elif len(nutrient_type) != 0:  
+            valid = Nutrients.containNutrient(nutrient_type[0])
+            if not valid:
+                return []
+    
+    def _add_min_to_slot(self, dispatcher, min_values, nutrient_type):
+        if len(min_values) >= 2:
+            return self._too_much_info(
+                dispatcher, "You can't input 2 minium type values"
+            )
+        
+        elif len(min_values) != 0:
+            nutrient_slots[f"{nutrient_type}_min"] = min_values[0]
+            
+    def _add_max_to_slot(self, dispatcher, max_values, nutrient_type):
+        if len(max_values) >= 2:
+            return self._too_much_info(
+                dispatcher, "You can't input 2 maximum type values"
+            )
+        elif len(max_values) != 0:
+            nutrient_slots[f"{nutrient_type}_max"] = max_values[0]
+        
     def _too_much_info(self, dispatcher, text):
         dispatcher.utter_message(text=text)
-        dispatcher.utter_message(text="Please input only 1 value of each values")
+        dispatcher.utter_message(text="Please input only 1 value of each type")
+        
         return []

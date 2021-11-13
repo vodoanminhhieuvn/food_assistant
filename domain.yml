@@ -21,10 +21,8 @@ intents:
     use_entities: true
 - food_recipe:
     use_entities: true
-- ask_for_calory:
+- ask_for_nutrient:
     use_entities: true
-- ask_for_fat:
-    user_entities: true
 - bad_language:
     use_entities: true
 entities:
@@ -51,6 +49,14 @@ slots:
     initial_value: []
     auto_fill: true
     influence_conversation: true
+  calory_min:
+    type: float
+  calory_max:
+    type: float
+  fat_min:
+    type: float
+  fat_max:
+    type: float
 responses:
   utter_food_recipe:
   - text: Food is good
@@ -70,6 +76,6 @@ responses:
 actions:
 - action_search_food_recipe
 - action_get_food_recipe
-- action_get_calory
+- action_get_nutrient
 forms: {}
 e2e_actions: []
