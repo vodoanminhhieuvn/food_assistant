@@ -28,7 +28,6 @@ stories:
   - slot_was_set:
     - ingredient: apple
   - action: action_search_food_recipe
-
 - story: food recipe path 2
   steps:
   - action: action_search_food_recipe
@@ -61,4 +60,8 @@ stories:
         end: 0
         value: frying
         extractor: RegexEntityExtractor
-  - action: action_get_food_recipe
+- story: food nutrient path
+  steps:
+  - intent: ask_for_calory
+  - action: action_get_calory
+

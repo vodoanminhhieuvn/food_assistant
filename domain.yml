@@ -21,6 +21,10 @@ intents:
     use_entities: true
 - food_recipe:
     use_entities: true
+- ask_for_calory:
+    use_entities: true
+- ask_for_fat:
+    user_entities: true
 - bad_language:
     use_entities: true
 entities:
@@ -28,10 +32,9 @@ entities:
 - ingredientReg
 - preparation_technique
 - or
-- calory_min
-- calory_max
-- fat_min
-- fat_max
+- nutrient
+- min
+- max
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot
@@ -67,5 +70,6 @@ responses:
 actions:
 - action_search_food_recipe
 - action_get_food_recipe
+- action_get_calory
 forms: {}
 e2e_actions: []

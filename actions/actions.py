@@ -32,16 +32,23 @@ class ActionSearchFoodRecipe(Action):
         print(recipe_parts)
         entities = tracker.latest_message["entities"]
         has_ingredient_in_old = any(
-            item["entity"] == "ingredient" for item in recipe_parts)
+            item["entity"] == "ingredient" for item in recipe_parts
+        )
         has_technique_in_old = any(
-            item["entity"] == "preparation_technique" for item in recipe_parts)
-        has_ingredient_in_new = any(
-            item["entity"] == "ingredient" for item in entities)
+            item["entity"] == "preparation_technique" for item in recipe_parts
+        )
+        has_ingredient_in_new = any(item["entity"] == "ingredient" for item in entities)
         has_technique_in_new = any(
-            item["entity"] == "preparation_technique" for item in entities)
+            item["entity"] == "preparation_technique" for item in entities
+        )
 
         # Check should clear list entity
-        if has_ingredient_in_new and has_ingredient_in_old or has_technique_in_new and has_technique_in_old:
+        if (
+            has_ingredient_in_new
+            and has_ingredient_in_old
+            or has_technique_in_new
+            and has_technique_in_old
+        ):
             recipe_parts = []
 
         # Update recipe parts
@@ -54,12 +61,12 @@ class ActionSearchFoodRecipe(Action):
         results = []
         results.append(SlotSet("recipe_parts", recipe_parts))
         # Check for missing components => utter request
-        if not any(
-                item["entity"] == "ingredient" for item in recipe_parts):
+        if not any(item["entity"] == "ingredient" for item in recipe_parts):
             dispatcher.utter_message(text="Give me main ingredient")
             return results
         elif not any(
-                item["entity"] == "preparation_technique" for item in recipe_parts):
+            item["entity"] == "preparation_technique" for item in recipe_parts
+        ):
             dispatcher.utter_message(text="You can provide me a technique")
             return results
 
@@ -67,13 +74,16 @@ class ActionSearchFoodRecipe(Action):
         # Sort list
         def compareTo(e):
             return e["start"]
+
         recipe_parts.sort(key=compareTo)
 
         # Remove redundant operator
         for index, val in enumerate(recipe_parts):
-            if (val["entity"] == "or"
-                and (index == 0 or index == len(recipe_parts)-1
-                     or recipe_parts[index+1]["entity"] == "or")):
+            if val["entity"] == "or" and (
+                index == 0
+                or index == len(recipe_parts) - 1
+                or recipe_parts[index + 1]["entity"] == "or"
+            ):
                 del recipe_parts[index]
 
         print(list(map(lambda x: x["value"], recipe_parts)))
@@ -89,12 +99,15 @@ class ActionSearchFoodRecipe(Action):
         while index < len(recipe_parts):
             bl_len = len(branch_list)
             if recipe_parts[index]["entity"] == "or":
-                if recipe_parts[index-1]["entity"] == recipe_parts[index+1]["entity"]:
+                if (
+                    recipe_parts[index - 1]["entity"]
+                    == recipe_parts[index + 1]["entity"]
+                ):
                     for i in range(bl_len):
                         raw_item = branch_list[0]
                         del raw_item[-1]
-                        branch_list.append(raw_item+[recipe_parts[index-1]])
-                        branch_list.append(raw_item+[recipe_parts[index+1]])
+                        branch_list.append(raw_item + [recipe_parts[index - 1]])
+                        branch_list.append(raw_item + [recipe_parts[index + 1]])
                         del branch_list[0]
                     index += 1
             else:
@@ -108,7 +121,7 @@ class ActionSearchFoodRecipe(Action):
         for item in branch_list:
             search_list.append(item[0]["value"])
             for i in range(1, len(item)):
-                search_list[-1] += " "+item[i]["value"]
+                search_list[-1] += " " + item[i]["value"]
 
         # result utter
         results.append(SlotSet("search_list", search_list))
@@ -157,4 +170,53 @@ class ActionGetFoodRecipe(Action):
         # food_label = FoodAPI.get_food_recipe(ingredients=ingredients)
         # dispatcher.utter_message(text=f"{food_label}")
 
+        return []
+
+
+
+class ActionGetCalory(Action):
+    def name(self) -> Text:
+        return "action_get_calory"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict[Text, Any]]:
+        min_values = []
+        max_values = []
+        nutrient_values = []
+
+        tracker_entities = tracker.latest_message['entities']
+
+        for entity in tracker_entities:
+            if (entity["entity"] == "min"):
+                min_values.append(entity["value"])
+            elif (entity["entity"] == "max"):
+                max_values.append(entity["value"])
+            elif (entity["entity"] == "nutrient"):
+                nutrient_values.append(entity["value"])
+                
+        if (len(min_values) >= 2):
+            return self._too_much_info(
+                dispatcher, "You can't input 2 minium values"
+            )
+
+        if (len(max_values) >=2):
+            return self._too_much_info(
+                dispatcher, "You can't input 2 maximum values"
+            )
+
+        if (len(nutrient_values) >= 2):
+            return self._too_much_info(
+                dispatcher, "You can't input 2 nutrient type"
+            )
+
+        return []
+
+
+    def _too_much_info(self, dispatcher, text):
+        dispatcher.utter_message(text=text)
+        dispatcher.utter_message(text="Please input only 1 value of each values")
         return []
