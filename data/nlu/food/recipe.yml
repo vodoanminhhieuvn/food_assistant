@@ -3,37 +3,37 @@ nlu:
 - intent: food_recipe
   examples: |
     - What is [rice](ingredient)
-    - is [apple](ingredient) good?
-    - what recipe with [rice](ingredient)
-    - what dish come with [apple](ingredient)
-    - are there any good [fish](ingredient) dish
-    - can you show few [meat](ingredient)
-    - I want to make some food with [tuna](ingredient)
-    - What can i cook with [brocoli](ingredient)
-    - Which are [carrot](ingredient) ?
-    - can I make anything with [carrot](ingredient)
-    - I want to make something with [chicken](ingredient)
+    - is apple good?
+    - what recipe with rice
+    - what dish come with apple
+    - are there any good fish dish
+    - can you show few meat
+    - I want to make some food with tuna
+    - What can i cook with brocoli
+    - Which are carrot ?
+    - can I make anything with carrot
+    - I want to make something with chicken
     - What is [Baking](preparation_technique)
-    - what recipe with [Baking](preparation_technique)
-    - what dish come with [Baking](preparation_technique)
-    - are there any good [Baking](preparation_technique) dish
-    - can you show few [Frying](preparation_technique)
-    - I want to make some food with [Drying](preparation_technique)
-    - What can i cook with [Drying](preparation_technique)
-    - can I make anything with [Boiling](preparation_technique)
-    - I want to make something with [Deep Frying](preparation_technique)
-    - What is [rice](ingredient) [boiling](preparation_technique)
-    - is [apple](ingredient) [cutting](preparation_technique) good?
-    - what recipe with [rice](ingredient) [carrot}(ingredient) [oiling](preparation_technique)
-    - what dish come with [apple](ingredient) and [banana](ingredient)
-    - are there any good [fish](ingredient) [or](or) [pig](ingredient) [oiling](preparation_technique) dish
-    - can you show few [meat](ingredient) [drying](preparation_technique) [-](or) [oiling](preparation_technique)
-    - I want to make some food with [tuna](ingredient) [frying](preparation_technique)
-    - Which are [carrot](ingredient) [dicing](preparation_technique) and [chicken](ingredient) [milling](preparation_technique)?
-    - can I make anything with [carrot](ingredient) and [dicing](preparation_technique)?
-    - I want to make something with [chicken](ingredient) [or](or) [pig](ingredient) [milling](preparation_technique)?
-    - [frying](preparation_technique)
-    - what is [rice](ingredient) and [water](ingredient)
-    - i want to cook with [boiling](preparation_technique)
-    - what is [boiling](preparation_technique)
-    - i want to cook [boiling](preparation_technique)
+    - what recipe with Baking
+    - what dish come with Baking
+    - are there any good Baking dish
+    - can you show few Frying
+    - I want to make some food with Drying
+    - What can i cook with Drying
+    - can I make anything with Boiling
+    - I want to make something with Deep Frying
+    - What is rice boiling
+    - is apple cutting good?
+    - what recipe with rice carrot oiling
+    - what dish come with apple and banana
+    - are there any good fish or(or) pig oiling dish
+    - can you show few meat drying -(or) oiling
+    - I want to make some food with tuna frying
+    - Which are carrot dicing and chicken milling?
+    - can I make anything with carrot and dicing?
+    - I want to make something with chicken or(or) pig milling?
+    - frying
+    - what is rice and water
+    - i want to cook with boiling
+    - what is boiling
+    - i want to cook boiling

@@ -3,8 +3,7 @@ from actions import config
 import requests
 import json
 import os
-
-from actions.extension_function import ExtensionFunction
+from actions.extension.extension_function import ExtensionFunction
 
 
 class FoodAPI:
