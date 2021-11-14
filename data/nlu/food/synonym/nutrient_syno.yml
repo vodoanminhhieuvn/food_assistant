@@ -1,0 +1,22 @@
+version: "2.0"
+
+nlu:
+  - synonym: "<"
+    examples: |
+      - smaller than
+      - lower than
+      - maximum
+  - synonym: ">"
+    examples: |
+      - greater than
+      - more than
+      - minium
+  - synonym: calory
+    examples: |
+      - Calory
+      - cAloRy
+      - Calo
+      - calo
+  - synonym: fat
+    examples: |
+      - fatty

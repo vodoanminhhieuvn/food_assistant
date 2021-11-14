@@ -1,0 +1,48 @@
+version: "2.0"
+
+nlu:
+  - lookup: cuisineType
+    examples: |
+      - American
+      - Asian
+      - British
+      - Caribbean
+      - Central Europe
+      - Chinese
+      - Eastern Europe
+      - French
+      - Indian
+      - Italian
+      - Japanese
+      - Kosher
+      - Mediterranean
+      - Mexican
+  
+  - lookup: mealType
+    examples: |
+      - Breakfast
+      - Dinner
+      - Lunch
+      - Snack
+      - Teatime
+  
+  - lookup: diskType
+    examples: |
+      - Biscuits and cookies
+      - Bread
+      - Cereal
+      - Condiments and sauces
+      - Desserts
+      - Dessert
+      - Drink
+      - Main course
+      - Pancake
+      - Preps
+      - Preserve
+      - Salad
+      - Sandwiches
+      - Side dish
+      - Soup
+      - Starter
+      - Sweets
+      

@@ -1,76 +1,56 @@
 version: "2.0"
 nlu:
-- intent: ask_for_nutrient
-  examples: |
-    - [calo] [<500]{"entity": "max", "value": "500"}
-    - I need [calory](nutrient) <[540](max)
-    - How about < [500](max) calo
-    - How about > [500](min) calo
-    - How about [<500]{"entity": "max", "value": "500"} calo
-    - How about [>500]{"entity": "min", "value": "500"} calo
-    - <[500](max) [calory](nutrient) please
-    - >[230](min) [calory](nutrient)
-    - <[500]{"entity": "max", "value": "500"}  please
-    - >[230]{"entity": "min", "value": "230"} [calory](nutrient)
-    - <500[](max) [calory](nutrient) please
-    - >230[](min) [calory](nutrient)
-    - calo > [333](min) is okay
-    - calo < [333](max) is okay
-    - calo [>333]{"entity": "min", "value": "333"} is okay
-    - calo [<333]{"entity": "max", "value": "333"} is okay
-    - calo > [333](min) < [555](max)
-    - calo < [555](max) > [533](min)
-    - [calory](nutrient) >[500](min) please
-    - [calory](nutrient) > [500](min) please
-    - [calory](nutrient) < [500](max) please
-    - can you give me [calory](nutrient) < [500](max)
-    - i need lower than [400](max)
-    - food has > [500](min) and < [650](max)
-    - food has < [230](max)
-    - [fat](nutrient) >[500](min)
-    - [fat](nutrient) <[500](max)
-    - [fat](nutrient) [>500]{"entity": "min", "value": "500"}
-    - [fat](nutrient) [<500]{"entity": "max", "value": "500"}
-    - I need [fat](nutrient) >[123](min)
-    - I need [fat](nutrient) <[540](max)
-    - How about < [500](max) [fat](nutrient)
-    - How about > [500](min) [fat](nutrient)
-    - How about [<500]{"entity": "max", "value": "500"} [fat](nutrient)
-    - How about [>500]{"entity": "min", "value": "500"} [fat](nutrient)
-    - <[500](max) [fat](nutrient) please
-    - >[230](min) [fat](nutrient)
-    - <500[](max) [fat](nutrient) please
-    - >230[](min) [fat](nutrient)
-    - [fat](nutrient) > [333](min) is okay
-    - [fat](nutrient) < [333](max) is okay
-    - [fat](nutrient) [>333]{"entity": "min", "value": "333"} is okay
-    - [fat](nutrient) [<333]{"entity": "max", "value": "333"} is okay
-    - [fat](nutrient) > [333](min) < [555](max)
-    - [fat](nutrient) < [555](max) > [533](min)
-    - [fat](nutrient) >[500](min) please
-    - [fat](nutrient) > [500](min) please
-    - [fat](nutrient) < [500](max) please
-    - can you give me [fat](nutrient) < [500](max)
-    - i need lower than [400](max) [fat](nutrient)
-    - food has > [500](min) and < [650](max) [fat](nutrient)
-    - food has < [230](max) [fat](nutrient)
-
-- synonym: '<'
-  examples: |
-    - smaller than
-    - lower than
-    - maximum
-- synonym: '>'
-  examples: |
-    - greater than
-    - more than
-    - minium
-- synonym: calory
-  examples: |
-    - Calory
-    - cAloRy
-    - Calo
-    - calo
-- synonym: fat
-  examples: |
-    - fatty
+  - intent: ask_for_nutrient
+    examples: |
+      - [calo] [<500]{"entity": "max", "value": "500"}
+      - I need [calory](nutrient) <[540](max)
+      - How about < [500](max) calo
+      - How about > [500](min) calo
+      - How about [<500]{"entity": "max", "value": "500"} calo
+      - How about [>500]{"entity": "min", "value": "500"} calo
+      - <[500](max) [calory](nutrient) please
+      - >[230](min) [calory](nutrient)
+      - <[500]{"entity": "max", "value": "500"}  please
+      - >[230]{"entity": "min", "value": "230"} [calory](nutrient)
+      - <500[](max) [calory](nutrient) please
+      - >230[](min) [calory](nutrient)
+      - calo > [333](min) is okay
+      - calo < [333](max) is okay
+      - calo [>333]{"entity": "min", "value": "333"} is okay
+      - calo [<333]{"entity": "max", "value": "333"} is okay
+      - calo > [333](min) < [555](max)
+      - calo < [555](max) > [533](min)
+      - [calory](nutrient) >[500](min) please
+      - [calory](nutrient) > [500](min) please
+      - [calory](nutrient) < [500](max) please
+      - can you give me [calory](nutrient) < [500](max)
+      - i need lower than [400](max)
+      - food has > [500](min) and < [650](max)
+      - food has < [230](max)
+      - [fat](nutrient) >[500](min)
+      - [fat](nutrient) <[500](max)
+      - [fat](nutrient) [>500]{"entity": "min", "value": "500"}
+      - [fat](nutrient) [<500]{"entity": "max", "value": "500"}
+      - I need [fat](nutrient) >[123](min)
+      - I need [fat](nutrient) <[540](max)
+      - How about < [500](max) [fat](nutrient)
+      - How about > [500](min) [fat](nutrient)
+      - How about [<500]{"entity": "max", "value": "500"} [fat](nutrient)
+      - How about [>500]{"entity": "min", "value": "500"} [fat](nutrient)
+      - <[500](max) [fat](nutrient) please
+      - >[230](min) [fat](nutrient)
+      - <500[](max) [fat](nutrient) please
+      - >230[](min) [fat](nutrient)
+      - [fat](nutrient) > [333](min) is okay
+      - [fat](nutrient) < [333](max) is okay
+      - [fat](nutrient) [>333]{"entity": "min", "value": "333"} is okay
+      - [fat](nutrient) [<333]{"entity": "max", "value": "333"} is okay
+      - [fat](nutrient) > [333](min) < [555](max)
+      - [fat](nutrient) < [555](max) > [533](min)
+      - [fat](nutrient) >[500](min) please
+      - [fat](nutrient) > [500](min) please
+      - [fat](nutrient) < [500](max) please
+      - can you give me [fat](nutrient) < [500](max)
+      - i need lower than [400](max) [fat](nutrient)
+      - food has > [500](min) and < [650](max) [fat](nutrient)
+      - food has < [230](max) [fat](nutrient)

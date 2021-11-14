@@ -1,7 +1,6 @@
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
-import rasa_sdk
 from rasa_sdk.types import DomainDict
 from rasa_sdk.forms import FormValidationAction
 from rasa_sdk.executor import CollectingDispatcher

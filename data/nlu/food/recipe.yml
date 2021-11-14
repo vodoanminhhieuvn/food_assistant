@@ -1,39 +1,39 @@
 version: "2.0"
 nlu:
-- intent: food_recipe
-  examples: |
-    - What is [rice](ingredient)
-    - is apple good?
-    - what recipe with rice
-    - what dish come with apple
-    - are there any good fish dish
-    - can you show few meat
-    - I want to make some food with tuna
-    - What can i cook with brocoli
-    - Which are carrot ?
-    - can I make anything with carrot
-    - I want to make something with chicken
-    - What is [Baking](preparation_technique)
-    - what recipe with Baking
-    - what dish come with Baking
-    - are there any good Baking dish
-    - can you show few Frying
-    - I want to make some food with Drying
-    - What can i cook with Drying
-    - can I make anything with Boiling
-    - I want to make something with Deep Frying
-    - What is rice boiling
-    - is apple cutting good?
-    - what recipe with rice carrot oiling
-    - what dish come with apple and banana
-    - are there any good fish or(or) pig oiling dish
-    - can you show few meat drying -(or) oiling
-    - I want to make some food with tuna frying
-    - Which are carrot dicing and chicken milling?
-    - can I make anything with carrot and dicing?
-    - I want to make something with chicken or(or) pig milling?
-    - frying
-    - what is rice and water
-    - i want to cook with boiling
-    - what is boiling
-    - i want to cook boiling
+  - intent: food_recipe
+    examples: |
+      - What is [rice](ingredient)
+      - is apple good?
+      - what recipe with rice
+      - what dish come with apple
+      - are there any good fish dish
+      - can you show few meat
+      - I want to make some food with tuna
+      - What can i cook with brocoli
+      - Which are carrot ?
+      - can I make anything with carrot
+      - I want to make something with chicken
+      - What is [Baking](preparation_technique)
+      - what recipe with Baking
+      - what dish come with Baking
+      - are there any good Baking dish
+      - can you show few Frying
+      - I want to make some food with Drying
+      - What can i cook with Drying
+      - can I make anything with Boiling
+      - I want to make something with Deep Frying
+      - What is rice boiling
+      - is apple cutting good?
+      - what recipe with rice carrot oiling
+      - what dish come with apple and banana
+      - are there any good fish or(or) pig oiling dish
+      - can you show few meat drying -(or) oiling
+      - I want to make some food with tuna frying
+      - Which are carrot dicing and chicken milling?
+      - can I make anything with carrot and dicing?
+      - I want to make something with chicken or(or) pig milling?
+      - frying
+      - what is rice and water
+      - i want to cook with boiling
+      - what is boiling
+      - i want to cook boiling
