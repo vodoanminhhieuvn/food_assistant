@@ -1,6 +1,15 @@
 version: "2.0"
 
 nlu:
+  - intent: finish
+    examples: |
+      - That's all
+      - That's all i need
+      - search food for me please
+      - Done
+      - finish
+      - get food
+
   - intent: greet
     examples: |
       - hey

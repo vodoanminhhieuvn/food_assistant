@@ -11,15 +11,14 @@ from rasa_sdk.events import (
     EventType,
 )
 
-import os
-
-from actions.api.food_api import FoodAPI
 from actions.utils.food_utils import Nutrients
+
+
 class ActionSearchFoodRecipe(Action):
     def name(self) -> Text:
         return "action_search_food_recipe"
 
-    def run(
+    async def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
@@ -167,5 +166,5 @@ class ActionGetFoodRecipe(Action):
 
         # food_label = FoodAPI.get_food_recipe(ingredients=ingredients)
         # dispatcher.utter_message(text=f"{food_label}")
-    
+
         return []

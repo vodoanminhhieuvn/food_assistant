@@ -1,0 +1,53 @@
+version: "2.0"
+
+nlu:
+  - intent: clear_nutrient
+    examples: |
+      - reset [all](nutrient_reset_option) nutrient
+      - reset [all](nutrient_reset_option) nutrient
+      - reset [a](nutrient_reset_option) nutrient
+      - can you reset [all](nutrient_reset_option) nutrient
+      - clear [all](nutrient_reset_option) nutrient
+      - clear [min](nutrient_reset_option) nutrient
+      - clear [max](nutrient_reset_option) nutrient
+      - reset nutrient [all](nutrient_reset_option)
+      - reset nutrient [all](nutrient_reset_option)
+      - reset nutrient [a](nutrient_reset_option)
+      - can you reset nutrient [all](nutrient_reset_option)
+      - clear nutrient [all](nutrient_reset_option)
+      - clear nutrient [min](nutrient_reset_option)
+      - clear nutrient [max](nutrient_reset_option)
+
+  - intent: clear_fat
+    examples: |
+      - reset [all](nutrient_reset_option) fat
+      - reset [all](nutrient_reset_option) fat
+      - reset [a](nutrient_reset_option) fat
+      - can you reset [all](nutrient_reset_option) fat
+      - clear [all](nutrient_reset_option) fat
+      - clear [min](nutrient_reset_option) fat
+      - clear [max](nutrient_reset_option) fat
+      - reset fat [all](nutrient_reset_option)
+      - reset fat [all](nutrient_reset_option)
+      - reset fat [a](nutrient_reset_option)
+      - can you reset fat [all](nutrient_reset_option)
+      - clear fat [all](nutrient_reset_option)
+      - clear fat [min](nutrient_reset_option)
+      - clear fat [max](nutrient_reset_option)
+
+  - intent: clear_calory
+    examples: |
+      - reset [all](nutrient_reset_option) calory
+      - reset [all](nutrient_reset_option) calory
+      - reset [a](nutrient_reset_option) calory
+      - can you reset [all](nutrient_reset_option) calory
+      - clear [all](nutrient_reset_option) calory
+      - clear [min](nutrient_reset_option) calory
+      - clear [max](nutrient_reset_option) calory
+      - reset calory [all](nutrient_reset_option)
+      - reset calory [all](nutrient_reset_option)
+      - reset calory [a](nutrient_reset_option)
+      - can you reset calory [all](nutrient_reset_option)
+      - clear calory [all](nutrient_reset_option)
+      - clear calory [min](nutrient_reset_option)
+      - clear calory [max](nutrient_reset_option)

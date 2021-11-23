@@ -11,23 +11,28 @@ from rasa_sdk.events import (
     ConversationPaused,
     EventType,
 )
-from actions.api.get_api import SpoonAPI
 
-from actions.models.slots import Slot
+from actions.api.get_api import SpoonAPI, get_edamam_config
 
 
-class ActionFinishAsking(Action):
+class ActionClearData(Action):
     def name(self) -> Text:
-        return "action_get_data"
+        return "action_clear_data"
 
-    async def run(
+    def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        print(tracker.latest_message)
         SpoonAPI.getRecipes()
-        print(Slot.nutrient_slots)
+        # tracker_intent = tracker.latest_message["intent"]
+        # tracker_entities = tracker.latest_message["entities"]
+        # print(tracker_intent)
+        # print(tracker_entities)
 
-        return []
+    def clear_calory():
+        print("Clear calory")
+
+    def clear_fat():
+        print("Clear fat")

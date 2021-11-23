@@ -1,0 +1,21 @@
+version: "2.0"
+nlu:
+  - synonym: reset_all
+    examples: |
+      - full
+      - all
+      - -a
+      - --all
+      - reset all
+
+  - synonym: reset_min
+    examples: |
+      - min
+      - minium
+      - reset min
+
+  - synonym: reset_max
+    examples: |
+      - max
+      - maximum
+      - reset max

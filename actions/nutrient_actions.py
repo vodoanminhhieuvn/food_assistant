@@ -12,18 +12,9 @@ from rasa_sdk.events import (
 )
 
 import os
-
-from actions.api.food_api import FoodAPI
+from actions.models.message_tracker_model import MessageTracker
+from actions.models.slots import Slot, slot
 from actions.utils.food_utils import Nutrients
-
-
-""" [nutrient_slot] to set Slot after calling Get Nutrient """
-nutrient_slots = {
-    "calory_min": None,
-    "calory_max": None,
-    "fat_min": None,
-    "fat_max": None,
-}
 
 
 class ActionGetNutrient(Action):
@@ -41,23 +32,25 @@ class ActionGetNutrient(Action):
         max_value = []
         nutrient_type = []
 
-        tracker_entities = tracker.latest_message["entities"]
+        message_tracker = MessageTracker(**tracker.latest_message)
 
-        for entity in tracker_entities:
-            if entity["entity"] == "min":
-                min_value.append(entity["value"])
-            elif entity["entity"] == "max":
-                max_value.append(entity["value"])
-            elif entity["entity"] == "nutrient":
-                nutrient_type.append(entity["value"])
+        slot.nutrient_slots.minCalories = 500
+        slot.nutrient_slots.maxCalories = 50
+        print(slot.nutrient_slots)
 
-        self._check_valid_nutrient(dispatcher, nutrient_type)
-        self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
-        self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
+        # for entity in message_tracker.entities:
+        #     if entity.type == "min":
+        #         min_value.append(entity.value)
+        #     elif entity.type == "max":
+        #         max_value.append(entity.value)
+        #     elif entity.type == "nutrient":
+        #         nutrient_type.append(entity.value)
 
-        print(nutrient_slots)
+        # self._check_valid_nutrient(dispatcher, nutrient_type)
+        # self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
+        # self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
 
-        return [SlotSet(slot, value) for slot, value in nutrient_slots.items()]
+        return []
 
     def _check_valid_nutrient(
         self, dispatcher: CollectingDispatcher, nutrient_type: list
@@ -80,7 +73,7 @@ class ActionGetNutrient(Action):
             )
 
         elif len(min_values) != 0:
-            nutrient_slots[f"{nutrient_type}_min"] = min_values[0]
+            Slot.set_nutrient_attr(f"min{nutrient_type}", min_values[0])
 
     def _add_max_to_slot(
         self, dispatcher: CollectingDispatcher, max_values: list, nutrient_type: str
@@ -89,8 +82,9 @@ class ActionGetNutrient(Action):
             return self._too_much_info(
                 dispatcher, "You can't input 2 maximum type values"
             )
+
         elif len(max_values) != 0:
-            nutrient_slots[f"{nutrient_type}_max"] = max_values[0]
+            Slot.set_nutrient_attr(f"min{nutrient_type}", max_values[0])
 
     def _too_much_info(self, dispatcher, text):
         dispatcher.utter_message(text=text)
