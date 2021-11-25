@@ -26,12 +26,12 @@ nlu:
       - is apple cutting good?
       - what recipe with rice carrot oiling
       - what dish come with apple and banana
-      - are there any good fish or(or) pig oiling dish
-      - can you show few meat drying -(or) oiling
+      - are there any good fish [or](or) pig oiling dish
+      - can you show few meat drying [-](or) oiling
       - I want to make some food with tuna frying
       - Which are carrot dicing and chicken milling?
       - can I make anything with carrot and dicing?
-      - I want to make something with chicken or(or) pig milling?
+      - I want to make something with chicken [or](or) pig milling?
       - frying
       - what is rice and water
       - i want to cook with boiling

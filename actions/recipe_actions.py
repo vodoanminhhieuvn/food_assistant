@@ -11,8 +11,10 @@ from rasa_sdk.events import (
     EventType,
 )
 
+import os
+from actions.models.message_tracker_model import MessageTracker
+from actions.models.slots import Slot, slot
 from actions.utils.food_utils import Nutrients
-
 
 class ActionSearchFoodRecipe(Action):
     def name(self) -> Text:
@@ -24,113 +26,32 @@ class ActionSearchFoodRecipe(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        print("------------------")
-        recipe_parts = tracker.get_slot("recipe_parts")
-        print(recipe_parts)
-        entities = tracker.latest_message["entities"]
-        has_ingredient_in_old = any(
-            item["entity"] == "ingredient" for item in recipe_parts
-        )
-        has_technique_in_old = any(
-            item["entity"] == "preparation_technique" for item in recipe_parts
-        )
-        has_ingredient_in_new = any(item["entity"] == "ingredient" for item in entities)
-        has_technique_in_new = any(
-            item["entity"] == "preparation_technique" for item in entities
-        )
-
+        message_tracker = MessageTracker(**tracker.latest_message)
+     
         # Check should clear list entity
-        if (
-            has_ingredient_in_new
-            and has_ingredient_in_old
-            or has_technique_in_new
-            and has_technique_in_old
-        ):
-            recipe_parts = []
+        slot.recipe_parts_slots.checkShouldClear(message_tracker.entities)
 
         # Update recipe parts
-        recipe_parts += entities
-        text_length = len(tracker.latest_message["text"])
-        for item in recipe_parts:
-            item["start"] -= text_length
-            item["end"] -= text_length
+        slot.recipe_parts_slots.append_list(message_tracker.entities)
 
-        results = []
-        results.append(SlotSet("recipe_parts", recipe_parts))
         # Check for missing components => utter request
-        if not any(item["entity"] == "ingredient" for item in recipe_parts):
-            dispatcher.utter_message(text="Give me main ingredient")
-            return results
-        elif not any(
-            item["entity"] == "preparation_technique" for item in recipe_parts
-        ):
-            dispatcher.utter_message(text="You can provide me a technique")
-            return results
-
+        if(self._request_more_part(dispatcher, slot.recipe_parts_slots.parts)):
+            return []
         # Else
         # Sort list
-        def compareTo(e):
-            return e["start"]
-
-        recipe_parts.sort(key=compareTo)
-
-        # Remove redundant operator
-        for index, val in enumerate(recipe_parts):
-            if val["entity"] == "or" and (
-                index == 0
-                or index == len(recipe_parts) - 1
-                or recipe_parts[index + 1]["entity"] == "or"
-            ):
-                del recipe_parts[index]
-
-        print(list(map(lambda x: x["value"], recipe_parts)))
+        slot.recipe_parts_slots.refactor()
 
         # Run handle creating search keywords by rule
-        # ? type or and
-        # ? same x2  +
-        # ? diff X   +
-        search_list = []
-
-        branch_list = []
-        index = 0
-        while index < len(recipe_parts):
-            bl_len = len(branch_list)
-            if recipe_parts[index]["entity"] == "or":
-                if (
-                    recipe_parts[index - 1]["entity"]
-                    == recipe_parts[index + 1]["entity"]
-                ):
-                    for i in range(bl_len):
-                        raw_item = branch_list[0]
-                        del raw_item[-1]
-                        branch_list.append(raw_item + [recipe_parts[index - 1]])
-                        branch_list.append(raw_item + [recipe_parts[index + 1]])
-                        del branch_list[0]
-                    index += 1
-            else:
-                if bl_len == 0:
-                    branch_list.append([recipe_parts[index]])
-                else:
-                    for item in branch_list:
-                        item.append(recipe_parts[index])
-            index += 1
-
-        for item in branch_list:
-            search_list.append(item[0]["value"])
-            for i in range(1, len(item)):
-                search_list[-1] += " " + item[i]["value"]
-
+        slot.recipe_search_keyword_slots.keywords = slot.recipe_parts_slots.createSearchKeywords()
+        
         # result utter
-        results.append(SlotSet("search_list", search_list))
-        print(search_list)
-
         dispatcher.utter_message("Your mind is:")
-        for item in search_list:
+        for item in slot.recipe_search_keyword_slots.keywords:
             dispatcher.utter_message(item)
 
         # results.append(rasa_sdk.events.FollowupAction(
         #     "action_get_food_recipe"))
-        return results
+        return []
 
         # if not entities:
         #     dispatcher.utter_message(
@@ -145,6 +66,17 @@ class ActionSearchFoodRecipe(Action):
         #         SlotSet("ingredient", entities[0]),
         #         rasa_sdk.events.FollowupAction("action_get_food_recipe"),
         #     ]
+        
+    def _request_more_part(self, dispatcher: CollectingDispatcher, recipe_parts: list) -> bool:
+        if all(item.type != "ingredient" for item in recipe_parts):
+            dispatcher.utter_message(text="Give me main ingredient")
+            return True
+        elif all(
+            item.type != "preparation_technique" for item in recipe_parts
+        ):
+            dispatcher.utter_message(text="You can provide me a technique")
+            return True
+        else: return False
 
 
 class ActionGetFoodRecipe(Action):

@@ -6,7 +6,7 @@ class Entity(BaseModel):
     type: str = Field(None, alias="entity")
     start: int
     end: int
-    confidence_entity: float
+    confidence_entity: Optional[float]
     value: str
     extractor: str
     processors: Optional[List[str]]
