@@ -12,7 +12,7 @@ nlu:
       - Which are carrot ?
       - can I make anything with carrot
       - I want to make something with chicken
-      - what recipe with [Baking](preparation_technique)
+      - what recipe with [Baking](cook_technique)
       - what dish come with Baking
       - are there any good Baking dish
       - can you show few Frying

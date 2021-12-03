@@ -16,10 +16,10 @@ rules:
       - intent: food_recipe
       - action: action_search_food_recipe
 
-  - rule: Ask meaning preparation technique
+  - rule: Ask meaning cook technique
     steps:
-      - intent: ask_for_prepare_technique
-      - action: action_answer_prepare_technique
+      - intent: ask_for_cook_technique
+      - action: action_explain_cook_technique
 
   - rule: Finish asking
     steps:

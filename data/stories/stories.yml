@@ -100,19 +100,19 @@ stories:
   - action: action_get_nutrient
   - intent: finish
   - action: action_get_data
-- story: food recipe ask prepare technique
+- story: food recipe ask cook technique
   steps:
-  - action: action_answer_prepare_technique
+  - action: action_explain_cook_technique
   - intent: food_recipe
   - action: action_search_food_recipe
   - intent: food_recipe
   - action: action_search_food_recipe
-  - intent: ask_for_prepare_technique
-  - action: action_answer_prepare_technique
-- story: ask prepare technique path 1
+  - intent: ask_for_cook_technique
+  - action: action_explain_cook_technique
+- story: ask cook technique path 1
   steps:
-  - action: action_answer_prepare_technique
-  - intent: ask_for_prepare_technique
+  - action: action_explain_cook_technique
+  - intent: ask_for_cook_technique
     entities:
     - preparation_technique: drying
-  - action: action_answer_prepare_technique
+  - action: action_explain_cook_technique

@@ -21,7 +21,7 @@ intents:
     use_entities: true
 - food_recipe:
     use_entities: true
-- ask_for_prepare_technique:
+- ask_for_cook_technique:
     use_entities: true
 - ask_for_nutrient:
     use_entities: true
@@ -38,27 +38,18 @@ intents:
 entities:
 - ingredient
 - ingredientReg
-- preparation_technique
+- cook_technique
 - or
 - nutrient
 - min
 - max
 - confirmation
 - nutrient_reset_option
+- preparation_technique
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot
     initial_value: false
-    auto_fill: true
-    influence_conversation: true
-  recipe_parts:
-    type: rasa.shared.core.slots.ListSlot
-    initial_value: []
-    auto_fill: true
-    influence_conversation: true
-  search_list:
-    type: rasa.shared.core.slots.ListSlot
-    initial_value: []
     auto_fill: true
     influence_conversation: true
   confirmation:
@@ -66,6 +57,16 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  search_list:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
+  recipe_parts:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_food_recipe:
   - text: Food is good
@@ -87,6 +88,6 @@ actions:
 - action_get_food_recipe
 - action_get_nutrient
 - action_get_data
-- action_answer_prepare_technique
+- action_explain_cook_technique
 forms: {}
 e2e_actions: []
