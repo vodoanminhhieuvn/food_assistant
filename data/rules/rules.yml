@@ -25,5 +25,8 @@ rules:
     steps:
       - intent: finish
       - action: action_get_data
-  
-  
+
+  - rule: Get food detail
+    steps:
+      - intent: get_food_detail
+      - action: action_get_food_detail

@@ -50,7 +50,7 @@ class ActionGetNutrient(Action):
         # self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
         # self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
 
-        return []
+        # return []
 
     def _check_valid_nutrient(
         self, dispatcher: CollectingDispatcher, nutrient_type: list

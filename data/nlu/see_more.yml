@@ -1,0 +1,11 @@
+version: "2.0"
+
+nlu:
+  - intent: see_more
+    examples: |
+      - See more
+      - See more detail
+      - Load more
+      - Show more
+      - Loading more
+      - Get me more food
