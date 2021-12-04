@@ -1,0 +1,196 @@
+version: "2.0"
+
+nlu:
+  - lookup: cook_technique
+    examples: |
+      - Acidulate
+      - Al dente
+      - Amandine
+      - Amylolytic process
+      - Anti-griddle
+      - Aspic
+      - Au gratin
+      - Au jus
+      - Au poivre
+      - Backwoods cooking
+      - Baghaar
+      - Bain-marie
+      - Baking
+      - Barbecuing
+      - Barding
+      - Basting
+      - Blanching
+      - Blending
+      - Blind-baking
+      - Boiling
+      - Braising
+      - Bricolage
+      - Brine
+      - Brining
+      - Broasting
+      - Browning
+      - Candy making
+      - Canning
+      - Caramelization
+      - Carryover cooking
+      - Casserole
+      - Ceviche
+      - Charbroiler
+      - Cheesemaking
+      - Chicken frying
+      - Chiffonade
+      - Chinese cooking techniques
+      - Clay pot cooking
+      - Coddling
+      - Concasse
+      - Conche
+      - Confit
+      - Consomme
+      - Cooking with alcohol
+      - Cream
+      - Creaming
+      - Croquette
+      - Culinary triangle
+      - Curdling
+      - Cured fish
+      - Curing
+      - Cutting
+      - Deep frying
+      - Deglazing
+      - Degreasing
+      - Dicing
+      - Double steaming
+      - Dough sheeting
+      - Dredging
+      - Dry roasting
+      - Drying
+      - Dum pukht
+      - Dutch oven cooking
+      - Earth oven
+      - Egg wash
+      - Emulsify
+      - En papillote
+      - En vessie
+      - Engastration
+      - Engine cooking
+      - Escagraph
+      - Fermentation
+      - Fillet
+      - Flambe
+      - Flattop grill
+      - Foam
+      - Fondue
+      - Food preservation
+      - Food steamer
+      - Fricassee
+      - Fruit preserves
+      - Frying
+      - Gentle frying
+      - Glazing
+      - Gratin
+      - Grating 
+      - Grilling
+      - High-altitude cooking
+      - Hot salt frying
+      - Huff paste
+      - Indirect grilling
+      - Infusion
+      - Jugging
+      - Juicing
+      - Julienne
+      - Julienning 
+      - Kalua
+      - Karaage
+      - Kho
+      - Kinpira
+      - Kneading
+      - Larding
+      - Leaching
+      - Low-temperature cooking
+      - Maceration
+      - Marinating
+      - Marination
+      - Microwave oven
+      - Milling
+      - Mincing 
+      - Mincing
+      - Mixing
+      - Mongolian barbecue
+      - Mother sauces
+      - Nappage
+      - Nixtamalization
+      - Once-a-month cooking
+      - Outdoor cooking
+      - Pan frying
+      - Parbaking
+      - Parboiling
+      - Paste
+      - Peeling 
+      - Pellicle
+      - Pickling
+      - Pig roast
+      - Poaching
+      - Pre-ferment
+      - Pressure cooking
+      - Pressure frying
+      - Proofing
+      - Purée
+      - Reconstitution
+      - Red cooking
+      - Reduction
+      - Rendering
+      - Ricing
+      - Rillettes
+      - Roasting
+      - Robatayaki
+      - Rotisserie
+      - Roux
+      - Saikyoyaki
+      - Salting
+      - Sautéing
+      - Searing
+      - Seasoning
+      - Separating eggs
+      - Shallow frying
+      - Shaving 
+      - Shrivelling
+      - Shuck
+      - Simmering
+      - Slow cooker
+      - Slow oven cooking
+      - Smoking
+      - Smothering
+      - Souring
+      - Sous vide
+      - Spatchcock
+      - Spherification
+      - Sprouting
+      - Steaming
+      - Steeping
+      - Stewing
+      - Stir frying
+      - Straight dough
+      - Stuffing
+      - Sugar panning
+      - Sugaring
+      - Supreme
+      - Sweating
+      - Swissing
+      - Syringe
+      - Tandoor
+      - Tataki
+      - Tempering
+      - Tenderizing
+      - Teriyaki
+      - Thermal cooking
+      - Thermal immersion circulator
+      - Thermization
+      - Thickening
+      - Transglutaminase
+      - Truss
+      - Turkey fryer
+      - Vacuum flask cooking
+      - Velveting
+      - Vietnamese cooking techniques
+      - Wok cooking
+      - Zest

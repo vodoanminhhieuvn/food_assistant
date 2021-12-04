@@ -1,8 +1,8 @@
 version: "2.0"
 nlu:
-- intent: ask_for_prepare_technique
+- intent: ask_for_cook_technique
   examples: |
-    - What is [Baking](preparation_technique)
+    - What is [Baking](cook_technique)
     - Baking ???
     - Baking is meaning ?
     - I don't know baking
@@ -13,6 +13,6 @@ nlu:
     - how to poaching ?
     - what can smoking do ?
     - what is Braising
-    - what is [oiling](preparation_technique) and [frying](preparation_technique)
-    - i want [oiling](preparation_technique) [or](or) [frying](preparation_technique)
+    - what is oiling and frying
+    - i want oiling [or](or) frying
     - what is boiling
