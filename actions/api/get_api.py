@@ -1,3 +1,4 @@
+from rasa_sdk.events import SlotSet
 from actions.api.config import (
     EDAMAM_API_KEY,
     EDAMAM_APP_ID,
@@ -9,7 +10,7 @@ from actions.models.slots import Slot
 from actions.models.data import food_data
 
 import requests
-
+from actions.models.slots import slot
 
 get_spoon_config = {
     "apiKey": SPOON_API_KEY,
@@ -24,13 +25,15 @@ get_edamam_config = {"app_id": EDAMAM_APP_ID, "app_key": EDAMAM_API_KEY}
 
 class SpoonAPI:
     def getRecipes():
-        request_params = {**get_spoon_config}
+        request_params = {**get_spoon_config, **slot.nutrient_slots.dict()}
 
-        response = requests.get(SPOON_TARGET_URL, params=request_params)
+        # print(request_params)
 
-        food_response = FoodResponse(**response.json())
+        # response = requests.get(SPOON_TARGET_URL, params=request_params)
 
-        food_data.init(food_response)
+        # food_response = FoodResponse(**response.json())
+
+        # food_data.init(food_response)
 
 
 class EdamAPI:

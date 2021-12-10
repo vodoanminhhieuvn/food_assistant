@@ -31,9 +31,7 @@ intents:
       use_entities: true
   - clear_nutrient:
       use_entities: true
-  - clear_fat:
-      use_entities: true
-  - clear_calory:
+  - clear_all:
       use_entities: true
   - get_food_detail:
       use_entities: false
@@ -50,6 +48,7 @@ entities:
   - confirmation
   - nutrient_reset_option
   - food_position
+  - nutrient_type
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot
@@ -95,5 +94,6 @@ actions:
   - action_answer_prepare_technique
   - action_get_food_detail
   - action_explain_cook_technique
+  - action_clear_data
 forms: {}
 e2e_actions: []

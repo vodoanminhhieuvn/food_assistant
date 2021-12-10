@@ -12,7 +12,10 @@ from rasa_sdk.events import (
     EventType,
 )
 
+from actions.models.message_tracker_model import MessageTracker
+
 from actions.api.get_api import SpoonAPI, get_edamam_config
+from actions.models.slots import slot
 
 
 class ActionClearData(Action):
@@ -25,14 +28,26 @@ class ActionClearData(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        SpoonAPI.getRecipes()
-        # tracker_intent = tracker.latest_message["intent"]
-        # tracker_entities = tracker.latest_message["entities"]
-        # print(tracker_intent)
-        # print(tracker_entities)
+        message_tracker = MessageTracker(**tracker.latest_message)
 
-    def clear_calory():
-        print("Clear calory")
+        if message_tracker.intent.name == "clear_all":
+            self._clear_all()
 
-    def clear_fat():
-        print("Clear fat")
+        elif message_tracker.intent.name == "clear_nutrient":
+            for entity in message_tracker.entities:
+                if entity.type == "nutrient_type":
+                    self._clear_nutrient(
+                        message_tracker.entities[0].value, entity.value
+                    )
+
+    def _clear_all():
+        print("Clear all")
+
+    def _clear_nutrient(reset_option: str, target: str):
+        if reset_option == "reset_all":
+            slot.set_nutrient_attr(f"min{target}", None)
+            slot.set_nutrient_attr(f"max{target}", None)
+        elif reset_option == "reset_min":
+            slot.set_nutrient_attr(f"min{target}", None)
+        elif reset_option == "reset_max":
+            slot.set_nutrient_attr(f"max{target}", None)
