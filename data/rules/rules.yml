@@ -25,5 +25,18 @@ rules:
     steps:
       - intent: finish
       - action: action_get_data
-  
-  
+
+  - rule: Get food detail
+    steps:
+      - intent: get_food_detail
+      - action: action_get_food_detail
+
+  - rule: Reset all
+    steps:
+      - intent: clear_all
+      - action: action_clear_data
+
+  - rule: Reset nutrient
+    steps:
+      - intent: clear_nutrient
+      - action: action_clear_data

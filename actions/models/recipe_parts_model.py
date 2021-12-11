@@ -17,12 +17,12 @@ class RecipePartsModel(BaseModel):
             item.type == "ingredient" for item in self.parts
         )
         has_technique_in_old = any(
-            item.type == "preparation_technique" for item in self.parts
+            item.type == "cook_technique" for item in self.parts
         )
         has_ingredient_in_new = any(
             item.type == "ingredient" for item in newParts)
         has_technique_in_new = any(
-            item.type == "preparation_technique" for item in newParts
+            item.type == "cook_technique" for item in newParts
         )
 
         if (

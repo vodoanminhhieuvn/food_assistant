@@ -5,11 +5,11 @@ recipe_parts = [{'entity': 'ingredient', 'start': -47, 'end': -43, 'value': 'ric
                     'value': 'water', 'extractor': 'RegexEntityExtractor'},
                 {'entity': 'or', 'start': -23, 'end': -21,
                     'value': 'or', 'extractor': 'RegexEntityExtractor'},
-                {'entity': 'preparation_technique', 'start': -20, 'end': -13,
+                {'entity': 'cook_technique', 'start': -20, 'end': -13,
                     'value': 'boiling', 'extractor': 'RegexEntityExtractor'},
                 {'entity': 'or', 'start': -12, 'end': -10,
                     'value': 'or', 'extractor': 'RegexEntityExtractor'},
-                {'entity': 'preparation_technique', 'start': -9, 'end': -3,
+                {'entity': 'cook_technique', 'start': -9, 'end': -3,
                  'value': 'drying', 'extractor': 'RegexEntityExtractor'}]
 search_list = []
 for index, val in enumerate(recipe_parts):

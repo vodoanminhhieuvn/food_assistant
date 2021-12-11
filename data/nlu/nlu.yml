@@ -9,6 +9,8 @@ nlu:
       - Done
       - finish
       - get food
+      - get me food
+      - show me food
 
   - intent: greet
     examples: |

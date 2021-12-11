@@ -1,0 +1,10 @@
+version: "2.0"
+nlu:
+  - intent: get_food_detail
+    examples: |
+      - show me food detail at [0](food_position)
+      - get me food at [2](food_position)
+      - give me [3](food_position)
+      - can you show me food detail at [0](food_position)
+      - food at [2](food_position)
+      - food position [1](food_position)

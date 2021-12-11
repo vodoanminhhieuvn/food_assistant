@@ -34,21 +34,23 @@ class ActionGetNutrient(Action):
 
         message_tracker = MessageTracker(**tracker.latest_message)
 
-        slot.nutrient_slots.minCalories = 500
-        slot.nutrient_slots.maxCalories = 50
+        for entity in message_tracker.entities:
+            if entity.type == "min":
+                print(entity.value)
+                min_value.append(entity.value)
+
+            elif entity.type == "max":
+                print(entity.value)
+                max_value.append(entity.value)
+
+            elif entity.type == "nutrient":
+                nutrient_type.append(entity.value)
+
+        self._check_valid_nutrient(dispatcher, nutrient_type)
+        self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
+        self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
+
         print(slot.nutrient_slots)
-
-        # for entity in message_tracker.entities:
-        #     if entity.type == "min":
-        #         min_value.append(entity.value)
-        #     elif entity.type == "max":
-        #         max_value.append(entity.value)
-        #     elif entity.type == "nutrient":
-        #         nutrient_type.append(entity.value)
-
-        # self._check_valid_nutrient(dispatcher, nutrient_type)
-        # self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
-        # self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
 
         return []
 
@@ -73,18 +75,19 @@ class ActionGetNutrient(Action):
             )
 
         elif len(min_values) != 0:
-            Slot.set_nutrient_attr(f"min{nutrient_type}", min_values[0])
+            slot.set_nutrient_attr(f"min{nutrient_type}", min_values[0])
 
     def _add_max_to_slot(
         self, dispatcher: CollectingDispatcher, max_values: list, nutrient_type: str
     ):
+
         if len(max_values) >= 2:
             return self._too_much_info(
                 dispatcher, "You can't input 2 maximum type values"
             )
 
         elif len(max_values) != 0:
-            Slot.set_nutrient_attr(f"min{nutrient_type}", max_values[0])
+            slot.set_nutrient_attr(f"max{nutrient_type}", max_values[0])
 
     def _too_much_info(self, dispatcher, text):
         dispatcher.utter_message(text=text)

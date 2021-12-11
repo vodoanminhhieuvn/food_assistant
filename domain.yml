@@ -1,51 +1,54 @@
-version: '2.0'
+version: "2.0"
 config:
   store_entities_as_slots: true
 session_config:
   session_expiration_time: 480
   carry_over_slots_to_new_session: true
 intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- food_recipe:
-    use_entities: true
-- ask_for_cook_technique:
-    use_entities: true
-- ask_for_nutrient:
-    use_entities: true
-- bad_language:
-    use_entities: true
-- finish:
-    use_entities: true
-- clear_nutrient:
-    use_entities: true
-- clear_fat:
-    use_entities: true
-- clear_calory:
-    use_entities: true
+  - greet:
+      use_entities: true
+  - goodbye:
+      use_entities: true
+  - affirm:
+      use_entities: true
+  - deny:
+      use_entities: true
+  - mood_great:
+      use_entities: true
+  - mood_unhappy:
+      use_entities: true
+  - bot_challenge:
+      use_entities: true
+  - food_recipe:
+      use_entities: true
+  - ask_for_cook_technique:
+      use_entities: true
+  - ask_for_nutrient:
+      use_entities: true
+  - bad_language:
+      use_entities: true
+  - finish:
+      use_entities: true
+  - clear_nutrient:
+      use_entities: true
+  - clear_all:
+      use_entities: true
+  - get_food_detail:
+      use_entities: false
+  - see_more:
+      use_entities: false
 entities:
-- ingredient
-- ingredientReg
-- cook_technique
-- or
-- nutrient
-- min
-- max
-- confirmation
-- nutrient_reset_option
-- preparation_technique
+  - ingredient
+  - ingredientReg
+  - cook_technique
+  - or
+  - nutrient
+  - min
+  - max
+  - confirmation
+  - nutrient_reset_option
+  - nutrient_type
+  - food_position
 slots:
   ingredient:
     type: rasa.shared.core.slots.TextSlot
@@ -69,25 +72,27 @@ slots:
     influence_conversation: false
 responses:
   utter_food_recipe:
-  - text: Food is good
+    - text: Food is good
   utter_greet:
-  - text: Hey! How are you?
+    - text: Hey! How are you?
   utter_cheer_up:
-  - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+    - image: https://i.imgur.com/nGF1K8f.jpg
+      text: "Here is something to cheer you up:"
   utter_did_that_help:
-  - text: Did that help you?
+    - text: Did that help you?
   utter_happy:
-  - text: Great, carry on!
+    - text: Great, carry on!
   utter_goodbye:
-  - text: Bye
+    - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+    - text: I am a bot, powered by Rasa.
 actions:
-- action_search_food_recipe
-- action_get_food_recipe
-- action_get_nutrient
-- action_get_data
-- action_explain_cook_technique
+  - action_search_food_recipe
+  - action_get_food_recipe
+  - action_get_nutrient
+  - action_get_data
+  - action_get_food_detail
+  - action_explain_cook_technique
+  - action_clear_data
 forms: {}
 e2e_actions: []

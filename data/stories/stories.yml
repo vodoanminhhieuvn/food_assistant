@@ -34,7 +34,7 @@ stories:
         extractor: RegexEntityExtractor
   - intent: food_recipe
     entities:
-    - preparation_technique: frying
+    - cook_technique: frying
   - action: action_search_food_recipe
   - slot_was_set:
     - recipe_parts:
@@ -43,7 +43,7 @@ stories:
         end: -6
         value: chicken
         extractor: RegexEntityExtractor
-      - entity: preparation_technique
+      - entity: cook_technique
         start: -6
         end: 0
         value: frying
@@ -72,7 +72,7 @@ stories:
   - intent: food_recipe
     entities:
     - ingredient: chicken
-    - preparation_technique: frying
+    - cook_technique: frying
   - slot_was_set:
     - ingredient: chicken
   - action: action_search_food_recipe
@@ -83,7 +83,7 @@ stories:
         end: -7
         value: chicken
         extractor: RegexEntityExtractor
-      - entity: preparation_technique
+      - entity: cook_technique
         start: -6
         end: 0
         value: frying
@@ -114,5 +114,5 @@ stories:
   - action: action_explain_cook_technique
   - intent: ask_for_cook_technique
     entities:
-    - preparation_technique: drying
+    - cook_technique: drying
   - action: action_explain_cook_technique
