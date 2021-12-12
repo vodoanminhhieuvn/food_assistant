@@ -39,4 +39,4 @@ rules:
   - rule: Reset nutrient
     steps:
       - intent: clear_nutrient
-      - actions: action_clear_data
+      - action: action_clear_data

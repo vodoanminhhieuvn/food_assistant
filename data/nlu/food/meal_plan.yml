@@ -1,0 +1,13 @@
+version: "2.0"
+
+nlu:
+  - intent: ask_for_meal_plan
+    examples: |
+      - Generate meal plan for [Vegan](diet)
+      - meal plan for Gluten Free
+      - full meal Ketogenic
+      - today plan for Vegetarian
+      - give me some plan for Ketogenic
+      - generate some meal plan
+      - create meal plan for me
+      - meal plan for today

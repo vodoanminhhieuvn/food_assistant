@@ -2,108 +2,141 @@ from pydantic import BaseModel, Field
 from typing import List, Literal, Optional
 
 
-class CaloricBreakdown(BaseModel):
-    percent_protein: float = Field(..., alias="percentProtein")
-    percent_fat: float = Field(..., alias="percentFat")
-    percent_carbs: float = Field(..., alias="percentCarbs")
+class Nutrient(BaseModel):
+    label: str
+    quantity: float
+    unit: str
 
 
-class WeightPerServing(BaseModel):
-    amount: int
-    unit: Literal["g"]
+class Sub(BaseModel):
+    label: str
+    tag: str
+    total: float
+    has_rdi: bool = Field(..., alias="hasRDI")
+    daily: float
+    unit: str
+    schema_org_tag: Optional[str] = Field(None, alias="schemaOrgTag")
 
 
-class Length_Temperature(BaseModel):
-    number: int
-    unit: Literal["Fahrenheit", "minutes"]
+class Digest_Sub(BaseModel):
+    label: str
+    tag: str
+    total: float
+    has_rdi: bool = Field(..., alias="hasRDI")
+    daily: float
+    unit: str
+    schema_org_tag: Optional[str] = Field(None, alias="schemaOrgTag")
+    sub: Optional[List[Sub]] = []
 
 
-class Equipment_Ingredient(BaseModel):
-    id_: int = Field(..., alias="id")
-    name: str
-    localized_name: str = Field(..., alias="localizedName")
-    image: str
-    temperature: Optional[Length_Temperature] = None
-
-
-class Step(BaseModel):
-    number: int
-    step: str
-    ingredients: List[Equipment_Ingredient]
-    equipment: List[Equipment_Ingredient]
-    length: Optional[Length_Temperature] = None
-
-
-class Flavonoid_Nutrient_Property(BaseModel):
+class Next_Self(BaseModel):
+    href: str
     title: str
-    name: str
-    amount: float
-    unit: Literal["", "IU", "g", "kcal", "mg", "µg"]
-    percent_of_daily_needs: Optional[float] = Field(None, alias="percentOfDailyNeeds")
+
+
+class _link(BaseModel):
+    next_: Next_Self = Field(..., alias="next")
+
+
+class _link_3X(BaseModel):
+    self: Next_Self
+
+
+class Large_Regular_Small_Thumbnail(BaseModel):
+    url: str
+    width: int
+    height: int
+
+
+class Image(BaseModel):
+    thumbnail: Large_Regular_Small_Thumbnail = Field(..., alias="THUMBNAIL")
+    small: Large_Regular_Small_Thumbnail = Field(..., alias="SMALL")
+    regular: Optional[Large_Regular_Small_Thumbnail] = Field(None, alias="REGULAR")
+    large: Optional[Large_Regular_Small_Thumbnail] = Field(None, alias="LARGE")
 
 
 class Ingredient(BaseModel):
-    id_: int = Field(..., alias="id")
-    name: str
-    amount: float
-    unit: str
-    nutrients: List[Flavonoid_Nutrient_Property]
+    text: str
+    quantity: float
+    food: str
+    weight: float
+    food_id: str = Field(..., alias="foodId")
+    measure: Optional[str] = None
+    food_category: Optional[str] = Field(None, alias="foodCategory")
+    image: Optional[str] = None
 
 
-class AnalyzedInstruction(BaseModel):
-    name: str
-    steps: List[Step]
+class TotalDaily_TotalNutrient(BaseModel):
+    enerc_kcal: Nutrient = Field(..., alias="ENERC_KCAL")
+    fat: Nutrient = Field(..., alias="FAT")
+    fasat: Nutrient = Field(..., alias="FASAT")
+    chocdf: Nutrient = Field(..., alias="CHOCDF")
+    fibtg: Nutrient = Field(..., alias="FIBTG")
+    procnt: Nutrient = Field(..., alias="PROCNT")
+    chole: Nutrient = Field(..., alias="CHOLE")
+    na: Nutrient = Field(..., alias="NA")
+    ca: Nutrient = Field(..., alias="CA")
+    mg: Nutrient = Field(..., alias="MG")
+    k: Nutrient = Field(..., alias="K")
+    fe: Nutrient = Field(..., alias="FE")
+    zn: Nutrient = Field(..., alias="ZN")
+    p: Nutrient = Field(..., alias="P")
+    vita_rae: Nutrient = Field(..., alias="VITA_RAE")
+    vitc: Nutrient = Field(..., alias="VITC")
+    thia: Nutrient = Field(..., alias="THIA")
+    ribf: Nutrient = Field(..., alias="RIBF")
+    nia: Nutrient = Field(..., alias="NIA")
+    vitb6_a: Nutrient = Field(..., alias="VITB6A")
+    foldfe: Nutrient = Field(..., alias="FOLDFE")
+    vitb12: Nutrient = Field(..., alias="VITB12")
+    vitd: Nutrient = Field(..., alias="VITD")
+    tocpha: Nutrient = Field(..., alias="TOCPHA")
+    vitk1: Nutrient = Field(..., alias="VITK1")
+    fatrn: Optional[Nutrient] = Field(None, alias="FATRN")
+    fams: Optional[Nutrient] = Field(None, alias="FAMS")
+    fapu: Optional[Nutrient] = Field(None, alias="FAPU")
+    chocd_fnet: Optional[Nutrient] = Field(None, alias="CHOCDF.net")
+    sugar: Optional[Nutrient] = Field(None, alias="SUGAR")
+    suga_radded: Optional[Nutrient] = Field(None, alias="SUGAR.added")
+    folfd: Optional[Nutrient] = Field(None, alias="FOLFD")
+    folac: Optional[Nutrient] = Field(None, alias="FOLAC")
+    sugaralcohol: Optional[Nutrient] = Field(None, alias="Sugar.alcohol")
+    water: Optional[Nutrient] = Field(None, alias="WATER")
 
 
-class Nutrition(BaseModel):
-    nutrients: List[Flavonoid_Nutrient_Property]
-    properties: List[Flavonoid_Nutrient_Property]
-    flavonoids: List[Flavonoid_Nutrient_Property]
-    ingredients: List[Ingredient]
-    caloric_breakdown: CaloricBreakdown = Field(..., alias="caloricBreakdown")
-    weight_per_serving: WeightPerServing = Field(..., alias="weightPerServing")
-
-
-class FoodModel(BaseModel):
-    vegetarian: bool
-    vegan: bool
-    gluten_free: bool = Field(..., alias="glutenFree")
-    dairy_free: bool = Field(..., alias="dairyFree")
-    very_healthy: bool = Field(..., alias="veryHealthy")
-    cheap: bool
-    very_popular: bool = Field(..., alias="veryPopular")
-    sustainable: bool
-    weight_watcher_smart_points: int = Field(..., alias="weightWatcherSmartPoints")
-    gaps: str
-    low_fodmap: bool = Field(..., alias="lowFodmap")
-    aggregate_likes: int = Field(..., alias="aggregateLikes")
-    spoonacular_score: int = Field(..., alias="spoonacularScore")
-    health_score: int = Field(..., alias="healthScore")
-    credits_text: str = Field(..., alias="creditsText")
-    license_: str = Field(..., alias="license")
-    source_name: str = Field(..., alias="sourceName")
-    price_per_serving: float = Field(..., alias="pricePerServing")
-    id_: int = Field(..., alias="id")
-    title: str
-    ready_in_minutes: int = Field(..., alias="readyInMinutes")
-    servings: int
-    source_url: str = Field(..., alias="sourceUrl")
+class RecipeModel(BaseModel):
+    uri: str
+    label: str
     image: str
-    image_type: str = Field(..., alias="imageType")
-    nutrition: Nutrition
-    summary: str
-    cuisines: List[str]
-    dish_types: List[str] = Field(..., alias="dishTypes")
-    diets: List[str]
-    occasions: List[str]
-    analyzed_instructions: List[AnalyzedInstruction] = Field(
-        ..., alias="analyzedInstructions"
-    )
-    spoonacular_source_url: str = Field(..., alias="spoonacularSourceUrl")
+    images: Image
+    source: str
+    url: str
+    share_as: str = Field(..., alias="shareAs")
+    yield_: int = Field(..., alias="yield")
+    diet_labels: List[str] = Field(..., alias="dietLabels")
+    health_labels: List[str] = Field(..., alias="healthLabels")
+    cautions: List[str]
+    ingredient_lines: List[str] = Field(..., alias="ingredientLines")
+    ingredients: List[Ingredient]
+    calories: float
+    total_weight: float = Field(..., alias="totalWeight")
+    total_time: int = Field(..., alias="totalTime")
+    cuisine_type: List[str] = Field(..., alias="cuisineType")
+    meal_type: List[str] = Field(..., alias="mealType")
+    dish_type: List[str] = Field(..., alias="dishType")
+    total_nutrients: TotalDaily_TotalNutrient = Field(..., alias="totalNutrients")
+    total_daily: TotalDaily_TotalNutrient = Field(..., alias="totalDaily")
+    digest: List[Digest_Sub]
+
+
+class Hit(BaseModel):
+    recipe: RecipeModel
+    _links: _link_3X
 
 
 class FoodResponse(BaseModel):
-    results: List[FoodModel]
-    offset: int
-    number: int
-    total_results: int = Field(..., alias="totalResults")
+    from_: int = Field(..., alias="from")
+    to: int
+    count: int
+    _links: _link
+    hits: List[Hit]

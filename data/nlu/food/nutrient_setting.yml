@@ -1,0 +1,24 @@
+version: "2.0"
+nlu:
+  - intent: ask_nutrient_setting
+    examples: |
+      - show me current [calory][(nutrient_type)
+      - show me current [nutrient][(nutrient_type)
+      - show me current [calory][(nutrient_type) Info
+      - current [calory](nutrient_type) info
+      - current [nutrient](nutrient_type) info
+      - current [fat](nutrient_type) info
+      - [calory](nutrient_type) setting
+      - [fat](nutrient_type) setting
+      - [nutrient](nutrient_type) setting
+      - [calory](nutrient_type) current info
+      - [fat](nutrient_type) current info
+      - current [calory][(nutrient_type)
+      - current [fat][(nutrient_type)
+      - current [nutrient][(nutrient_type)
+      - setting [fat][(nutrient_type)
+      - setting [nutrient][(nutrient_type)
+      - setting [calory][(nutrient_type)
+      - get me [nutrient](nutrient_type) setting
+      - [nutrient(nutrient_type) setting
+      - [nutrient] setting info

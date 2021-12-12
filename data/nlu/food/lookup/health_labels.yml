@@ -9,7 +9,18 @@ nlu:
       - low-carb
       - low-fat
       - low-sodium
-  
+      - Gluten Free
+      - Ketogenic
+      - Vegetarian
+      - Lacto-Vegetarian
+      - Ovo-Vegetarian
+      - Vegan
+      - Pescetarian
+      - Paleo
+      - Primal
+      - Low FODMAP
+      - Whole30
+
   - lookup: health
     examples: |
       - alcohol-cocktail
@@ -46,4 +57,3 @@ nlu:
       - sulfite-free
       - tree-nut-free
       - vegan
-

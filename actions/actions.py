@@ -15,7 +15,7 @@ from actions.api.get_api import SpoonAPI
 
 from actions.models.slots import Slot
 from actions.models.data import food_data
-from actions.models.food_model import FoodModel
+from actions.models.food_model import RecipeModel
 from actions.models.button_message_model import ButtonMessageModel
 
 
@@ -32,17 +32,17 @@ class ActionFinishAsking(Action):
 
         SpoonAPI.getRecipes()
 
-        # button_message: List[ButtonMessageModel] = []
+        button_message: List[ButtonMessageModel] = []
 
-        # for index, food_model in enumerate(food_data.list_food_model):
-        #     food_name = food_model.title
-        #     button_message.append(
-        #         ButtonMessageModel(
-        #             title=food_name, payload=f"get me food at {index}"
-        #         ).dict()
-        #     )
-        #     dispatcher.utter_message(text=food_name)
+        for index, food_model in enumerate(food_data.list_food_model[:5]):
+            food_name = food_model.label
+            button_message.append(
+                ButtonMessageModel(
+                    title=food_name, payload=f"get me food detail at {index}"
+                ).dict()
+            )
+            dispatcher.utter_message(text=food_name)
 
-        # dispatcher.utter_message(text="Here your foods", buttons=button_message)
+        dispatcher.utter_message(text="Here your foods", buttons=button_message)
 
         return []

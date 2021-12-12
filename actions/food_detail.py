@@ -12,7 +12,7 @@ from rasa_sdk.events import (
 
 from actions.models.message_tracker_model import MessageTracker
 from actions.models.data import food_data
-from actions.models.food_model import FoodModel
+from actions.models.food_model import RecipeModel
 
 
 class ActionGetFoodDetail(Action):
@@ -28,17 +28,13 @@ class ActionGetFoodDetail(Action):
 
         message_tracker = MessageTracker(**tracker.latest_message)
 
-        food_model: FoodModel = food_data.list_food_model[
+        food_model: RecipeModel = food_data.list_food_model[
             int(message_tracker.entities[0].value)
         ]
 
-        list_nutrients = [
-            nutrient.dict() for nutrient in food_model.nutrition.nutrients
-        ]
-
         message = "".join(
-            f"{nutrient.name} + {nutrient.amount} \n"
-            for nutrient in food_model.nutrition.nutrients
+            f"{value.label}: {value.quantity / food_model.yield_} {value.unit} \n"
+            for field, value in food_model.total_nutrients
         )
 
         dispatcher.utter_message(image=food_model.image)

@@ -1,0 +1,16 @@
+version: "2.0"
+
+nlu:
+  - intent: ask_for_help
+    examples: |
+      - How can i use this
+      - Where should i start
+      - i need some help
+      - help
+      - how to use this bott
+      - how to use
+      - --help
+      - help me
+      - can you help me to how to use this
+      - help chatbot
+      - instruction

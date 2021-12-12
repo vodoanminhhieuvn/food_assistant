@@ -15,6 +15,7 @@ import os
 from actions.models.message_tracker_model import MessageTracker
 from actions.models.slots import Slot, slot
 from actions.utils.food_utils import Nutrients
+from actions.models.nutrient_model import NutrientModel
 
 
 class ActionGetNutrient(Action):
@@ -28,29 +29,40 @@ class ActionGetNutrient(Action):
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
 
-        min_value = []
-        max_value = []
+        min_values = []
+        max_values = []
         nutrient_type = []
 
         message_tracker = MessageTracker(**tracker.latest_message)
 
         for entity in message_tracker.entities:
             if entity.type == "min":
-                print(entity.value)
-                min_value.append(entity.value)
+
+                min_values.append(entity.value)
 
             elif entity.type == "max":
-                print(entity.value)
-                max_value.append(entity.value)
+
+                max_values.append(entity.value)
 
             elif entity.type == "nutrient":
                 nutrient_type.append(entity.value)
 
-        self._check_valid_nutrient(dispatcher, nutrient_type)
-        self._add_min_to_slot(dispatcher, min_value, nutrient_type[0])
-        self._add_max_to_slot(dispatcher, max_value, nutrient_type[0])
+        if not (self._check_valid_nutrient(dispatcher, nutrient_type)):
+            return []
 
-        print(slot.nutrient_slots)
+        if not (
+            self._add_nutrient_to_slot(
+                dispatcher, min_values, max_values, nutrient_type[0]
+            )
+        ):
+            return []
+
+        minDisplayValue = slot.nutrient_slots.dict()[f"min{nutrient_type[0]}"]
+        maxDisplayValue = slot.nutrient_slots.dict()[f"max{nutrient_type[0]}"]
+
+        dispatcher.utter_message(
+            text=f"{nutrient_type[0]}\nMin: {minDisplayValue} - Max: {maxDisplayValue}"
+        )
 
         return []
 
@@ -61,36 +73,33 @@ class ActionGetNutrient(Action):
             return self._too_much_info(
                 dispatcher, "You can't input 2 nutrient type values"
             )
-        elif len(nutrient_type) != 0:
-            valid = Nutrients.containNutrient(nutrient_type[0])
-            if not valid:
-                return []
+        return True
 
-    def _add_min_to_slot(
-        self, dispatcher: CollectingDispatcher, min_values: list, nutrient_type: str
+    def _add_nutrient_to_slot(
+        self,
+        dispatcher: CollectingDispatcher,
+        min_values: list,
+        max_values: list,
+        nutrient_type: str,
     ):
-        if len(min_values) >= 2:
+        if len(min_values) >= 2 or len(max_values) >= 2:
             return self._too_much_info(
-                dispatcher, "You can't input 2 minium type values"
+                dispatcher, "You can't input 2 minium or maximum type values"
             )
 
-        elif len(min_values) != 0:
-            slot.set_nutrient_attr(f"min{nutrient_type}", min_values[0])
+        slot.nutrient_slots = NutrientModel(
+            **slot.nutrient_slots.copy(
+                update={
+                    f"min{nutrient_type}": min_values[0],
+                    f"max{nutrient_type}": max_values[0],
+                }
+            ).dict()
+        )
 
-    def _add_max_to_slot(
-        self, dispatcher: CollectingDispatcher, max_values: list, nutrient_type: str
-    ):
-
-        if len(max_values) >= 2:
-            return self._too_much_info(
-                dispatcher, "You can't input 2 maximum type values"
-            )
-
-        elif len(max_values) != 0:
-            slot.set_nutrient_attr(f"max{nutrient_type}", max_values[0])
+        return True
 
     def _too_much_info(self, dispatcher, text):
         dispatcher.utter_message(text=text)
         dispatcher.utter_message(text="Please input only 1 value of each type")
 
-        return []
+        return False

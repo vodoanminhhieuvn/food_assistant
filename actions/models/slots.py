@@ -8,9 +8,9 @@ class Slot:
 
     def set_nutrient_attr(self, name: str, value: int):
         self.nutrient_slots.__setattr__(name, value)
-        
+
     recipe_parts_slots = RecipePartsModel()
-    
+
     recipe_search_keyword_slots = RecipeSearchKeyword()
 
 
