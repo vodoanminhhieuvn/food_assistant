@@ -1,0 +1,15 @@
+version: "2.0"
+nlu:
+  - intent: how_to_cook
+    examples: |
+      - How to cook [0](food_position)
+      - How to cook [1](food_position)
+      - How to cook [2](food_position)
+      - cook [0](food_position)
+      - how to make [3](food_position)
+      - make [2](food_position)
+      - teach me cook [4](food_position)
+      - teach me make [0](food_position)
+      - how to prepare [1](food_position)
+      - prepare [5](food_position)
+      - cook [0](food_position)

@@ -16,6 +16,7 @@ from actions.models.message_tracker_model import MessageTracker
 from actions.models.slots import Slot, slot
 from actions.utils.food_utils import Nutrients
 
+
 class ActionSearchFoodRecipe(Action):
     def name(self) -> Text:
         return "action_search_food_recipe"
@@ -26,8 +27,12 @@ class ActionSearchFoodRecipe(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List[Dict[Text, Any]]:
-        message_tracker = MessageTracker(**tracker.latest_message)
-     
+        try:
+            message_tracker = MessageTracker(**tracker.latest_message)
+        except:
+            # TODO handle error here!
+            return []
+
         # Check should clear list entity
         slot.recipe_parts_slots.checkShouldClear(message_tracker.entities)
 
@@ -35,15 +40,17 @@ class ActionSearchFoodRecipe(Action):
         slot.recipe_parts_slots.append_list(message_tracker.entities)
 
         # Check for missing components => utter request
-        if(self._request_more_part(dispatcher, slot.recipe_parts_slots.parts)):
+        if self._request_more_part(dispatcher, slot.recipe_parts_slots.parts):
             return []
         # Else
         # Sort list
         slot.recipe_parts_slots.refactor()
 
         # Run handle creating search keywords by rule
-        slot.recipe_search_keyword_slots.keywords = slot.recipe_parts_slots.createSearchKeywords()
-        
+        slot.recipe_search_keyword_slots.keywords = (
+            slot.recipe_parts_slots.createSearchKeywords()
+        )
+
         # result utter
         dispatcher.utter_message("Your mind is:")
         for item in slot.recipe_search_keyword_slots.keywords:
@@ -66,17 +73,18 @@ class ActionSearchFoodRecipe(Action):
         #         SlotSet("ingredient", entities[0]),
         #         rasa_sdk.events.FollowupAction("action_get_food_recipe"),
         #     ]
-        
-    def _request_more_part(self, dispatcher: CollectingDispatcher, recipe_parts: list) -> bool:
+
+    def _request_more_part(
+        self, dispatcher: CollectingDispatcher, recipe_parts: list
+    ) -> bool:
         if all(item.type != "ingredient" for item in recipe_parts):
             dispatcher.utter_message(text="Give me main ingredient")
             return True
-        elif all(
-            item.type != "preparation_technique" for item in recipe_parts
-        ):
+        elif all(item.type != "preparation_technique" for item in recipe_parts):
             dispatcher.utter_message(text="You can provide me a technique")
             return True
-        else: return False
+        else:
+            return False
 
 
 class ActionGetFoodRecipe(Action):

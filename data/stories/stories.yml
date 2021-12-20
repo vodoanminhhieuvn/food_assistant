@@ -1,118 +1,26 @@
 version: "2.0"
 stories:
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: food_recipe
-  - action: action_search_food_recipe
-  - intent: mood_great
-  - action: utter_happy
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-- story: food ingredient path 1
-  steps:
-  - intent: food_recipe
-    entities:
-    - ingredient: chicken
-  - slot_was_set:
-    - ingredient: chicken
-  - action: action_search_food_recipe
-  - slot_was_set:
-    - recipe_parts:
-      - entity: ingredient
-        start: -7
-        end: 0
-        value: chicken
-        extractor: RegexEntityExtractor
-  - intent: food_recipe
-    entities:
-    - preparation_technique: frying
-  - action: action_search_food_recipe
-  - slot_was_set:
-    - recipe_parts:
-      - entity: ingredient
-        start: -13
-        end: -6
-        value: chicken
-        extractor: RegexEntityExtractor
-      - entity: preparation_technique
-        start: -6
-        end: 0
-        value: frying
-        extractor: RegexEntityExtractor
-  - slot_was_set:
-    - search_list:
-      - chicken frying
-  - intent: finish
-  - action: action_get_data
-- story: food nutrient path 1
-  steps:
-  - intent: ask_for_nutrient
-    entities:
-    - nutrient: calory
-    - min: 500
-  - action: action_get_nutrient
-  - intent: ask_for_nutrient
-    entities:
-    - nutrient: calory
-    - max: '560'
-  - action: action_get_nutrient
-  - intent: finish
-  - action: action_get_data
-- story: food ingredient and nutrient path 1
-  steps:
-  - intent: food_recipe
-    entities:
-    - ingredient: chicken
-    - preparation_technique: frying
-  - slot_was_set:
-    - ingredient: chicken
-  - action: action_search_food_recipe
-  - slot_was_set:
-    - recipe_parts:
-      - entity: ingredient
-        start: -14
-        end: -7
-        value: chicken
-        extractor: RegexEntityExtractor
-      - entity: preparation_technique
-        start: -6
-        end: 0
-        value: frying
-        extractor: RegexEntityExtractor
-  - slot_was_set:
-    - search_list:
-      - chicken frying
-  - intent: ask_for_nutrient
-    entities:
-    - nutrient: calory
-    - min: 500
-  - slot_was_set:
-    - ingredient: chicken
-  - action: action_get_nutrient
-  - intent: finish
-  - action: action_get_data
-- story: food recipe ask cook technique
-  steps:
-  - action: action_explain_cook_technique
-  - intent: food_recipe
-  - action: action_search_food_recipe
-  - intent: food_recipe
-  - action: action_search_food_recipe
-  - intent: ask_for_cook_technique
-  - action: action_explain_cook_technique
-- story: ask cook technique path 1
-  steps:
-  - action: action_explain_cook_technique
-  - intent: ask_for_cook_technique
-    entities:
-    - preparation_technique: drying
-  - action: action_explain_cook_technique
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: food_recipe
+      - action: action_search_food_recipe
+      - intent: mood_great
+      - action: utter_happy
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+  - story: ask cook technique path 1
+    steps:
+      - action: action_explain_cook_technique
+      - intent: ask_for_cook_technique
+        entities:
+          - preparation_technique: drying
+      - action: action_explain_cook_technique

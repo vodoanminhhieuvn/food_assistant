@@ -34,14 +34,15 @@ class ActionFinishAsking(Action):
 
         button_message: List[ButtonMessageModel] = []
 
-        for index, food_model in enumerate(food_data.list_food_model[:5]):
+        for index, food_model in enumerate(food_data.list_current_food):
             food_name = food_model.label
             button_message.append(
                 ButtonMessageModel(
-                    title=food_name, payload=f"get me food detail at {index}"
+                    title=food_name, payload=f"food option {index}"
                 ).dict()
             )
-            dispatcher.utter_message(text=food_name)
+
+        print(food_data.list_current_food[0].label)
 
         dispatcher.utter_message(text="Here your foods", buttons=button_message)
 

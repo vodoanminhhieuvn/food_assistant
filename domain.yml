@@ -34,14 +34,25 @@ intents:
     - clear_all:
           use_entities: true
     - get_food_detail:
-          use_entities: []
+          use_entities: true
     - see_more:
-          use_entities: []
+          use_entities: true
     - ask_for_cook_technique:
           use_entities: true
     - ask_nutrient_setting:
+          use_entities: true
     - ask_for_meal_plan:
+          use_entities: true
     - ask_for_help:
+          use_entities: true
+    - get_last_food:
+          use_entities: true
+    - how_to_cook:
+          use_entities: true
+    - get_ingredient_detail:
+          use_entities: true
+    - ask_for_help:
+          use_entities: false
 entities:
     - ingredient
     - ingredientReg
@@ -55,6 +66,7 @@ entities:
     - food_position
     - nutrient_type
     - cook_technique
+    - diet
 slots:
     ingredient:
         type: rasa.shared.core.slots.TextSlot
@@ -101,5 +113,8 @@ actions:
     - action_get_food_detail
     - action_explain_cook_technique
     - action_clear_data
+    - action_how_to_cook
+    - action_ingredient_detail
+    - action_help
 forms: {}
 e2e_actions: []

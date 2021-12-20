@@ -31,6 +31,16 @@ rules:
       - intent: get_food_detail
       - action: action_get_food_detail
 
+  - rule: Get ingredient detail
+    steps:
+      - intent: get_ingredient_detail
+      - action: action_ingredient_detail
+
+  - rule: How to cook
+    steps:
+      - intent: how_to_cook
+      - action: action_how_to_cook
+
   - rule: Reset all
     steps:
       - intent: clear_all
@@ -40,3 +50,8 @@ rules:
     steps:
       - intent: clear_nutrient
       - action: action_clear_data
+
+  - rule: Ask for help
+    steps:
+      - intent: ask_for_help
+      - action: action_help

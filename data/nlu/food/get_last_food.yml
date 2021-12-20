@@ -1,0 +1,12 @@
+version: "2.0"
+nlu:
+  - intent: get_last_food
+    examples: |
+      - show me those food again
+      - show me those food back
+      - get back foods
+      - get food backs
+      - show me previous food
+      - get me previous food
+      - show current food
+      - show last food

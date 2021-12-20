@@ -1,10 +1,27 @@
 version: "2.0"
 nlu:
-  - intent: get_food_detail
-    examples: |
-      - show me food detail at [0](food_position)
-      - get me food at [2](food_position)
-      - give me [3](food_position)
-      - can you show me food detail at [0](food_position)
-      - food at [2](food_position)
-      - food position [1](food_position)
+- intent: get_food_detail
+  examples: |
+    - show me food detail at [0](food_position)
+    - get me food at [2](food_position)
+    - give me [3](food_position)
+    - can you show me food detail at [0](food_position)
+    - food at [2](food_position)
+    - food position [1](food_position)
+    - show me food [0](food_position)
+    - detail at [2](food_position)
+    - option [1](food_position)
+    - food option [3](food_position)
+    - food option [0](food_position)
+- intent: get_ingredient_detail
+  examples: |
+    - show me ingredient detail at [0](food_position)
+    - get me ingredient at [2](food_position)
+    - can you show me ingredient detail at [0](food_position)
+    - ingredient at [2](food_position)
+    - ingredient position [1](food_position)
+    - show me ingredient [0](food_position)
+    - ingredient detail at [2](food_position)
+    - ingredient option [1](food_position)
+    - ingredient option [3](food_position)
+    - ingredient option [0](food_position)
