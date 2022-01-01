@@ -1,0 +1,8 @@
+version: "2.0"
+nlu:
+  - intent: spoon_food_recipe
+    examples: |
+      - this intent just for test purpose only
+      - add this example so we don't have to see warning about
+      - missing examples
+      - kinda annoying

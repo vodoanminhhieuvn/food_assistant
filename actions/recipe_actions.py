@@ -42,9 +42,12 @@ class ActionSearchFoodRecipe(Action):
         # Check for missing components => utter request
         if self._request_more_part(dispatcher, slot.recipe_parts_slots.parts):
             return []
+
         # Else
         # Sort list
         slot.recipe_parts_slots.refactor()
+
+        # print(slot.recipe_parts_slots.parts)
 
         # Run handle creating search keywords by rule
         slot.recipe_search_keyword_slots.keywords = (
@@ -52,7 +55,7 @@ class ActionSearchFoodRecipe(Action):
         )
 
         # result utter
-        dispatcher.utter_message("Your mind is:")
+        dispatcher.utter_message("Your search is:")
         for item in slot.recipe_search_keyword_slots.keywords:
             dispatcher.utter_message(item)
 
@@ -80,8 +83,8 @@ class ActionSearchFoodRecipe(Action):
         if all(item.type != "ingredient" for item in recipe_parts):
             dispatcher.utter_message(text="Give me main ingredient")
             return True
-        elif all(item.type != "preparation_technique" for item in recipe_parts):
-            dispatcher.utter_message(text="You can provide me a technique")
+        elif all(item.type != "cook_technique" for item in recipe_parts):
+            dispatcher.utter_message(text="You can provide me a technique if needed")
             return True
         else:
             return False

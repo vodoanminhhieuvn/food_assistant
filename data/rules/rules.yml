@@ -55,3 +55,43 @@ rules:
     steps:
       - intent: ask_for_help
       - action: action_help
+
+  - rule: Ask for help get recipe
+    steps:
+      - intent: help_get_recipe
+      - action: action_help
+
+  - rule: Ask for setting nutrient
+    steps:
+      - intent: help_set_nutrient
+      - action: action_help
+
+  - rule: Ask for previous food
+    steps:
+      - intent: get_last_food
+      - action: action_get_last_food
+
+  - rule: Set nutrient property
+    steps:
+      - intent: ask_for_nutrient
+      - action: action_get_nutrient
+
+  - rule: Show nutrient setting
+    steps:
+      - intent: ask_nutrient_setting
+      - action: action_nutrient_setting
+
+  - rule: Create meal plan
+    steps:
+      - intent: ask_for_meal_plan
+      - action: action_meal_plan
+
+  - rule: Show ingredient setting
+    steps:
+      - intent: ask_ingredient_setting
+      - action: action_ingredient_setting
+
+  - rule: Get food detail
+    steps:
+      - intent: spoon_food_recipe
+      - action: action_spoon_recipe_search

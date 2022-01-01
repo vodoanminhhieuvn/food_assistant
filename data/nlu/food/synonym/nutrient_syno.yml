@@ -7,22 +7,18 @@ nlu:
 - synonym: <
   examples: |
     - smaller than
+    - smaller
     - lower than
     - maximum
-- synonym: '>'
+    - less than
+    - less
+- synonym: greater
   examples: |
     - greater than
-    - more than
+    - larger than
     - minium
-- synonym: Calories
-  examples: |
-    - Calory
-    - cAloRy
-    - calory
-    - Calo
-    - calo
-    - Kcal
-    - KCAL
+    - more than
+    - more
 - synonym: Fat
   examples: |
     - fatty

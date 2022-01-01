@@ -1,0 +1,14 @@
+version: "2.0"
+nlu:
+  - intent: ask_ingredient_setting
+    examples: |
+      - my current ingredient setting
+      - show my current ingredient setting
+      - current ingredient setting
+      - ingredient setting
+      - show my search list
+      - my current search list
+      - current search list
+      - my current ingredient search list
+      - display current search list
+      - display current ingredient

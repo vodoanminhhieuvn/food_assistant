@@ -10,7 +10,29 @@ nlu:
       - how to use this bott
       - how to use
       - --help
+      - help
       - help me
       - can you help me to how to use this
       - help chatbot
       - instruction
+
+  - intent: help_get_recipe
+    examples: |
+      - How can i get recipe
+      - help me get recipe
+      - i don't know how to get recipe
+      - how to get recipe bot
+      - get recipe how ?
+      - how to show recipe
+      - show recipe how ?
+      - recipe getting ?
+
+  - intent: help_set_nutrient
+    examples: |
+      - How can i set nutrient
+      - how can i change nutrient
+      - change nutrient how ?
+      - how to change nutrient
+      - nutrient set how ?
+      - setting nutrient ?
+      - i want to change nutrient

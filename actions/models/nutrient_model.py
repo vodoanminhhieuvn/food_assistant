@@ -6,7 +6,7 @@ class NutrientModel(BaseModel):
     minCalories: Optional[int] = 50
     maxCalories: Optional[int] = 800
     minFat: Optional[int] = 10
-    maxFat: Optional[int] = 100
+    maxFat: Optional[int] = 200
 
     class Config:
         validate_assignment = True
@@ -18,7 +18,7 @@ class NutrientModel(BaseModel):
         minCalories = values["minCalories"] = values["minCalories"] or 50
         maxCalories = values["maxCalories"] = values["maxCalories"] or 800
         minFat = values["minFat"] = values["minFat"] or 10
-        maxFat = values["maxFat"] = values["maxFat"] or 100
+        maxFat = values["maxFat"] = values["maxFat"] or 200
 
         if minCalories > maxCalories:
             values["minCalories"], values["maxCalories"] = (maxCalories, minCalories)

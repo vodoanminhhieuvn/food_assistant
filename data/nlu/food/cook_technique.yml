@@ -1,18 +1,21 @@
 version: "2.0"
 nlu:
-- intent: ask_for_cook_technique
-  examples: |
-    - What is [Baking](cook_technique)
-    - Baking ???
-    - Baking is meaning ?
-    - I don't know baking
-    - Can you explain baking for me ?
-    - what is drying ?
-    - How to drying ?
-    - How to baking ?
-    - how to poaching ?
-    - what can smoking do ?
-    - what is Braising
-    - what is oiling and frying
-    - i want oiling [or](or) frying
-    - what is boiling
+  - intent: ask_for_cook_technique
+    examples: |
+      - What is [Baking](cook_technique)
+      - Baking ???
+      - Baking is meaning ?
+      - I don't know baking
+      - Can you explain baking for me ?
+      - what is drying ?
+      - How to drying ?
+      - How to baking ?
+      - how to poaching ?
+      - what can smoking do ?
+      - what is Braising
+      - what is oiling and frying
+      - i want oiling [or](or) frying
+      - what is boiling
+      - what baking
+      - what frying
+      - what Barbecuing

@@ -90,8 +90,12 @@ class ActionGetNutrient(Action):
         slot.nutrient_slots = NutrientModel(
             **slot.nutrient_slots.copy(
                 update={
-                    f"min{nutrient_type}": min_values[0],
-                    f"max{nutrient_type}": max_values[0],
+                    f"min{nutrient_type}": min_values[0]
+                    if 0 < len(min_values)
+                    else slot.nutrient_slots.dict()[f"min{nutrient_type}"],
+                    f"max{nutrient_type}": max_values[0]
+                    if 0 < len(max_values)
+                    else slot.nutrient_slots.dict()[f"max{nutrient_type}"],
                 }
             ).dict()
         )

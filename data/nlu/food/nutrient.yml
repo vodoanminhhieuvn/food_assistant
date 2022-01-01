@@ -53,6 +53,18 @@ nlu:
     - i need lower than [400](max) [fat](nutrient)
     - food has > [500](min) and < [650](max) [fat](nutrient)
     - food has < [230](max) [fat](nutrient)
+    - [calory]{"entity": "nutrient", "value": "Calories"} less than [2](food_position)
+    - [fat](nutrient) greater than [333](min) is okay
+    - [fat](nutrient) less than [333](max) is okay
+    - [fat](nutrient) [greater 333]{"entity": "min", "value": "333"} is okay
+    - [fat](nutrient) [less 333]{"entity": "max", "value": "333"} is okay
+    - [calory](nutrient) greater than [333](min) < [555](max)
+    - [calory](nutrient) greater than [545](min)
+    - [calory](nutrient) greater [650](min)
+    - [calory](nutrient) less [555](max) > [533](min)
+    - [calory](nutrient) more [500](min) please
+    - [calory](nutrient) smaller [500](min) please
+    - [calory]{"entity": "nutrient", "value": "Calories"} greater than [400](min)
 - synonym: '500'
   examples: |
     - <500
@@ -61,3 +73,8 @@ nlu:
   examples: |
     - >333
     - <333
+    - greater 333
+    - less 333
+- synonym: Calories
+  examples: |
+    - calory

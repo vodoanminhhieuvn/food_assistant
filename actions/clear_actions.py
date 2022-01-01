@@ -14,7 +14,6 @@ from rasa_sdk.events import (
 
 from actions.models.message_tracker_model import MessageTracker
 
-from actions.api.get_api import SpoonAPI, get_edamam_config
 from actions.models.slots import slot
 from actions.models.nutrient_model import NutrientModel
 
@@ -46,12 +45,17 @@ class ActionClearData(Action):
 
             self._clear_nutrient(nutrient_reset_option[-1], nutrient_type)
 
-    def _clear_all(self):
-        print("Clear all")
+    def _clear_all(
+        self,
+        dispatcher: CollectingDispatcher,
+    ):
+        slot.nutrient_slots = NutrientModel()
+        message = "".join(f"{field}: {value}\n" for field, value in slot.nutrient_slots)
+        dispatcher.utter_message(message)
 
-    def _clear_nutrient(self, reset_option: str, targets: List[str]):
-        print(reset_option)
-        print(targets)
+    def _clear_nutrient(
+        self, reset_option: str, dispatcher: CollectingDispatcher, targets: List[str]
+    ):
         for target in targets:
             if reset_option == "reset_all":
                 slot.nutrient_slots = NutrientModel(
@@ -68,3 +72,12 @@ class ActionClearData(Action):
                 slot.nutrient_slots = NutrientModel(
                     **slot.nutrient_slots.copy(update={"max{target}": None}).dict()
                 )
+
+            minProperty = f"min{target}"
+            maxProperty = f"max{target}"
+            minValue = slot.nutrient_slots.dict()[minProperty]
+            maxValue = slot.nutrient_slots.dict()[maxProperty]
+
+            message = "".join(f"{target} \n min: {minValue} \n max: {maxValue}")
+
+            dispatcher.utter_message(message)

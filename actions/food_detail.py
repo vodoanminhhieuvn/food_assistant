@@ -33,8 +33,9 @@ class ActionGetFoodDetail(Action):
             return []
 
         try:
-            food_model = food_data.list_current_food[0]
-
+            food_model = food_data.list_current_food[
+                int(message_tracker.entities[0].value)
+            ]
         except:
             dispatcher.utter_message(text="Error has occurred: No food model found")
             return []
@@ -56,7 +57,7 @@ class ActionGetFoodDetail(Action):
 
         button_message.append(
             ButtonMessageModel(
-                title=f"How to cook {food_name}",
+                title=f"How to cook {food_model.label}",
                 payload=f"How to cook {message_tracker.entities[0].value}",
             ).dict()
         )

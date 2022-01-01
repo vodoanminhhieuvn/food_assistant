@@ -1,0 +1,7 @@
+version: "2.0"
+
+nlu:
+  - lookup: recipe_provider
+    examples: |
+      - spoon_api
+      - edamam_api
