@@ -1,5 +1,117 @@
 [
     {
+        "label": "EDAMAM_API_KEY",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "isExtraImport": true,
+        "detail": "actions.api.config",
+        "documentation": {}
+    },
+    {
+        "label": "EDAMAM_APP_ID",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "isExtraImport": true,
+        "detail": "actions.api.config",
+        "documentation": {}
+    },
+    {
+        "label": "SPOON_API_KEY",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "isExtraImport": true,
+        "detail": "actions.api.config",
+        "documentation": {}
+    },
+    {
+        "label": "SPOON_TARGET_URL",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "isExtraImport": true,
+        "detail": "actions.api.config",
+        "documentation": {}
+    },
+    {
+        "label": "FoodResponse",
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "isExtraImport": true,
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "FoodModel",
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "isExtraImport": true,
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "slot",
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "isExtraImport": true,
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
         "label": "requests",
         "kind": 6,
         "isExtraImport": true,
@@ -9,20 +121,45 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
+        "label": "print_function",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "config",
-        "importPath": "actions",
-        "description": "actions",
+        "label": "time",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "actions",
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "spoonacular",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "spoonacular",
+        "description": "spoonacular",
+        "detail": "spoonacular",
+        "documentation": {}
+    },
+    {
+        "label": "ApiException",
+        "importPath": "spoonacular.rest",
+        "description": "spoonacular.rest",
+        "isExtraImport": true,
+        "detail": "spoonacular.rest",
+        "documentation": {}
+    },
+    {
+        "label": "pprint",
+        "importPath": "pprint",
+        "description": "pprint",
+        "isExtraImport": true,
+        "detail": "pprint",
         "documentation": {}
     },
     {
@@ -35,11 +172,172 @@
         "documentation": {}
     },
     {
-        "label": "ExtensionFunction",
-        "importPath": "actions.extension_function",
-        "description": "actions.extension_function",
+        "label": "json",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "actions.extension_function",
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "root_validator",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -75,11 +373,258 @@
         "documentation": {}
     },
     {
-        "label": "rasa_sdk",
-        "kind": 6,
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Text",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Entity",
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "isExtraImport": true,
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "Entity",
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "isExtraImport": true,
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "MessageTracker",
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "isExtraImport": true,
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "MessageTracker",
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "isExtraImport": true,
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "MessageTracker",
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "isExtraImport": true,
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "NutrientModel",
+        "importPath": "actions.models.nutrient_model",
+        "description": "actions.models.nutrient_model",
+        "isExtraImport": true,
+        "detail": "actions.models.nutrient_model",
+        "documentation": {}
+    },
+    {
+        "label": "RecipePartsModel",
+        "importPath": "actions.models.recipe_parts_model",
+        "description": "actions.models.recipe_parts_model",
+        "isExtraImport": true,
+        "detail": "actions.models.recipe_parts_model",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSearchKeyword",
+        "importPath": "actions.models.recipe_search_keyword",
+        "description": "actions.models.recipe_search_keyword",
+        "isExtraImport": true,
+        "detail": "actions.models.recipe_search_keyword",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
         "importPath": "rasa_sdk",
         "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Action",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
+        "detail": "rasa_sdk",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "rasa_sdk",
+        "description": "rasa_sdk",
+        "isExtraImport": true,
         "detail": "rasa_sdk",
         "documentation": {}
     },
@@ -108,11 +653,107 @@
         "documentation": {}
     },
     {
+        "label": "DomainDict",
+        "importPath": "rasa_sdk.types",
+        "description": "rasa_sdk.types",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.types",
+        "documentation": {}
+    },
+    {
+        "label": "DomainDict",
+        "importPath": "rasa_sdk.types",
+        "description": "rasa_sdk.types",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.types",
+        "documentation": {}
+    },
+    {
+        "label": "DomainDict",
+        "importPath": "rasa_sdk.types",
+        "description": "rasa_sdk.types",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.types",
+        "documentation": {}
+    },
+    {
+        "label": "DomainDict",
+        "importPath": "rasa_sdk.types",
+        "description": "rasa_sdk.types",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.types",
+        "documentation": {}
+    },
+    {
         "label": "FormValidationAction",
         "importPath": "rasa_sdk.forms",
         "description": "rasa_sdk.forms",
         "isExtraImport": true,
         "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "FormValidationAction",
+        "importPath": "rasa_sdk.forms",
+        "description": "rasa_sdk.forms",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "FormValidationAction",
+        "importPath": "rasa_sdk.forms",
+        "description": "rasa_sdk.forms",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "FormValidationAction",
+        "importPath": "rasa_sdk.forms",
+        "description": "rasa_sdk.forms",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "FormValidationAction",
+        "importPath": "rasa_sdk.forms",
+        "description": "rasa_sdk.forms",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.forms",
+        "documentation": {}
+    },
+    {
+        "label": "CollectingDispatcher",
+        "importPath": "rasa_sdk.executor",
+        "description": "rasa_sdk.executor",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.executor",
+        "documentation": {}
+    },
+    {
+        "label": "CollectingDispatcher",
+        "importPath": "rasa_sdk.executor",
+        "description": "rasa_sdk.executor",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.executor",
+        "documentation": {}
+    },
+    {
+        "label": "CollectingDispatcher",
+        "importPath": "rasa_sdk.executor",
+        "description": "rasa_sdk.executor",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.executor",
+        "documentation": {}
+    },
+    {
+        "label": "CollectingDispatcher",
+        "importPath": "rasa_sdk.executor",
+        "description": "rasa_sdk.executor",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.executor",
         "documentation": {}
     },
     {
@@ -156,109 +797,683 @@
         "documentation": {}
     },
     {
-        "label": "FoodAPI",
-        "importPath": "actions.api.food_api",
-        "description": "actions.api.food_api",
+        "label": "SlotSet",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
         "isExtraImport": true,
-        "detail": "actions.api.food_api",
+        "detail": "rasa_sdk.events",
         "documentation": {}
     },
     {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
+        "label": "UserUtteranceReverted",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
         "isExtraImport": true,
-        "detail": "dotenv",
+        "detail": "rasa_sdk.events",
         "documentation": {}
     },
     {
-        "label": "file",
+        "label": "ConversationPaused",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventType",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "SlotSet",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "UserUtteranceReverted",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationPaused",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventType",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "SlotSet",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "UserUtteranceReverted",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationPaused",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventType",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "SlotSet",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "UserUtteranceReverted",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "ConversationPaused",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "EventType",
+        "importPath": "rasa_sdk.events",
+        "description": "rasa_sdk.events",
+        "isExtraImport": true,
+        "detail": "rasa_sdk.events",
+        "documentation": {}
+    },
+    {
+        "label": "SpoonAPI",
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "isExtraImport": true,
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "SpoonAPI",
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "isExtraImport": true,
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "get_edamam_config",
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "isExtraImport": true,
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "Nutrients",
+        "importPath": "actions.utils.food_utils",
+        "description": "actions.utils.food_utils",
+        "isExtraImport": true,
+        "detail": "actions.utils.food_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Nutrients",
+        "importPath": "actions.utils.food_utils",
+        "description": "actions.utils.food_utils",
+        "isExtraImport": true,
+        "detail": "actions.utils.food_utils",
+        "documentation": {}
+    },
+    {
+        "label": "Nutrients",
+        "importPath": "actions.utils.food_utils",
+        "description": "actions.utils.food_utils",
+        "isExtraImport": true,
+        "detail": "actions.utils.food_utils",
+        "documentation": {}
+    },
+    {
+        "label": "SPOON_API_KEY",
         "kind": 5,
-        "importPath": "actions.api.api_testing",
-        "description": "actions.api.api_testing",
-        "peekOfCode": "file = open(\"./data/chicken.json\")\ndata = json.load(file)\nprint(data[\"hits\"][0][\"recipe\"][\"label\"])\n# print(data)\n# ingredients = {\n#     \"chicken\",\n#     \"fish\",\n#     \"egg\",\n#     \"beaf\",\n#     \"banana\",",
-        "detail": "actions.api.api_testing",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "peekOfCode": "SPOON_API_KEY = \"630f23d681534cd7b10aaa492800a5cd\"\nSPOON_TARGET_URL = \"https://api.spoonacular.com/recipes/complexSearch\"\nEDAMAM_APP_ID = \"d736f71a\"\nEDAMAM_API_KEY = \"5a61563f39257241ba253b7e87328f5a\"\nEDAMAM_TARGET_URL = \"https://api.edamam.com/api/recipes/v2\"",
+        "detail": "actions.api.config",
         "documentation": {}
     },
     {
-        "label": "data",
+        "label": "SPOON_TARGET_URL",
         "kind": 5,
-        "importPath": "actions.api.api_testing",
-        "description": "actions.api.api_testing",
-        "peekOfCode": "data = json.load(file)\nprint(data[\"hits\"][0][\"recipe\"][\"label\"])\n# print(data)\n# ingredients = {\n#     \"chicken\",\n#     \"fish\",\n#     \"egg\",\n#     \"beaf\",\n#     \"banana\",\n# }",
-        "detail": "actions.api.api_testing",
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "peekOfCode": "SPOON_TARGET_URL = \"https://api.spoonacular.com/recipes/complexSearch\"\nEDAMAM_APP_ID = \"d736f71a\"\nEDAMAM_API_KEY = \"5a61563f39257241ba253b7e87328f5a\"\nEDAMAM_TARGET_URL = \"https://api.edamam.com/api/recipes/v2\"",
+        "detail": "actions.api.config",
         "documentation": {}
     },
     {
-        "label": "FoodAPI",
-        "kind": 6,
-        "importPath": "actions.api.food_api",
-        "description": "actions.api.food_api",
-        "peekOfCode": "class FoodAPI:\n    @staticmethod\n    def get_food_recipe(ingredients: str) -> str:\n        try:\n            jsonData = ExtensionFunction.getJsonFILE(\n                f\"src/actions/api/data/{ingredients}.json\"\n            )\n            return jsonData[\"hits\"][0][\"recipe\"][\"label\"]\n        except Exception as e:\n            params = {",
-        "detail": "actions.api.food_api",
+        "label": "EDAMAM_APP_ID",
+        "kind": 5,
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "peekOfCode": "EDAMAM_APP_ID = \"d736f71a\"\nEDAMAM_API_KEY = \"5a61563f39257241ba253b7e87328f5a\"\nEDAMAM_TARGET_URL = \"https://api.edamam.com/api/recipes/v2\"",
+        "detail": "actions.api.config",
         "documentation": {}
     },
     {
-        "label": "ActionSearchFoodRecipe",
-        "kind": 6,
-        "importPath": "actions.actions",
-        "description": "actions.actions",
-        "peekOfCode": "class ActionSearchFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_search_food_recipe\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        entities = [",
-        "detail": "actions.actions",
+        "label": "EDAMAM_API_KEY",
+        "kind": 5,
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "peekOfCode": "EDAMAM_API_KEY = \"5a61563f39257241ba253b7e87328f5a\"\nEDAMAM_TARGET_URL = \"https://api.edamam.com/api/recipes/v2\"",
+        "detail": "actions.api.config",
         "documentation": {}
     },
     {
-        "label": "ActionGetFoodRecipe",
+        "label": "EDAMAM_TARGET_URL",
+        "kind": 5,
+        "importPath": "actions.api.config",
+        "description": "actions.api.config",
+        "peekOfCode": "EDAMAM_TARGET_URL = \"https://api.edamam.com/api/recipes/v2\"",
+        "detail": "actions.api.config",
+        "documentation": {}
+    },
+    {
+        "label": "SpoonAPI",
         "kind": 6,
-        "importPath": "actions.actions",
-        "description": "actions.actions",
-        "peekOfCode": "class ActionGetFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_get_food_recipe\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        ingredients = tracker.get_slot(\"ingredients\")",
-        "detail": "actions.actions",
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "peekOfCode": "class SpoonAPI:\n    def getRecipes():\n        request_params = {**get_spoon_config}\n        # request_params.update(Slot.nutrient_slots)\n        print(request_params)\n        response = requests.get(SPOON_TARGET_URL, params=request_params)\n        data_response = FoodResponse(**response.json())\n        print(data_response.total_results)\nclass EdamAPI:\n    def howToCook():",
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "EdamAPI",
+        "kind": 6,
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "peekOfCode": "class EdamAPI:\n    def howToCook():\n        request_params = {\"q\": \"Chicken\"}\n        print(request_params)",
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "get_spoon_config",
+        "kind": 5,
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "peekOfCode": "get_spoon_config = {\n    \"apiKey\": SPOON_API_KEY,\n    \"number\": 1,\n    \"offset\": 10,\n    \"addRecipeNutrition\": True,\n    \"query\": \"chicken\",\n}\nget_edamam_config = {\"app_id\": EDAMAM_APP_ID, \"app_key\": EDAMAM_API_KEY}\nclass SpoonAPI:\n    def getRecipes():",
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "get_edamam_config",
+        "kind": 5,
+        "importPath": "actions.api.get_api",
+        "description": "actions.api.get_api",
+        "peekOfCode": "get_edamam_config = {\"app_id\": EDAMAM_APP_ID, \"app_key\": EDAMAM_API_KEY}\nclass SpoonAPI:\n    def getRecipes():\n        request_params = {**get_spoon_config}\n        # request_params.update(Slot.nutrient_slots)\n        print(request_params)\n        response = requests.get(SPOON_TARGET_URL, params=request_params)\n        data_response = FoodResponse(**response.json())\n        print(data_response.total_results)\nclass EdamAPI:",
+        "detail": "actions.api.get_api",
+        "documentation": {}
+    },
+    {
+        "label": "configuration",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "configuration = spoonacular.Configuration()\n# Configure API key authorization: apiKeyScheme\nconfiguration.api_key[\"apiKey\"] = \"630f23d681534cd7b10aaa492800a5cd\"\n# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed\n# configuration.api_key_prefix['apiKey'] = 'Bearer'\n# create an instance of the API class\napi_instance = spoonacular.IngredientsApi(spoonacular.ApiClient(configuration))\nquery = \"burger\"  # str | The (natural language) search query. (optional)\nnumber = 10  # int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)\nmeta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "configuration.api_key[\"apiKey\"]",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "configuration.api_key[\"apiKey\"] = \"630f23d681534cd7b10aaa492800a5cd\"\n# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed\n# configuration.api_key_prefix['apiKey'] = 'Bearer'\n# create an instance of the API class\napi_instance = spoonacular.IngredientsApi(spoonacular.ApiClient(configuration))\nquery = \"burger\"  # str | The (natural language) search query. (optional)\nnumber = 10  # int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)\nmeta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)\nintolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "api_instance",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "api_instance = spoonacular.IngredientsApi(spoonacular.ApiClient(configuration))\nquery = \"burger\"  # str | The (natural language) search query. (optional)\nnumber = 10  # int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)\nmeta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)\nintolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:\n    # Autocomplete Ingredient Search\n    api_response = api_instance.autocomplete_ingredient_search(\n        query=query,\n        number=number,",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "query",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "query = \"burger\"  # str | The (natural language) search query. (optional)\nnumber = 10  # int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)\nmeta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)\nintolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:\n    # Autocomplete Ingredient Search\n    api_response = api_instance.autocomplete_ingredient_search(\n        query=query,\n        number=number,\n        meta_information=meta_information,",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "number",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "number = 10  # int | The maximum number of items to return (between 1 and 100). Defaults to 10. (optional) (default to 10)\nmeta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)\nintolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:\n    # Autocomplete Ingredient Search\n    api_response = api_instance.autocomplete_ingredient_search(\n        query=query,\n        number=number,\n        meta_information=meta_information,\n        intolerances=intolerances,",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "meta_information",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "meta_information = False  # bool | Whether to return more meta information about the ingredients. (optional)\nintolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:\n    # Autocomplete Ingredient Search\n    api_response = api_instance.autocomplete_ingredient_search(\n        query=query,\n        number=number,\n        meta_information=meta_information,\n        intolerances=intolerances,\n    )",
+        "detail": "actions.api.test_api",
+        "documentation": {}
+    },
+    {
+        "label": "intolerances",
+        "kind": 5,
+        "importPath": "actions.api.test_api",
+        "description": "actions.api.test_api",
+        "peekOfCode": "intolerances = \"egg\"  # str | A comma-separated list of intolerances. All recipes returned must not contain ingredients that are not suitable for people with the intolerances entered. See a full list of supported intolerances. (optional)\ntry:\n    # Autocomplete Ingredient Search\n    api_response = api_instance.autocomplete_ingredient_search(\n        query=query,\n        number=number,\n        meta_information=meta_information,\n        intolerances=intolerances,\n    )\n    pprint(api_response)",
+        "detail": "actions.api.test_api",
         "documentation": {}
     },
     {
         "label": "edamam_url_endpoint",
         "kind": 5,
-        "importPath": "actions.config",
-        "description": "actions.config",
+        "importPath": "actions.config.config",
+        "description": "actions.config.config",
         "peekOfCode": "edamam_url_endpoint = \"https://api.edamam.com/api/recipes/v2\"\nedamam_app_id = os.environ.get(\"EDAMAM_APP_ID\", \"d736f71a\")\nedamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
-        "detail": "actions.config",
+        "detail": "actions.config.config",
         "documentation": {}
     },
     {
         "label": "edamam_app_id",
         "kind": 5,
-        "importPath": "actions.config",
-        "description": "actions.config",
+        "importPath": "actions.config.config",
+        "description": "actions.config.config",
         "peekOfCode": "edamam_app_id = os.environ.get(\"EDAMAM_APP_ID\", \"d736f71a\")\nedamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
-        "detail": "actions.config",
+        "detail": "actions.config.config",
         "documentation": {}
     },
     {
         "label": "edamam_app_key",
         "kind": 5,
-        "importPath": "actions.config",
-        "description": "actions.config",
+        "importPath": "actions.config.config",
+        "description": "actions.config.config",
         "peekOfCode": "edamam_app_key = \"5a61563f39257241ba253b7e87328f5a\"\ningredient_data_path = \"src/actions/api/data\"",
-        "detail": "actions.config",
+        "detail": "actions.config.config",
         "documentation": {}
     },
     {
         "label": "ingredient_data_path",
         "kind": 5,
-        "importPath": "actions.config",
-        "description": "actions.config",
+        "importPath": "actions.config.config",
+        "description": "actions.config.config",
         "peekOfCode": "ingredient_data_path = \"src/actions/api/data\"",
-        "detail": "actions.config",
+        "detail": "actions.config.config",
+        "documentation": {}
+    },
+    {
+        "label": "ResetOption",
+        "kind": 6,
+        "importPath": "actions.constants.reset_option",
+        "description": "actions.constants.reset_option",
+        "peekOfCode": "class ResetOption:\n    reset_all = \"reset_all\"\n    reset_min = \"reset_min\"\n    reset_max = \"reset_max\"",
+        "detail": "actions.constants.reset_option",
         "documentation": {}
     },
     {
         "label": "ExtensionFunction",
         "kind": 6,
-        "importPath": "actions.extension_function",
-        "description": "actions.extension_function",
+        "importPath": "actions.extension.extension_function",
+        "description": "actions.extension.extension_function",
         "peekOfCode": "class ExtensionFunction:\n    @staticmethod\n    def getJsonFILE(path: str) -> json:\n        cur_path = os.path.dirname(__file__)\n        relative_path = os.path.relpath(path, cur_path)\n        print(relative_path)\n        file = open(relative_path)\n        return json.load(file)",
-        "detail": "actions.extension_function",
+        "detail": "actions.extension.extension_function",
+        "documentation": {}
+    },
+    {
+        "label": "FoodData",
+        "kind": 6,
+        "importPath": "actions.models.data",
+        "description": "actions.models.data",
+        "peekOfCode": "class FoodData:\n    data = FoodModel()\nfood_data = FoodData()",
+        "detail": "actions.models.data",
+        "documentation": {}
+    },
+    {
+        "label": "food_data",
+        "kind": 5,
+        "importPath": "actions.models.data",
+        "description": "actions.models.data",
+        "peekOfCode": "food_data = FoodData()",
+        "detail": "actions.models.data",
+        "documentation": {}
+    },
+    {
+        "label": "CaloricBreakdown",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class CaloricBreakdown(BaseModel):\n    percent_protein: float = Field(..., alias=\"percentProtein\")\n    percent_fat: float = Field(..., alias=\"percentFat\")\n    percent_carbs: float = Field(..., alias=\"percentCarbs\")\nclass WeightPerServing(BaseModel):\n    amount: int\n    unit: Literal[\"g\"]\nclass Length_Temperature(BaseModel):\n    number: int\n    unit: Literal[\"Fahrenheit\", \"minutes\"]",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "WeightPerServing",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class WeightPerServing(BaseModel):\n    amount: int\n    unit: Literal[\"g\"]\nclass Length_Temperature(BaseModel):\n    number: int\n    unit: Literal[\"Fahrenheit\", \"minutes\"]\nclass Equipment_Ingredient(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    localized_name: str = Field(..., alias=\"localizedName\")",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Length_Temperature",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Length_Temperature(BaseModel):\n    number: int\n    unit: Literal[\"Fahrenheit\", \"minutes\"]\nclass Equipment_Ingredient(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    localized_name: str = Field(..., alias=\"localizedName\")\n    image: str\n    temperature: Optional[Length_Temperature] = None\nclass Step(BaseModel):",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Equipment_Ingredient",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Equipment_Ingredient(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    localized_name: str = Field(..., alias=\"localizedName\")\n    image: str\n    temperature: Optional[Length_Temperature] = None\nclass Step(BaseModel):\n    number: int\n    step: str\n    ingredients: List[Equipment_Ingredient]",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Step",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Step(BaseModel):\n    number: int\n    step: str\n    ingredients: List[Equipment_Ingredient]\n    equipment: List[Equipment_Ingredient]\n    length: Optional[Length_Temperature] = None\nclass Flavonoid_Nutrient_Property(BaseModel):\n    title: str\n    name: str\n    amount: float",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Flavonoid_Nutrient_Property",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Flavonoid_Nutrient_Property(BaseModel):\n    title: str\n    name: str\n    amount: float\n    unit: Literal[\"\", \"IU\", \"g\", \"kcal\", \"mg\", \"µg\"]\n    percent_of_daily_needs: Optional[float] = Field(None, alias=\"percentOfDailyNeeds\")\nclass Ingredient(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    amount: float",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Ingredient",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Ingredient(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    amount: float\n    unit: str\n    nutrients: List[Flavonoid_Nutrient_Property]\nclass AnalyzedInstruction(BaseModel):\n    name: str\n    steps: List[Step]\nclass Nutrition(BaseModel):",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "AnalyzedInstruction",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class AnalyzedInstruction(BaseModel):\n    name: str\n    steps: List[Step]\nclass Nutrition(BaseModel):\n    nutrients: List[Flavonoid_Nutrient_Property]\n    properties: List[Flavonoid_Nutrient_Property]\n    flavonoids: List[Flavonoid_Nutrient_Property]\n    ingredients: List[Ingredient]\n    caloric_breakdown: CaloricBreakdown = Field(..., alias=\"caloricBreakdown\")\n    weight_per_serving: WeightPerServing = Field(..., alias=\"weightPerServing\")",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Nutrition",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Nutrition(BaseModel):\n    nutrients: List[Flavonoid_Nutrient_Property]\n    properties: List[Flavonoid_Nutrient_Property]\n    flavonoids: List[Flavonoid_Nutrient_Property]\n    ingredients: List[Ingredient]\n    caloric_breakdown: CaloricBreakdown = Field(..., alias=\"caloricBreakdown\")\n    weight_per_serving: WeightPerServing = Field(..., alias=\"weightPerServing\")\nclass Result(BaseModel):\n    vegetarian: bool\n    vegan: bool",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Result",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class Result(BaseModel):\n    vegetarian: bool\n    vegan: bool\n    gluten_free: bool = Field(..., alias=\"glutenFree\")\n    dairy_free: bool = Field(..., alias=\"dairyFree\")\n    very_healthy: bool = Field(..., alias=\"veryHealthy\")\n    cheap: bool\n    very_popular: bool = Field(..., alias=\"veryPopular\")\n    sustainable: bool\n    weight_watcher_smart_points: int = Field(..., alias=\"weightWatcherSmartPoints\")",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "FoodResponse",
+        "kind": 6,
+        "importPath": "actions.models.food_model",
+        "description": "actions.models.food_model",
+        "peekOfCode": "class FoodResponse(BaseModel):\n    results: List[Result]\n    offset: int\n    number: int\n    total_results: int = Field(..., alias=\"totalResults\")",
+        "detail": "actions.models.food_model",
+        "documentation": {}
+    },
+    {
+        "label": "Entity",
+        "kind": 6,
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "peekOfCode": "class Entity(BaseModel):\n    type: str = Field(None, alias=\"entity\")\n    start: int\n    end: int\n    confidence_entity: Optional[float]\n    value: str\n    extractor: str\n    processors: Optional[List[str]]\nclass Intent(BaseModel):\n    id_: int = Field(..., alias=\"id\")",
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "Intent",
+        "kind": 6,
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "peekOfCode": "class Intent(BaseModel):\n    id_: int = Field(..., alias=\"id\")\n    name: str\n    confidence: float\nclass MessageTracker(BaseModel):\n    text: str\n    intent: Intent\n    entities: List[Entity]\n    intent_ranking: List[Intent]",
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "MessageTracker",
+        "kind": 6,
+        "importPath": "actions.models.message_tracker_model",
+        "description": "actions.models.message_tracker_model",
+        "peekOfCode": "class MessageTracker(BaseModel):\n    text: str\n    intent: Intent\n    entities: List[Entity]\n    intent_ranking: List[Intent]",
+        "detail": "actions.models.message_tracker_model",
+        "documentation": {}
+    },
+    {
+        "label": "NutrientModel",
+        "kind": 6,
+        "importPath": "actions.models.nutrient_model",
+        "description": "actions.models.nutrient_model",
+        "peekOfCode": "class NutrientModel(BaseModel):\n    minCalories: Optional[int]\n    maxCalories: Optional[int]\n    minFat: Optional[int]\n    maxFat: Optional[int]\n    class Config:\n        validate_assignment = True\n    @root_validator()\n    @classmethod\n    def calculate_total_score(cls, values):",
+        "detail": "actions.models.nutrient_model",
+        "documentation": {}
+    },
+    {
+        "label": "RecipePartsModel",
+        "kind": 6,
+        "importPath": "actions.models.recipe_parts_model",
+        "description": "actions.models.recipe_parts_model",
+        "peekOfCode": "class RecipePartsModel(BaseModel):\n    parts: List[Entity] = []\n    def add_part(self, entity: Entity):\n        if(entity.extractor == \"RegexEntityExtractor\"):\n            self.parts.append()\n    def checkShouldClear(self, newParts: List[Entity]):\n        has_ingredient_in_old = any(\n            item.type == \"ingredient\" for item in self.parts\n        )\n        has_technique_in_old = any(",
+        "detail": "actions.models.recipe_parts_model",
+        "documentation": {}
+    },
+    {
+        "label": "RecipeSearchKeyword",
+        "kind": 6,
+        "importPath": "actions.models.recipe_search_keyword",
+        "description": "actions.models.recipe_search_keyword",
+        "peekOfCode": "class RecipeSearchKeyword(BaseModel):\n    keywords: list = []",
+        "detail": "actions.models.recipe_search_keyword",
+        "documentation": {}
+    },
+    {
+        "label": "Slot",
+        "kind": 6,
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "peekOfCode": "class Slot:\n    nutrient_slots = NutrientModel()\n    def set_nutrient_attr(self, name: str, value: int):\n        self.nutrient_slots.__setattr__(name, value)\n    recipe_parts_slots = RecipePartsModel()\n    recipe_search_keyword_slots = RecipeSearchKeyword()\nslot = Slot()",
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "slot",
+        "kind": 5,
+        "importPath": "actions.models.slots",
+        "description": "actions.models.slots",
+        "peekOfCode": "slot = Slot()",
+        "detail": "actions.models.slots",
+        "documentation": {}
+    },
+    {
+        "label": "Nutrients",
+        "kind": 6,
+        "importPath": "actions.utils.food_utils",
+        "description": "actions.utils.food_utils",
+        "peekOfCode": "class Nutrients:\n  @staticmethod\n  def containNutrient(nutrient: str) -> bool:\n    return nutrient in NUTRIENT_LIST",
+        "detail": "actions.utils.food_utils",
+        "documentation": {}
+    },
+    {
+        "label": "NUTRIENT_LIST",
+        "kind": 5,
+        "importPath": "actions.utils.food_utils",
+        "description": "actions.utils.food_utils",
+        "peekOfCode": "NUTRIENT_LIST = [\"calory\", \"fat\"]\nclass Nutrients:\n  @staticmethod\n  def containNutrient(nutrient: str) -> bool:\n    return nutrient in NUTRIENT_LIST",
+        "detail": "actions.utils.food_utils",
+        "documentation": {}
+    },
+    {
+        "label": "ActionFinishAsking",
+        "kind": 6,
+        "importPath": "actions.actions",
+        "description": "actions.actions",
+        "peekOfCode": "class ActionFinishAsking(Action):\n    def name(self) -> Text:\n        return \"action_get_data\"\n    async def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        SpoonAPI.getRecipes()",
+        "detail": "actions.actions",
+        "documentation": {}
+    },
+    {
+        "label": "ActionClearData",
+        "kind": 6,
+        "importPath": "actions.clear_actions",
+        "description": "actions.clear_actions",
+        "peekOfCode": "class ActionClearData(Action):\n    def name(self) -> Text:\n        return \"action_clear_data\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        SpoonAPI.getRecipes()",
+        "detail": "actions.clear_actions",
+        "documentation": {}
+    },
+    {
+        "label": "ActionGetNutrient",
+        "kind": 6,
+        "importPath": "actions.nutrient_actions",
+        "description": "actions.nutrient_actions",
+        "peekOfCode": "class ActionGetNutrient(Action):\n    def name(self) -> Text:\n        return \"action_get_nutrient\"\n    async def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        min_value = []",
+        "detail": "actions.nutrient_actions",
+        "documentation": {}
+    },
+    {
+        "label": "ActionSearchFoodRecipe",
+        "kind": 6,
+        "importPath": "actions.prepare_technique",
+        "description": "actions.prepare_technique",
+        "peekOfCode": "class ActionSearchFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_answer_prepare_technique\"\n    async def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        message_tracker = MessageTracker(**tracker.latest_message)",
+        "detail": "actions.prepare_technique",
+        "documentation": {}
+    },
+    {
+        "label": "tech_descriptions",
+        "kind": 5,
+        "importPath": "actions.prepare_technique",
+        "description": "actions.prepare_technique",
+        "peekOfCode": "tech_descriptions = {\n    \"baking\": \"The technique of prolonged cooking of food by dry heat acting by convection, normally in an oven, but can also be done in hot ashes or on hot stones. Appliances like Rotimatic also allow automatic baking.\",\n    \"blind-baking\": \"Baking pastry before adding a filling.\",\n    \"boiling\": \"The rapid vaporization of a liquid, which occurs when a liquid is heated to its boiling point, the temperature at which the vapor pressure of the liquid is equal to the pressure exerted on the liquid by the surrounding environmental pressure.\",\n    \"blanching\": \"Cooking technique which food substance, usually a vegetable or fruit, is plunged into boiling water, removed after a brief, timed interval, and finally plunged into iced water or placed under cold running water (shocked) to halt the cooking process.\",\n    \"braising\": \"Combination cooking method using both moist and dry heat; typically the food is first seared at a high temperature and then finished in a covered pot with a variable amount of liquid, resulting in a particular flavour.\",\n    \"coddling\": \"Food is heated in water kept just below the boiling point.\",\n    \"infusion\": \"The process of soaking plant matter, such as fruits or tea leaves, in a liquid, such as water or alcohol, so as to impart flavor into the liquid.\",\n    \"pressure cooking\": \"Cooking in a sealed vessel that does not permit air or liquids to escape below a preset pressure, which allows the liquid in the pot to rise to a higher temperature before boiling.\",\n    \"simmering\": \"Foods are cooked in hot liquids kept at or just below the boiling point of water, but higher than poaching temperature.\",",
+        "detail": "actions.prepare_technique",
+        "documentation": {}
+    },
+    {
+        "label": "ActionSearchFoodRecipe",
+        "kind": 6,
+        "importPath": "actions.recipe_actions",
+        "description": "actions.recipe_actions",
+        "peekOfCode": "class ActionSearchFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_search_food_recipe\"\n    async def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        message_tracker = MessageTracker(**tracker.latest_message)",
+        "detail": "actions.recipe_actions",
+        "documentation": {}
+    },
+    {
+        "label": "ActionGetFoodRecipe",
+        "kind": 6,
+        "importPath": "actions.recipe_actions",
+        "description": "actions.recipe_actions",
+        "peekOfCode": "class ActionGetFoodRecipe(Action):\n    def name(self) -> Text:\n        return \"action_get_food_recipe\"\n    def run(\n        self,\n        dispatcher: CollectingDispatcher,\n        tracker: Tracker,\n        domain: Dict[Text, Any],\n    ) -> List[Dict[Text, Any]]:\n        print(\"Hello World\")",
+        "detail": "actions.recipe_actions",
+        "documentation": {}
+    },
+    {
+        "label": "recipe_parts",
+        "kind": 5,
+        "importPath": "tests.test",
+        "description": "tests.test",
+        "peekOfCode": "recipe_parts = [{'entity': 'ingredient', 'start': -47, 'end': -43, 'value': 'rice', 'extractor': 'RegexEntityExtractor'},\n                {'entity': 'or', 'start': -42, 'end': -40,\n                    'value': 'or', 'extractor': 'RegexEntityExtractor'},\n                {'entity': 'ingredient', 'start': -39, 'end': -34,\n                    'value': 'water', 'extractor': 'RegexEntityExtractor'},\n                {'entity': 'or', 'start': -23, 'end': -21,\n                    'value': 'or', 'extractor': 'RegexEntityExtractor'},\n                {'entity': 'preparation_technique', 'start': -20, 'end': -13,\n                    'value': 'boiling', 'extractor': 'RegexEntityExtractor'},\n                {'entity': 'or', 'start': -12, 'end': -10,",
+        "detail": "tests.test",
+        "documentation": {}
+    },
+    {
+        "label": "search_list",
+        "kind": 5,
+        "importPath": "tests.test",
+        "description": "tests.test",
+        "peekOfCode": "search_list = []\nfor index, val in enumerate(recipe_parts):\n    if (val[\"entity\"] == \"or\"\n        and (index == 0 or index == len(recipe_parts)-1\n             or recipe_parts[index+1][\"entity\"] == \"or\")):\n        del recipe_parts[index]\nprint(list(map(lambda x: x[\"value\"], recipe_parts)))\nbranch_list = []\nindex = 0\nwhile index < len(recipe_parts):",
+        "detail": "tests.test",
+        "documentation": {}
+    },
+    {
+        "label": "branch_list",
+        "kind": 5,
+        "importPath": "tests.test",
+        "description": "tests.test",
+        "peekOfCode": "branch_list = []\nindex = 0\nwhile index < len(recipe_parts):\n    bl_len = len(branch_list)\n    if recipe_parts[index][\"entity\"] == \"or\":\n        if recipe_parts[index-1][\"entity\"] == recipe_parts[index+1][\"entity\"]:\n            for i in range(bl_len):\n                raw_item = branch_list[0]\n                del raw_item[-1]\n                branch_list.append(raw_item+[recipe_parts[index-1]])",
+        "detail": "tests.test",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 5,
+        "importPath": "tests.test",
+        "description": "tests.test",
+        "peekOfCode": "index = 0\nwhile index < len(recipe_parts):\n    bl_len = len(branch_list)\n    if recipe_parts[index][\"entity\"] == \"or\":\n        if recipe_parts[index-1][\"entity\"] == recipe_parts[index+1][\"entity\"]:\n            for i in range(bl_len):\n                raw_item = branch_list[0]\n                del raw_item[-1]\n                branch_list.append(raw_item+[recipe_parts[index-1]])\n                branch_list.append(raw_item+[recipe_parts[index+1]])",
+        "detail": "tests.test",
         "documentation": {}
     }
 ]

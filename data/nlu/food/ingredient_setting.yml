@@ -12,3 +12,17 @@ nlu:
       - my current ingredient search list
       - display current search list
       - display current ingredient
+
+  - intent: ask_for_reset_ingredient
+    examples: |
+      - clear my ingredient
+      - reset my ingredient
+      - clear ingredient
+      - reset ingredient
+      - empty ingredient
+      - we don't need ingredient
+      - ingredient is not necessary
+      - ingredient don't need
+      - no more ingredient
+      - reset ingredient to default
+      - roll back ingredient

@@ -5,7 +5,7 @@ nlu:
     examples: |
       - balanced
       - high-protein
-      - hight-fiber
+      - high-fiber
       - low-carb
       - low-fat
       - low-sodium

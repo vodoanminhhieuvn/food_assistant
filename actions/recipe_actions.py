@@ -84,7 +84,7 @@ class ActionSearchFoodRecipe(Action):
             dispatcher.utter_message(text="Give me main ingredient")
             return True
         elif all(item.type != "cook_technique" for item in recipe_parts):
-            dispatcher.utter_message(text="You can provide me a technique if needed")
+            dispatcher.utter_message(text="You can provide me a cook technique")
             return True
         else:
             return False

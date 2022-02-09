@@ -7,7 +7,6 @@ nlu:
 - synonym: <
   examples: |
     - smaller than
-    - smaller
     - lower than
     - maximum
     - less than
@@ -19,6 +18,7 @@ nlu:
     - minium
     - more than
     - more
+    - >
 - synonym: Fat
   examples: |
     - fatty

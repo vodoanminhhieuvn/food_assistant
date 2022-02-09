@@ -55,15 +55,26 @@ nlu:
     - food has < [230](max) [fat](nutrient)
     - [calory]{"entity": "nutrient", "value": "Calories"} less than [2](food_position)
     - [fat](nutrient) greater than [333](min) is okay
-    - [fat](nutrient) less than [333](max) is okay
+    - [fat](nutrient) greater [333](min) is okay
+    - [fat](nutrient) lower [333](max) is okay
+    - [fat](nutrient) [lower than 333]{"entity": "max", "value": "333"} is okay
+    - [fat](nutrient) [less than 333]{"entity": "max", "value": "333"} is okay
     - [fat](nutrient) [greater 333]{"entity": "min", "value": "333"} is okay
     - [fat](nutrient) [less 333]{"entity": "max", "value": "333"} is okay
+    - [fat](nutrient) [greater than 340]{"entity": "min", "value": "340"} and (smaller than 2345){"entity": "max", "value": "2345"}
     - [calory](nutrient) greater than [333](min) < [555](max)
+    - [calory](nutrient) [greater than 340]{"entity": "min", "value": "340"} and (smaller than 2345){"entity": "max", "value": "2345"}
+    - [calory](nutrient) greater than [333](min) smaller than [555](max)
+    - [calory](nutrient) greater than [333](min) lower than [555](max)
+    - [calory](nutrient) > [333](min) smaller than [555](max)
     - [calory](nutrient) greater than [545](min)
     - [calory](nutrient) greater [650](min)
-    - [calory](nutrient) less [555](max) > [533](min)
+    - [calory](nutrient) [less 555]{"entity": "max", "value": "555"} > [533](min)
     - [calory](nutrient) more [500](min) please
-    - [calory](nutrient) smaller [500](min) please
+    - [calory](nutrient) less [600](max) please
+    - [calory](nutrient) less [400](max) please
+    - [calory](nutrient) [smaller than 200]{"entity": "max", "value": "200"} please
+    - [calory](nutrient) [smaller 500]{"entity": "max", "value": "333"} please
     - [calory]{"entity": "nutrient", "value": "Calories"} greater than [400](min)
 - synonym: '500'
   examples: |
@@ -73,8 +84,20 @@ nlu:
   examples: |
     - >333
     - <333
+    - lower than 333
+    - less than 333
     - greater 333
     - less 333
+    - smaller 500
 - synonym: Calories
   examples: |
     - calory
+- synonym: '340'
+  examples: |
+    - greater than 340
+- synonym: '555'
+  examples: |
+    - less 555
+- synonym: '200'
+  examples: |
+    - smaller than 200

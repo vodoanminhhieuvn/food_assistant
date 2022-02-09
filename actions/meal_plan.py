@@ -16,8 +16,10 @@ from actions.models.food_model import RecipeModel
 from actions.models.button_message_model import ButtonMessageModel
 from actions.models.food_model import Ingredient
 from actions.api.get_api import SpoonAPI
+from actions.models.slots import slot
 
 import json
+
 
 global list_ingredient
 
@@ -37,6 +39,9 @@ class ActionHowToCook(Action):
         message = "".join(
             f"{field}: {value} \n" for field, value in food_data.meal_plan.nutrients
         )
+
+        if slot.diet:
+            message = message + f"Diet: {slot.diet}"
 
         button_message: List[ButtonMessageModel] = []
 

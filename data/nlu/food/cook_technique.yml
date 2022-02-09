@@ -19,3 +19,16 @@ nlu:
       - what baking
       - what frying
       - what Barbecuing
+
+  - intent: ask_for_list_cook_technique
+    examples: |
+      - what is cook technique
+      - can you explain cook technique
+      - what cook technique
+      - what technique?
+      - show available cook technique
+      - how much cook technique you support
+      - explain cook technique
+      - cook technique ?
+      - i need to understand what cook technique
+      - hey bot what are cook techniques

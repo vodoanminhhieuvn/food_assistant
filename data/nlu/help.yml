@@ -26,6 +26,11 @@ nlu:
       - how to show recipe
       - show recipe how ?
       - recipe getting ?
+      - how can I provide ingredient
+      - how can i upload ingredient to you
+      - which way i can provide ingredient
+      - the way i can provide ingredient
+      - how i can set ingredient
 
   - intent: help_set_nutrient
     examples: |

@@ -59,6 +59,16 @@ intents:
     use_entities: true
 - spoon_food_recipe:
     use_entities: true
+- ask_for_diet:
+    use_entities: true
+- ask_for_diet_setting:
+    use_entities: true
+- ask_for_reset_ingredient:
+    use_entities: []
+- ask_for_reset_diet:
+    use_entities: []
+- ask_for_list_cook_technique:
+    use_entities: []
 entities:
 - ingredient
 - ingredientReg
@@ -99,7 +109,7 @@ responses:
   utter_food_recipe:
   - text: Food is good
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey im recipe searching chatbot, you can type "help" to know how top make use of me
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
     text: 'Here is something to cheer you up:'
@@ -128,5 +138,10 @@ actions:
 - action_meal_plan
 - action_ingredient_setting
 - action_spoon_recipe_search
+- action_set_diet
+- action_show_diet
+- action_reset_ingredient
+- action_reset_diet
+- action_what_is_cook_technique
 forms: {}
 e2e_actions: []

@@ -49,8 +49,8 @@ class Large_Regular_Small_Thumbnail(BaseModel):
 
 
 class Image(BaseModel):
-    thumbnail: Large_Regular_Small_Thumbnail = Field(..., alias="THUMBNAIL")
-    small: Large_Regular_Small_Thumbnail = Field(..., alias="SMALL")
+    thumbnail: Optional[Large_Regular_Small_Thumbnail] = Field(..., alias="THUMBNAIL")
+    small: Optional[Large_Regular_Small_Thumbnail] = Field(..., alias="SMALL")
     regular: Optional[Large_Regular_Small_Thumbnail] = Field(None, alias="REGULAR")
     large: Optional[Large_Regular_Small_Thumbnail] = Field(None, alias="LARGE")
 
@@ -107,7 +107,7 @@ class TotalDaily_TotalNutrient(BaseModel):
 class RecipeModel(BaseModel):
     uri: str
     label: str
-    image: str
+    image: Optional[str]
     images: Image
     source: str
     url: str

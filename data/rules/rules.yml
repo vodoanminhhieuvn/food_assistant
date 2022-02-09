@@ -95,3 +95,28 @@ rules:
     steps:
       - intent: spoon_food_recipe
       - action: action_spoon_recipe_search
+
+  - rule: Set diet setting
+    steps:
+      - intent: ask_for_diet
+      - action: action_set_diet
+
+  - rule: Show diet setting
+    steps:
+      - intent: ask_for_diet_setting
+      - action: action_show_diet
+
+  - rule: Reset diet setting
+    steps:
+      - intent: ask_for_reset_diet
+      - action: action_reset_diet
+
+  - rule: Reset ingredient setting
+    steps:
+      - intent: ask_for_reset_ingredient
+      - action: action_reset_ingredient
+
+  - rule: What is cook technique
+    steps:
+      - intent: ask_for_list_cook_technique
+      - action: action_what_is_cook_technique

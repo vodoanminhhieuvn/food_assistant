@@ -29,7 +29,6 @@ get_spoon_config = {
 generate_meal_plan_config = {
     "apiKey": SPOON_API_KEY,
     "targetCalories": slot.target_calory,
-    "diet": "",
     "timeFrame": "day",
 }
 
@@ -45,11 +44,13 @@ class SpoonAPI:
         }
 
         list_food_response = []
-
         request_params = {**get_edamam_config}
 
         for recipe in slot.recipe_search_keyword_slots.keywords:
             request_params["q"] = recipe
+
+            if slot.diet:
+                request_params["diet"] = slot.diet
 
             response = requests.get(EDAMAM_TARGET_URL, params=request_params)
 
@@ -60,10 +61,11 @@ class SpoonAPI:
     def getMealPlan():
         request_params = {**generate_meal_plan_config}
 
+        if slot.diet:
+            request_params["diet"] = slot.diet
+
         response = requests.get(GENERATE_MEAL_URL, params=request_params)
-
         meal_response = MealPlan(**response.json())
-
         food_data.initMealPlan(meal_response)
 
     def getSearchRecipe(recipe_name: str):

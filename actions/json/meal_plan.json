@@ -1,0 +1,34 @@
+{
+  "meals": [
+    {
+      "id": 558756,
+      "imageType": "jpg",
+      "title": "Banoffee Pie",
+      "readyInMinutes": 265,
+      "servings": 8,
+      "sourceUrl": "https://www.fifteenspatulas.com/banoffee-pie/"
+    },
+    {
+      "id": 525378,
+      "imageType": "jpg",
+      "title": "Easy Movie Nachos with Fontina Queso + Candied Jalapeños",
+      "readyInMinutes": 25,
+      "servings": 2,
+      "sourceUrl": "http://www.howsweeteats.com/2013/06/easy-movie-nachos-with-fontina-queso-candied-jalapenos/"
+    },
+    {
+      "id": 655570,
+      "imageType": "jpg",
+      "title": "Penne Con Funghi E Melanzane (Penne With Mushrooms and Eggplant)",
+      "readyInMinutes": 45,
+      "servings": 4,
+      "sourceUrl": "https://spoonacular.com/penne-con-funghi-e-melanzane-penne-with-mushrooms-and-eggplant-655570"
+    }
+  ],
+  "nutrients": {
+    "calories": 2001.11,
+    "protein": 56.82,
+    "fat": 80.65,
+    "carbohydrates": 265.04
+  }
+}

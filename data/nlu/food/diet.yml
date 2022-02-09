@@ -1,0 +1,37 @@
+version: "2.0"
+nlu:
+  - intent: ask_for_diet
+    examples: |
+      - I want my food to be [high-protein}(diet)
+      - set diet to high-fiber
+      - diet to Vegetarian
+      - diet setting to Vegan
+      - How about diet is gluten-free
+      - i want my food Paleo
+      - I want my recipe Primal
+      - I am Vegan
+
+  - intent: ask_for_diet_setting
+    examples: |
+      - show me diet setting
+      - get me diet setting
+      - diet setting please
+      - can you show me diet setting
+      - current diet setting
+      - display diet setting
+
+  - intent: ask_for_reset_diet
+    examples: |
+      - clear diet setting
+      - remove diet setting
+      - clear my diet
+      - reset my diet
+      - clear diet
+      - reset diet
+      - empty diet
+      - we don't need diet
+      - diet is not necessary
+      - diet don't need
+      - no more diet
+      - reset diet to default
+      - roll back diet

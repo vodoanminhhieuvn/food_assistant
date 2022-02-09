@@ -1,0 +1,8 @@
+version: "2.0"
+nlu:
+- synonym: high-protein
+  examples: |
+    - High protein
+    - Big protein
+    - a lot protein
+    - high amount of protein

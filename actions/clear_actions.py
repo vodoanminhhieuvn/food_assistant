@@ -34,7 +34,7 @@ class ActionClearData(Action):
         nutrient_type: List[str] = []
 
         if message_tracker.intent.name == "clear_all":
-            self._clear_all()
+            self._clear_all(dispatcher)
 
         elif message_tracker.intent.name == "clear_nutrient":
             for entity in message_tracker.entities:
@@ -43,7 +43,7 @@ class ActionClearData(Action):
                 elif entity.type == "nutrient_reset_option":
                     nutrient_reset_option.append(entity.value)
 
-            self._clear_nutrient(nutrient_reset_option[-1], nutrient_type)
+            self._clear_nutrient(nutrient_reset_option[-1], dispatcher, nutrient_type)
 
     def _clear_all(
         self,
@@ -70,7 +70,7 @@ class ActionClearData(Action):
                 )
             elif reset_option == "reset_max":
                 slot.nutrient_slots = NutrientModel(
-                    **slot.nutrient_slots.copy(update={"max{target}": None}).dict()
+                    **slot.nutrient_slots.copy(update={f"max{target}": None}).dict()
                 )
 
             minProperty = f"min{target}"
